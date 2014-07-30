@@ -1,0 +1,35 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.MonoForAndroid_API_14" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="wave_android_uitest\MainActivity.cs" Line="158" Column="1" />
+      <File FileName="wave_android_uitest\GenericFragmentPagerAdaptor.cs" Line="62" Column="55" />
+      <File FileName="wave_android_uitest\GenericViewPagerFragment.cs" Line="7" Column="21" />
+      <File FileName="wave_android_uitest\Resources\layout\test_layout.xml" Line="2" Column="30" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="wave_android_uitest" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Properties" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="drawable" expanded="True" />
+              <Node name="layout" expanded="True">
+                <Node name="test_layout.xml" selected="True" />
+              </Node>
+              <Node name="values" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="wave_android_uitest\GenericFragmentPagerAdaptor.cs" line="46" offsetX="320" offsetY="973" expression="_rGroup.CheckedRadioButtonId" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.wave__android__uitest MonoForAntroid.PreferredDevice="2.7&quot; QVGA" />
+</Properties>

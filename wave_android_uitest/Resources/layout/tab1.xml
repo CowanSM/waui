@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:clipChildren="false">
+    <ImageView
+        android:src="@drawable/u62"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:id="@+id/imageView1"
+        android:maxHeight="20px"
+        android:scaleType="center"
+        android:scaleX="0.35"
+        android:scaleY=".35"
+        android:layout_gravity="top" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Lorem"
+        android:gravity="center"
+        android:typeface="serif"
+        android:textSize="50px"
+        android:layout_weight="1" />
+    <TextView
+        android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/body"
+        android:typeface="serif"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_weight="1" />
+</LinearLayout>
