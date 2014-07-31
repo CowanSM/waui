@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dip"
+    android:background="#414141">
+    <ImageView
+        android:src="@drawable/excl_triangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_image"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+    <ImageView
+        android:src="@drawable/down_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/drop_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:text="Oscar Bluth challenged Lucille Bluth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_text"
+        android:layout_toRightOf="@id/activity_image"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:inputType="none"
+        android:layout_toLeftOf="@id/drop_arrow" />
+</RelativeLayout>

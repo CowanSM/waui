@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using Android.App;
 using Android.Content;
@@ -6,11 +7,129 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V4.View;
 using Android.Support.V4.App;
+using Android.Support.V4.View;
 
 namespace wave_android_uitest
 {
+	public class Reloader : Android.Text.Style.ClickableSpan {
+		MainActivity _activity;
+
+		public Reloader(MainActivity activity) {
+			_activity = activity;
+		}
+
+		public override void OnClick (View widget)
+		{
+			_activity.RunOnUiThread (_activity.LoadStart);
+		}
+	}
+
+	public class ActivityListAdapter : ArrayAdapter {
+		List<ListItem> _list;
+		int _layoutResource;
+		LayoutInflater _inflator;
+
+		int _nextId;
+
+		private struct ListItem {
+			public int _id, _imageResource;
+			public string _text;
+			public bool _divider;
+			public Android.Text.SpannableString _sequence;
+		}
+
+		public ActivityListAdapter(Context context, int layoutId, int textViewId) :
+		base (context, layoutId, textViewId){
+			_list = new List<ListItem> ();
+			_layoutResource = layoutId;
+			_inflator = (LayoutInflater)context.GetSystemService (Context.LayoutInflaterService);
+
+			_nextId = 0;
+		}
+
+		public void AddItem(int imageResource, string text, bool divider = false) {
+			_list.Add (new ListItem () {
+				_id = _nextId++,
+				_text = text,
+				_imageResource = imageResource,
+				_divider = divider
+			});
+
+			this.Add (text);
+		}
+
+		public void AddItem(int imageResource, Android.Text.SpannableString sstring) {
+			_list.Add (new ListItem () {
+				_id = _nextId++,
+				_text = string.Empty,
+				_imageResource = imageResource,
+				_divider = false,
+				_sequence = sstring
+			});
+
+			this.Add (sstring);
+		}
+
+		public override View GetView (int position, View convertView, ViewGroup parent)
+		{
+			View view;
+
+			if (convertView == null) {
+				view = _inflator.Inflate (_layoutResource, parent, false);
+			} else {
+				view = convertView;
+			}
+
+			return this.BindData (view, position);
+		}
+
+		private View BindData (View view, int position)
+		{
+			var item = _list [position];
+
+			if (!item._divider) {
+				var image = view.FindViewById<ImageView> (Resource.Id.activity_image);
+				image.SetImageResource (item._imageResource);
+
+				var text = view.FindViewById<TextView> (Resource.Id.activity_text);
+				if (!string.IsNullOrEmpty (item._text)) {
+					text.Text = item._text;
+				} else {
+					text.TextFormatted = item._sequence;
+					text.MovementMethod = new Android.Text.Method.LinkMovementMethod ();
+				}
+				text.Gravity = GravityFlags.Center;
+				text.SetTextColor (Android.Graphics.Color.White);
+				var tParams = new RelativeLayout.LayoutParams (RelativeLayout.LayoutParams.FillParent, RelativeLayout.LayoutParams.WrapContent);
+				tParams.AddRule (LayoutRules.CenterInParent);
+				text.LayoutParameters = tParams;
+
+				var arrow = view.FindViewById<ImageView> (Resource.Id.drop_arrow);
+				arrow.SetImageResource (Resource.Drawable.down_arrow);
+
+				view.SetBackgroundColor (Android.Graphics.Color.Black);
+			} else {
+				var image = view.FindViewById<ImageView> (Resource.Id.activity_image);
+//				image.SetImageResource (Resource.Drawable.abc_ab_transparent_light_holo);
+				var arrow = view.FindViewById<ImageView> (Resource.Id.drop_arrow);
+//				arrow.SetImageResource (Resource.Drawable.abc_ab_transparent_dark_holo);
+
+				var text = view.FindViewById<TextView> (Resource.Id.activity_text);
+				text.Text = item._text;
+				text.Gravity = GravityFlags.Left;
+				text.SetTextColor (Android.Graphics.Color.White);
+				var tParams = new RelativeLayout.LayoutParams (RelativeLayout.LayoutParams.MatchParent, RelativeLayout.LayoutParams.WrapContent);
+				tParams.AddRule (LayoutRules.AlignParentLeft);
+				text.LayoutParameters = tParams;
+
+				view.SetBackgroundColor (Android.Graphics.Color.SlateGray);
+			}
+
+			return view;
+		}
+	}
+
 	public class AsyncUITimerTask : Java.Util.TimerTask {
 		private Action RunTask;
 		private Activity _activity;
@@ -89,8 +208,8 @@ namespace wave_android_uitest
 			SetContentView (lSplash);
 
 			Java.Util.Timer timer = new Java.Util.Timer ();
-			var task = new AsyncUITimerTask (this, LoadStart);
-//			var task = new AsyncUITimerTask (this, LoadActivity);
+//			var task = new AsyncUITimerTask (this, LoadStart);
+			var task = new AsyncUITimerTask (this, LoadActivity);
 
 			timer.Schedule (task, 5000);
 		}
@@ -102,10 +221,37 @@ namespace wave_android_uitest
 
 			root.AddView (vActivity);
 
+//			var adaptor = new ArrayAdapter<LinearLayout> (this, Resource.Layout.tab1, Resource.Id.title);
+			var adaptor = new ActivityListAdapter (this, Resource.Layout.activity_list_item, Resource.Id.activity_text);
+			var lview = root.FindViewById<ListView> (Resource.Id.listView1);
+
+			Android.Text.SpannableString span = new Android.Text.SpannableString ("This is a sample spannable string");
+			span.SetSpan (new Reloader (this), 10, 15, Android.Text.SpanTypes.InclusiveInclusive);
+
+			lview.Adapter = adaptor;
+
+			int n = 0;
+			adaptor.AddItem (Resource.Drawable.excl_triangle, span);
+			adaptor.AddItem (Resource.Drawable.excl_triangle, "This is sample text " + n++);
+			adaptor.AddItem (Resource.Drawable.excl_triangle, "This is sample text " + n++);
+
+			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
+			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
+			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
+
+			adaptor.AddItem (0, "At Somepoint", true);
+
+			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
+			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
+			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
+
+			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
+			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
+			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
 			ActionBar.Show ();
 		}
 
-		private void LoadStart() {
+		public void LoadStart() {
 //			root.RemoveView(splash);
 
 			root.RemoveAllViews ();

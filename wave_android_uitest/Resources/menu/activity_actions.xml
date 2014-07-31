@@ -3,8 +3,9 @@
 	<item android:id="@+id/action_activity"
 		android:icon="@drawable/Icon"
 		android:title="@string/activity_action"
-		waui:showAsAction="always|withText" />
+		android:showAsAction="always|withText" />
 	<item android:id="@+id/action_my_life"
 		android:icon="@drawable/Icon"
-		android:title="@string/my_life_action" />
+		android:title="@string/my_life_action"
+		android:showAsAction="always" />
 </menu>

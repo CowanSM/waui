@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Mono.Android.Support.v4" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.2\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -55,6 +57,7 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -74,6 +77,13 @@
     <AndroidResource Include="Resources\drawable\white_button.png" />
     <AndroidResource Include="Resources\layout\activity.xml" />
     <AndroidResource Include="Resources\menu\activity_actions.xml" />
+    <AndroidResource Include="Resources\values\style.xml" />
+    <AndroidResource Include="Resources\layout\activity_list_item.xml" />
+    <AndroidResource Include="Resources\drawable\excl_triangle.png" />
+    <AndroidResource Include="Resources\drawable\green_check.png" />
+    <AndroidResource Include="Resources\drawable\person_outline.png" />
+    <AndroidResource Include="Resources\drawable\red_check.png" />
+    <AndroidResource Include="Resources\drawable\down_arrow.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
