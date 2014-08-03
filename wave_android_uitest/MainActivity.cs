@@ -89,13 +89,14 @@ namespace wave_android_uitest
 			var item = _list [position];
 
 			if (!item._divider) {
-				var image = view.FindViewById<ImageView> (Resource.Id.activity_image);
+				var image = view.FindViewById<ImageView> (Resource.Id.activity_limage);
 				image.SetImageResource (item._imageResource);
 
 				var text = view.FindViewById<TextView> (Resource.Id.activity_text);
 				if (!string.IsNullOrEmpty (item._text)) {
 					text.Text = item._text;
 				} else {
+					text.SetLinkTextColor (Android.Graphics.Color.White);
 					text.TextFormatted = item._sequence;
 					text.MovementMethod = new Android.Text.Method.LinkMovementMethod ();
 				}
@@ -105,15 +106,15 @@ namespace wave_android_uitest
 				tParams.AddRule (LayoutRules.CenterInParent);
 				text.LayoutParameters = tParams;
 
-				var arrow = view.FindViewById<ImageView> (Resource.Id.drop_arrow);
+				var arrow = view.FindViewById<ImageView> (Resource.Id.activity_rimage);
 				arrow.SetImageResource (Resource.Drawable.down_arrow);
 
 				view.SetBackgroundColor (Android.Graphics.Color.Black);
 			} else {
-				var image = view.FindViewById<ImageView> (Resource.Id.activity_image);
-//				image.SetImageResource (Resource.Drawable.abc_ab_transparent_light_holo);
-				var arrow = view.FindViewById<ImageView> (Resource.Id.drop_arrow);
-//				arrow.SetImageResource (Resource.Drawable.abc_ab_transparent_dark_holo);
+				var image = view.FindViewById<ImageView> (Resource.Id.activity_limage);
+				image.SetImageResource (Resource.Drawable.transparent);
+				var arrow = view.FindViewById<ImageView> (Resource.Id.activity_rimage);
+				arrow.SetImageResource (Resource.Drawable.transparent);
 
 				var text = view.FindViewById<TextView> (Resource.Id.activity_text);
 				text.Text = item._text;
@@ -215,40 +216,8 @@ namespace wave_android_uitest
 		}
 
 		private void LoadActivity() {
-			root.RemoveAllViews ();
-
-			var vActivity = LayoutInflater.Inflate (Resource.Layout.activity, null);
-
-			root.AddView (vActivity);
-
-//			var adaptor = new ArrayAdapter<LinearLayout> (this, Resource.Layout.tab1, Resource.Id.title);
-			var adaptor = new ActivityListAdapter (this, Resource.Layout.activity_list_item, Resource.Id.activity_text);
-			var lview = root.FindViewById<ListView> (Resource.Id.listView1);
-
-			Android.Text.SpannableString span = new Android.Text.SpannableString ("This is a sample spannable string");
-			span.SetSpan (new Reloader (this), 10, 15, Android.Text.SpanTypes.InclusiveInclusive);
-
-			lview.Adapter = adaptor;
-
-			int n = 0;
-			adaptor.AddItem (Resource.Drawable.excl_triangle, span);
-			adaptor.AddItem (Resource.Drawable.excl_triangle, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.excl_triangle, "This is sample text " + n++);
-
-			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-
-			adaptor.AddItem (0, "At Somepoint", true);
-
-			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-
-			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
-			ActionBar.Show ();
+			var intent = new Intent (this, typeof(ActivityActivity));
+			StartActivity (intent);
 		}
 
 		public void LoadStart() {

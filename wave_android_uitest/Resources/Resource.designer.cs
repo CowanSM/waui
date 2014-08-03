@@ -85,16 +85,19 @@ namespace wave_android_uitest
 			public const int red_check = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int u23 = 2130837512;
+			public const int transparent = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int u61 = 2130837513;
+			public const int u23 = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int u62 = 2130837514;
+			public const int u61 = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int white_button = 2130837515;
+			public const int u62 = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int white_button = 2130837516;
 			
 			static Drawable()
 			{
@@ -109,101 +112,107 @@ namespace wave_android_uitest
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f07001e
-			public const int action_activity = 2131165214;
+			// aapt resource value: 0x7f080020
+			public const int action_activity = 2131230752;
 			
-			// aapt resource value: 0x7f07001f
-			public const int action_my_life = 2131165215;
+			// aapt resource value: 0x7f080021
+			public const int action_my_life = 2131230753;
 			
-			// aapt resource value: 0x7f070002
-			public const int activity_image = 2131165186;
+			// aapt resource value: 0x7f080002
+			public const int activity_limage = 2131230722;
 			
-			// aapt resource value: 0x7f070000
-			public const int activity_root = 2131165184;
+			// aapt resource value: 0x7f080001
+			public const int activity_pager = 2131230721;
 			
-			// aapt resource value: 0x7f070004
-			public const int activity_text = 2131165188;
+			// aapt resource value: 0x7f080003
+			public const int activity_rimage = 2131230723;
 			
-			// aapt resource value: 0x7f070015
-			public const int body = 2131165205;
+			// aapt resource value: 0x7f080000
+			public const int activity_root = 2131230720;
 			
-			// aapt resource value: 0x7f070003
-			public const int drop_arrow = 2131165187;
+			// aapt resource value: 0x7f080004
+			public const int activity_text = 2131230724;
 			
-			// aapt resource value: 0x7f070009
-			public const int editText1 = 2131165193;
+			// aapt resource value: 0x7f080017
+			public const int body = 2131230743;
 			
-			// aapt resource value: 0x7f07000b
-			public const int forgot_password = 2131165195;
+			// aapt resource value: 0x7f08000b
+			public const int editText1 = 2131230731;
 			
-			// aapt resource value: 0x7f070013
-			public const int imageView1 = 2131165203;
+			// aapt resource value: 0x7f08000d
+			public const int forgot_password = 2131230733;
 			
-			// aapt resource value: 0x7f070001
-			public const int listView1 = 2131165185;
+			// aapt resource value: 0x7f080015
+			public const int imageView1 = 2131230741;
 			
-			// aapt resource value: 0x7f07001c
-			public const int login = 2131165212;
+			// aapt resource value: 0x7f08001e
+			public const int login = 2131230750;
 			
-			// aapt resource value: 0x7f07000a
-			public const int login_btn = 2131165194;
+			// aapt resource value: 0x7f08000c
+			public const int login_btn = 2131230732;
 			
-			// aapt resource value: 0x7f070006
-			public const int login_facebook = 2131165190;
+			// aapt resource value: 0x7f080008
+			public const int login_facebook = 2131230728;
 			
-			// aapt resource value: 0x7f070005
-			public const int login_layout = 2131165189;
+			// aapt resource value: 0x7f080007
+			public const int login_layout = 2131230727;
 			
-			// aapt resource value: 0x7f070011
-			public const int logo = 2131165201;
+			// aapt resource value: 0x7f080013
+			public const int logo = 2131230739;
 			
-			// aapt resource value: 0x7f070016
-			public const int pager = 2131165206;
+			// aapt resource value: 0x7f080005
+			public const int option_cb = 2131230725;
 			
-			// aapt resource value: 0x7f070017
-			public const int parent_view = 2131165207;
+			// aapt resource value: 0x7f080006
+			public const int option_text = 2131230726;
 			
-			// aapt resource value: 0x7f070019
-			public const int rb11 = 2131165209;
+			// aapt resource value: 0x7f080018
+			public const int pager = 2131230744;
 			
-			// aapt resource value: 0x7f07001a
-			public const int rb12 = 2131165210;
+			// aapt resource value: 0x7f080019
+			public const int parent_view = 2131230745;
 			
-			// aapt resource value: 0x7f07001b
-			public const int rb13 = 2131165211;
+			// aapt resource value: 0x7f08001b
+			public const int rb11 = 2131230747;
 			
-			// aapt resource value: 0x7f070018
-			public const int rg1 = 2131165208;
+			// aapt resource value: 0x7f08001c
+			public const int rb12 = 2131230748;
 			
-			// aapt resource value: 0x7f07000f
-			public const int root = 2131165199;
+			// aapt resource value: 0x7f08001d
+			public const int rb13 = 2131230749;
 			
-			// aapt resource value: 0x7f07000d
-			public const int sign_btn = 2131165197;
+			// aapt resource value: 0x7f08001a
+			public const int rg1 = 2131230746;
 			
-			// aapt resource value: 0x7f07000c
-			public const int sign_facebook = 2131165196;
+			// aapt resource value: 0x7f080011
+			public const int root = 2131230737;
 			
-			// aapt resource value: 0x7f07001d
-			public const int signup = 2131165213;
+			// aapt resource value: 0x7f08000f
+			public const int sign_btn = 2131230735;
 			
-			// aapt resource value: 0x7f070012
-			public const int spinner = 2131165202;
+			// aapt resource value: 0x7f08000e
+			public const int sign_facebook = 2131230734;
 			
-			// aapt resource value: 0x7f070010
-			public const int splash = 2131165200;
+			// aapt resource value: 0x7f08001f
+			public const int signup = 2131230751;
 			
-			// aapt resource value: 0x7f070007
-			public const int textView1 = 2131165191;
+			// aapt resource value: 0x7f080014
+			public const int spinner = 2131230740;
 			
-			// aapt resource value: 0x7f070008
-			public const int textView2 = 2131165192;
+			// aapt resource value: 0x7f080012
+			public const int splash = 2131230738;
 			
-			// aapt resource value: 0x7f07000e
-			public const int textView3 = 2131165198;
+			// aapt resource value: 0x7f080009
+			public const int textView1 = 2131230729;
 			
-			// aapt resource value: 0x7f070014
-			public const int title = 2131165204;
+			// aapt resource value: 0x7f08000a
+			public const int textView2 = 2131230730;
+			
+			// aapt resource value: 0x7f080010
+			public const int textView3 = 2131230736;
+			
+			// aapt resource value: 0x7f080016
+			public const int title = 2131230742;
 			
 			static Id()
 			{
@@ -211,6 +220,22 @@ namespace wave_android_uitest
 			}
 			
 			private Id()
+			{
+			}
+		}
+		
+		public partial class Integer
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int small_text = 2131034112;
+			
+			static Integer()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Integer()
 			{
 			}
 		}
@@ -225,22 +250,25 @@ namespace wave_android_uitest
 			public const int activity_list_item = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int login = 2130903042;
+			public const int activity_option_item = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int signup = 2130903043;
+			public const int login = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int splash = 2130903044;
+			public const int signup = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int tab1 = 2130903045;
+			public const int splash = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int test2_layout = 2130903046;
+			public const int tab1 = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int test_layout = 2130903047;
+			public const int test2_layout = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int test_layout = 2130903048;
 			
 			static Layout()
 			{
@@ -255,8 +283,8 @@ namespace wave_android_uitest
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int activity_actions = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int activity_actions = 2131165184;
 			
 			static Menu()
 			{
@@ -271,17 +299,17 @@ namespace wave_android_uitest
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050002
-			public const int activity_action = 2131034114;
+			// aapt resource value: 0x7f060002
+			public const int activity_action = 2131099650;
 			
-			// aapt resource value: 0x7f050001
-			public const int app_name = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int app_name = 2131099649;
 			
-			// aapt resource value: 0x7f050000
-			public const int hello = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int hello = 2131099648;
 			
-			// aapt resource value: 0x7f050003
-			public const int my_life_action = 2131034115;
+			// aapt resource value: 0x7f060003
+			public const int my_life_action = 2131099651;
 			
 			static String()
 			{

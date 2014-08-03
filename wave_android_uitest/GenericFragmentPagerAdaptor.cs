@@ -36,6 +36,21 @@ namespace wave_android_uitest
 			_fragmentList.Add(new GenericViewPagerFragment(view));
 		}
 	}
+
+	public class GenericPageListener : ViewPager.SimpleOnPageChangeListener {
+		private ActionBar _bar;
+		public GenericPageListener(ActionBar bar) {
+			_bar = bar;
+		}
+
+		public override void OnPageSelected (int position)
+		{
+			if (_bar.NavigationMode == ActionBarNavigationMode.Tabs) {
+				_bar.SetSelectedNavigationItem (position);
+			}
+		}
+	}
+
 	public class ViewPageListenerForActionBar : ViewPager.SimpleOnPageChangeListener
 	{
 		private ActionBar _bar;

@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GenericViewPagerFragment.cs" />
     <Compile Include="GenericFragmentPagerAdaptor.cs" />
+    <Compile Include="ActivityActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -84,6 +85,9 @@
     <AndroidResource Include="Resources\drawable\person_outline.png" />
     <AndroidResource Include="Resources\drawable\red_check.png" />
     <AndroidResource Include="Resources\drawable\down_arrow.PNG" />
+    <AndroidResource Include="Resources\drawable\transparent.png" />
+    <AndroidResource Include="Resources\layout\activity_option_item.xml" />
+    <AndroidResource Include="Resources\values\integer.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
