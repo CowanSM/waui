@@ -161,80 +161,21 @@ namespace wave_android_uitest {
 		}
 	}
 
-						/*
-	public class OptionCheckBoxAdapter : ArrayAdapter {
-		private int _layout;
-		private LayoutInflater _inflater;
-		private List<Item> _items;
-
-		private struct Item {
-			public string text;
-			public bool divider;
-			public Action<bool> ClickEvent;
-		}
-
-		public OptionCheckBoxAdapter(Context context, int layoutRes, LayoutInflater inflater) :
-		base (context, 0) {
-			_layout = layoutRes;
-			_inflater = inflater;
-			_items = new List<Item> ();
-
-		}
-
-		public void AddOption(string text, Action<bool> clickEvent, bool divider = false) {
-			var item = new Item () {
-				text = text,
-				divider = divider,
-				ClickEvent = clickEvent
-			};
-
-			_items.Add (item);
-
-			this.Add ("");
-		}
-
-		public override View GetView (int position, View convertView, ViewGroup parent)
-		{
-			View view;
-			if (convertView != null) {
-				view = convertView;
-			} else {
-				view = _inflater.Inflate (_layout, parent, false);
-			}
-
-			return BindData (view, position);
-		}
-
-		private View BindData (View view, int position) {
-			var item = _items [position];
-			var cb = view.FindViewById<CheckBox> (Resource.Id.option_cb);
-			cb.Focusable = false;
-			cb.FocusableInTouchMode = false;
-
-			if (item.divider) {
-				cb.SetButtonDrawable (Resource.Drawable.transparent);
-				cb.SetOnCheckedChangeListener (null);
-			} else {
-				cb.SetButtonDrawable (Android.Resource.Drawable.CheckboxOffBackground);
-				// handle clicking the checkbox
-				cb.SetOnCheckedChangeListener (new CheckChangeListener (item.ClickEvent));
-			}
-
-			cb.SetText (item.text, TextView.BufferType.Normal);
-
-			return view;
-		}
-	}
-	*/
-
 	// class to start an activity to show a person
 	public class PersonSpan : Android.Text.Style.ClickableSpan {
+		private Action Click;
+
+		public PersonSpan(Action clickAction) {
+			Click = clickAction;
+		}
 
 		#region implemented abstract members of ClickableSpan
 
 		public override void OnClick (View widget)
 		{
-			throw new NotImplementedException ();
+			if (Click != null) {
+				Click ();
+			}
 		}
 
 		#endregion
@@ -244,6 +185,33 @@ namespace wave_android_uitest {
 	public class ActivityActivity : FragmentActivity {
 		private ListView _activityList, _groupList, _optionList;
 		private FilterOptions _filterOptions;
+
+		public override bool OnCreateOptionsMenu (IMenu menu) {
+			MenuInflater.Inflate (Resource.Menu.activity_actions, menu);
+			return base.OnCreateOptionsMenu (menu);
+		}
+
+		public override bool OnOptionsItemSelected (IMenuItem item)
+		{
+			switch (item.ItemId) {
+				case Resource.Id.action_activity:
+					// do nothing
+					break;
+				case Resource.Id.action_challenges:
+					Finish ();
+					break;
+				case Resource.Id.action_my_life:
+					Finish ();
+					break;
+				case Resource.Id.action_people:
+					Finish ();
+					break;
+				default:
+					break;
+			}
+
+			return base.OnOptionsItemSelected (item);
+		}
 
 		protected override void OnCreate (Bundle bundle) {
 			base.OnCreate (bundle);
@@ -266,35 +234,22 @@ namespace wave_android_uitest {
 			var adaptor = new GenericFragmentPagerAdaptor(SupportFragmentManager);
 
 			adaptor.AddFragmentView ((i, v, b) => {
-				return _groupList;
-			});
-
-			adaptor.AddFragmentView ((i, v, b) => {
-				var listAdaptor = new ActivityListAdapter (this, Resource.Layout.activity_list_item, Resource.Id.activity_text);
+				var listAdaptor = new ActivityListAdapter (this, Resource.Layout.activity_list_item, Resource.Id.activity_text1);
 				_activityList.Adapter = listAdaptor;
 
 				/* Populate activity list here... */
-				Android.Text.SpannableString span = new Android.Text.SpannableString ("This is a sample spannable string");
-				span.SetSpan (new PersonSpan(), 10, 16, Android.Text.SpanTypes.InclusiveInclusive);
-				span.SetSpan (new PersonSpan(), 27, 33, Android.Text.SpanTypes.InclusiveInclusive);
-				int n = 0;
-				listAdaptor.AddItem (Resource.Drawable.excl_triangle, span);
-				listAdaptor.AddItem (Resource.Drawable.excl_triangle, "This is sample text " + n++);
-				listAdaptor.AddItem (Resource.Drawable.excl_triangle, "This is sample text " + n++);
-
-				listAdaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-				listAdaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-				listAdaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-
-				listAdaptor.AddItem (0, "At Somepoint", true);
-
-				listAdaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-				listAdaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-				listAdaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-
-				listAdaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
-				listAdaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
-				listAdaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
+				Android.Text.SpannableString span = new Android.Text.SpannableString ("Oscar Bluth challenged Lucille Bluth.");
+				span.SetSpan (new PersonSpan(() => {
+					var intent = new Intent(BaseContext, typeof(PersonActivity));
+					intent.PutExtra("person_name", "Oscar Bluth");
+					StartActivity(intent);
+				}), 0, 10, Android.Text.SpanTypes.InclusiveInclusive);
+				span.SetSpan (new PersonSpan(() => {
+					var intent = new Intent(BaseContext, typeof(PersonActivity));
+					intent.PutExtra("person_name", "Lucille Bluth");
+					StartActivity(intent);
+				}), 23, 35, Android.Text.SpanTypes.InclusiveInclusive);
+				listAdaptor.AddItem(Resource.Drawable.person_outline, Resource.Drawable.person_outline, span, "Most steps in 2 hours. Bet: Dinner and drinks", "5 min ago");
 				/* * * * * * * * * * * * */
 
 				return _activityList;
@@ -427,50 +382,15 @@ namespace wave_android_uitest {
 			pager.SetOnPageChangeListener (new GenericPageListener (ActionBar));
 			pager.OffscreenPageLimit = 3;
 
-			ActionBar.AddTab (pager.GetViewPageTab (ActionBar, "Groups"));
+//			ActionBar.AddTab (pager.GetViewPageTab (ActionBar, "Groups"));
 			ActionBar.AddTab (pager.GetViewPageTab (ActionBar, "Activity"));
 			ActionBar.AddTab (pager.GetViewPageTab (ActionBar, "Options"));
 
-			ActionBar.SelectTab (ActionBar.GetTabAt (1));
+//			ActionBar.SelectTab (ActionBar.GetTabAt (1));
 
-			/*
-			 * 
-			root.RemoveAllViews ();
-
-			var vActivity = LayoutInflater.Inflate (Resource.Layout.activity, null);
-
-			root.AddView (vActivity);
-
-//			var adaptor = new ArrayAdapter<LinearLayout> (this, Resource.Layout.tab1, Resource.Id.title);
-			var adaptor = new ActivityListAdapter (this, Resource.Layout.activity_list_item, Resource.Id.activity_text);
-			var lview = root.FindViewById<ListView> (Resource.Id.actvity_list);
-
-			Android.Text.SpannableString span = new Android.Text.SpannableString ("This is a sample spannable string");
-			span.SetSpan (new Reloader (this), 10, 16, Android.Text.SpanTypes.InclusiveInclusive);
-			span.SetSpan (new Reloader (this), 27, 33, Android.Text.SpanTypes.InclusiveInclusive);
-
-			lview.Adapter = adaptor;
-
-			int n = 0;
-			adaptor.AddItem (Resource.Drawable.excl_triangle, span);
-			adaptor.AddItem (Resource.Drawable.excl_triangle, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.excl_triangle, "This is sample text " + n++);
-
-			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.red_check, "This is sample text " + n++);
-
-			adaptor.AddItem (0, "At Somepoint", true);
-
-			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.green_check, "This is sample text " + n++);
-
-			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
-			adaptor.AddItem (Resource.Drawable.person_outline, "This is sample text " + n++);
+			ActionBar.SetTitle (Resource.String.actionbar_activity);
+			ActionBar.SetIcon (Resource.Drawable.transparent);
 			ActionBar.Show ();
-			*/
 		}
 	}
 }

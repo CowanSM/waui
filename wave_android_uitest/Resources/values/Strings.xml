@@ -4,4 +4,7 @@
 	<string name="app_name">wave_android_uitest</string>
 	<string name="activity_action">Activity</string>
 	<string name="my_life_action">My Life</string>
+	<string name="challenges_action">Challenges</string>
+	<string name="people_action">People</string>
+	<string name="actionbar_activity">Activity</string>
 </resources>

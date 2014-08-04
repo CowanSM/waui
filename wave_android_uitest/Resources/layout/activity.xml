@@ -1,13 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/activity_root"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-		android:id="@+id/activity_pager"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
-   	</android.support.v4.view.ViewPager>
-</LinearLayout>
+    android:background="@drawable/global_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_tab_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_activity"
+            android:layout_alignParentLeft="true" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_my_life"
+            android:layout_toRightOf="@id/tab_bar_activity" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_challenges"
+            android:layout_toRightOf="@id/tab_bar_my_life" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_people"
+            android:layout_toRightOf="@id/tab_bar_challenges" />
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/activity_tab_bar"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>

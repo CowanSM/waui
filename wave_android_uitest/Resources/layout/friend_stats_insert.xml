@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fsi_scroll"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fsi_parent_layout">
+            <TextView
+                android:text="January"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_view_title"
+                android:layout_alignParentTop="true"
+                android:textSize="@dimen/sm_text_month_label"
+                android:textColor="@android:color/white"
+                android:typeface="serif"
+                android:layout_marginTop="10dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dip" />
+            <Button
+                android:text="&lt; Newer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_newer_button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dip"
+                android:layout_marginLeft="5dip" />
+            <Button
+                android:text="Older &gt;"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_older_button"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dip"
+                android:layout_marginRight="5dip" />
+            <TextView
+                android:text="Steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_steps_label"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/fsi_newer_button"
+                android:textSize="@dimen/sm_text_label"
+                android:typeface="serif"
+                android:layout_marginTop="10dip"
+                android:layout_marginLeft="5dip" />
+            <TextView
+                android:text="##,###"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_steps_count"
+                android:inputType="none"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_value"
+                android:layout_below="@id/fsi_steps_label"
+                android:layout_marginLeft="10dip"
+                android:layout_marginBottom="15dip"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:text="Miles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_miles_label"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_label"
+                android:layout_below="@id/fsi_steps_count"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dip" />
+            <TextView
+                android:text="#.##"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_miles_count"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_value"
+                android:layout_below="@id/fsi_miles_label"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginBottom="15dip"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:text="Hours Slept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_hours_label"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_label"
+                android:layout_below="@id/fsi_miles_count"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dip" />
+            <TextView
+                android:text="###"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_hours_count"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_value"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/fsi_hours_label"
+                android:layout_marginLeft="10dip" />
+            <ImageView
+                android:src="@drawable/excl_triangle"
+                android:layout_width="wrap_content"
+                android:layout_height="220.0dp"
+                android:id="@+id/fsi_stat_divider"
+                android:cropToPadding="true"
+                android:layout_below="@id/fsi_view_title"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:text="Your Steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_user_step_label"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_label"
+                android:layout_toRightOf="@id/fsi_stat_divider"
+                android:layout_below="@id/fsi_older_button"
+                android:layout_marginTop="10dip" />
+            <ImageView
+                android:src="@drawable/graph_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="178.5dp"
+                android:id="@+id/fsi_graph_placeholder"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginLeft="5dip"
+                android:layout_below="@id/fsi_hours_count" />
+            <TextView
+                android:text="##,###"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_user_step_count"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_value"
+                android:textColor="@android:color/white"
+                android:layout_toRightOf="@id/fsi_stat_divider"
+                android:layout_below="@id/fsi_user_step_label"
+                android:layout_marginLeft="5dip"
+                android:layout_marginBottom="15dip" />
+            <TextView
+                android:text="Your Miles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_user_mile_label"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_label"
+                android:layout_toRightOf="@id/fsi_stat_divider"
+                android:layout_below="@id/fsi_user_step_count" />
+            <TextView
+                android:text="#.##"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_user_mile_count"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_value"
+                android:textColor="@android:color/white"
+                android:layout_toRightOf="@id/fsi_stat_divider"
+                android:layout_below="@id/fsi_user_mile_label"
+                android:layout_marginLeft="5dip"
+                android:layout_marginBottom="15dip" />
+            <TextView
+                android:text="Your Hours Slept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_user_hour_label"
+                android:typeface="serif"
+                android:textSize="15dip"
+                android:layout_below="@id/fsi_user_mile_count"
+                android:layout_toRightOf="@id/fsi_stat_divider" />
+            <TextView
+                android:text="###"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsi_user_hour_count"
+                android:typeface="serif"
+                android:textSize="@dimen/sm_text_value"
+                android:layout_toRightOf="@id/fsi_stat_divider"
+                android:layout_below="@id/fsi_user_hour_label"
+                android:layout_marginLeft="5dip"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

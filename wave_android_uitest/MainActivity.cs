@@ -33,10 +33,10 @@ namespace wave_android_uitest
 		int _nextId;
 
 		private struct ListItem {
-			public int _id, _imageResource;
-			public string _text;
+			public int _id, _imageResourceLeft, _imageResourceRight;
+			public string _topText, _bottomText, _timeText;
 			public bool _divider;
-			public Android.Text.SpannableString _sequence;
+			public Android.Text.SpannableString _topSequence;
 		}
 
 		public ActivityListAdapter(Context context, int layoutId, int textViewId) :
@@ -48,27 +48,33 @@ namespace wave_android_uitest
 			_nextId = 0;
 		}
 
-		public void AddItem(int imageResource, string text, bool divider = false) {
+		public void AddItem(int imageResourceLeft, int imageResourceRight, string topText, string bottomText, string time, bool divider = false) {
 			_list.Add (new ListItem () {
 				_id = _nextId++,
-				_text = text,
-				_imageResource = imageResource,
+				_topText = topText,
+				_bottomText = bottomText,
+				_timeText = time,
+				_imageResourceLeft = imageResourceLeft,
+				_imageResourceRight = imageResourceRight,
 				_divider = divider
 			});
 
-			this.Add (text);
+			this.Add (topText);
 		}
 
-		public void AddItem(int imageResource, Android.Text.SpannableString sstring) {
+		public void AddItem(int imageResourceLeft, int imageResRight, Android.Text.SpannableString topString, string bottomString, string time) {
 			_list.Add (new ListItem () {
 				_id = _nextId++,
-				_text = string.Empty,
-				_imageResource = imageResource,
+				_topText = string.Empty,
+				_bottomText = bottomString,
+				_timeText = time,
+				_imageResourceLeft = imageResourceLeft,
+				_imageResourceRight = imageResRight,
 				_divider = false,
-				_sequence = sstring
+				_topSequence = topString
 			});
 
-			this.Add (sstring);
+			this.Add (topString);
 		}
 
 		public override View GetView (int position, View convertView, ViewGroup parent)
@@ -88,44 +94,18 @@ namespace wave_android_uitest
 		{
 			var item = _list [position];
 
-			if (!item._divider) {
-				var image = view.FindViewById<ImageView> (Resource.Id.activity_limage);
-				image.SetImageResource (item._imageResource);
+			var image = view.FindViewById<ImageView> (Resource.Id.activity_limage);
+			image.SetImageResource (item._imageResourceLeft);
 
-				var text = view.FindViewById<TextView> (Resource.Id.activity_text);
-				if (!string.IsNullOrEmpty (item._text)) {
-					text.Text = item._text;
-				} else {
-					text.SetLinkTextColor (Android.Graphics.Color.White);
-					text.TextFormatted = item._sequence;
-					text.MovementMethod = new Android.Text.Method.LinkMovementMethod ();
-				}
-				text.Gravity = GravityFlags.Center;
-				text.SetTextColor (Android.Graphics.Color.White);
-				var tParams = new RelativeLayout.LayoutParams (RelativeLayout.LayoutParams.FillParent, RelativeLayout.LayoutParams.WrapContent);
-				tParams.AddRule (LayoutRules.CenterInParent);
-				text.LayoutParameters = tParams;
-
-				var arrow = view.FindViewById<ImageView> (Resource.Id.activity_rimage);
-				arrow.SetImageResource (Resource.Drawable.down_arrow);
-
-				view.SetBackgroundColor (Android.Graphics.Color.Black);
+			var text1 = view.FindViewById<TextView> (Resource.Id.activity_text1);
+			if (!string.IsNullOrEmpty (item._topText)) {
+				text1.Text = item._topText;
 			} else {
-				var image = view.FindViewById<ImageView> (Resource.Id.activity_limage);
-				image.SetImageResource (Resource.Drawable.transparent);
-				var arrow = view.FindViewById<ImageView> (Resource.Id.activity_rimage);
-				arrow.SetImageResource (Resource.Drawable.transparent);
-
-				var text = view.FindViewById<TextView> (Resource.Id.activity_text);
-				text.Text = item._text;
-				text.Gravity = GravityFlags.Left;
-				text.SetTextColor (Android.Graphics.Color.White);
-				var tParams = new RelativeLayout.LayoutParams (RelativeLayout.LayoutParams.MatchParent, RelativeLayout.LayoutParams.WrapContent);
-				tParams.AddRule (LayoutRules.AlignParentLeft);
-				text.LayoutParameters = tParams;
-
-				view.SetBackgroundColor (Android.Graphics.Color.SlateGray);
+				text1.SetLinkTextColor (Android.Graphics.Color.White);
+				text1.TextFormatted = item._topSequence;
+				text1.MovementMethod = new Android.Text.Method.LinkMovementMethod ();
 			}
+			text1.Gravity = GravityFlags.Left;
 
 			return view;
 		}

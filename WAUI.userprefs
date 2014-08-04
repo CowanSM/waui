@@ -1,22 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.galaxy_nexus" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="wave_android_uitest\ActivityActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.nexus_5" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="wave_android_uitest\MainActivity.cs">
     <Files>
-      <File FileName="wave_android_uitest\MainActivity.cs" Line="267" Column="58" />
-      <File FileName="wave_android_uitest\ActivityActivity.cs" Line="52" Column="39" />
-      <File FileName="wave_android_uitest\Resources\layout\test2_layout.xml" Line="6" Column="2" />
-      <File FileName="wave_android_uitest\Resources\layout\activity.xml" Line="9" Column="34" />
-      <File FileName="wave_android_uitest\Resources\layout\activity_list_item.xml" Line="30" Column="57" />
-      <File FileName="wave_android_uitest\GenericFragmentPagerAdaptor.cs" Line="49" Column="47" />
+      <File FileName="wave_android_uitest\PersonActivity.cs" Line="83" Column="27" />
+      <File FileName="wave_android_uitest\MainActivity.cs" Line="106" Column="74" />
+      <File FileName="wave_android_uitest\ActivityActivity.cs" Line="252" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="wave_android_uitest" expanded="True">
+            <Node name="Properties" expanded="True" />
             <Node name="Resources" expanded="True">
               <Node name="layout" expanded="True" />
+              <Node name="menu" expanded="True" />
+              <Node name="values" expanded="True" />
             </Node>
-            <Node name="ActivityActivity.cs" selected="True" />
+            <Node name="MainActivity.cs" selected="True" />
           </Node>
         </State>
       </Pad>
