@@ -1,23 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.014FD82213013014" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="wave_android_uitest\ActivityListAdapter.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.nexus_5" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="wave_android_uitest\TabBarFragment.cs" Line="65" Column="57" />
-      <File FileName="wave_android_uitest\Activities\SubPrimaryActivity.cs" Line="24" Column="1" />
-      <File FileName="wave_android_uitest\Activities\MainActivity.cs" Line="28" Column="45" />
-      <File FileName="wave_android_uitest\Activities\ActivityActivity.cs" Line="244" Column="43" />
-      <File FileName="wave_android_uitest\ActivityListAdapter.cs" Line="41" Column="14" />
+      <File FileName="wave_android_uitest\Activities\MyLifeActivity.cs" Line="32" Column="81" />
+      <File FileName="wave_android_uitest\Activities\ActivityActivity.cs" Line="216" Column="27" />
+      <File FileName="wave_android_uitest\TabBarFragment.cs" Line="34" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="wave_android_uitest" expanded="True">
-            <Node name="Activities" expanded="True" />
+            <Node name="Activities" expanded="True">
+              <Node name="MyLifeActivity.cs" selected="True" />
+            </Node>
             <Node name="Resources" expanded="True">
               <Node name="layout" expanded="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
