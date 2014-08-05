@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/my_life_root_layout"
+    android:background="@drawable/global_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_life_header" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_life_pager_parent"
+        android:layout_below="@id/my_life_header">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/my_life_month_bar"
+            android:paddingTop="4dip"
+            android:paddingRight="8dip"
+            android:paddingBottom="4dip"
+            android:paddingLeft="8dip"
+            android:layout_alignParentTop="true">
+            <ImageView
+                android:src="@drawable/arrow_filled"
+                android:layout_width="24.6dp"
+                android:layout_height="16.9dp"
+                android:id="@+id/my_life_lt_arrow"
+                android:scaleType="centerInside"
+                android:rotationY="180.0" />
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:id="@+id/my_life_newer_text"
+                android:text="Newer"
+                android:layout_gravity="left" />
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/my_life_month_text"
+                android:text="JULY"
+                android:layout_weight="0.5"
+                android:gravity="center" />
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:id="@+id/my_life_older_text"
+                android:text="Older"
+                android:layout_gravity="right" />
+            <ImageView
+                android:src="@drawable/arrow_filled"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/my_life_gt_arrow" />
+        </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/my_life_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/my_life_month_bar" />
+    </RelativeLayout>
+</RelativeLayout>
