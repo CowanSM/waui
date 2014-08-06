@@ -3,8 +3,17 @@
 	<item android:id="@+id/action_activity"
 		android:icon="@drawable/Icon"
 		android:title="@string/activity_action"
-		waui:showAsAction="always|withText" />
+		android:showAsAction="ifRoom|withText" />
 	<item android:id="@+id/action_my_life"
-		android:icon="@drawable/Icon"
-		android:title="@string/my_life_action" />
+		android:icon="@drawable/my_life"
+		android:title="@string/my_life_action"
+		android:showAsAction="ifRoom|withText" />
+	<item android:id="@+id/action_challenges"
+		android:icon="@drawable/challenges"
+		android:title="@string/challenges_action"
+		android:showAsAction="ifRoom|withText" />
+	<item android:id="@+id/action_people"
+		android:icon="@drawable/people"
+		android:title="@string/people_action"
+		android:showAsAction="ifRoom|withText" />
 </menu>

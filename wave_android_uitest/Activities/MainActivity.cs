@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using Android.App;
 using Android.Content;
@@ -6,11 +7,110 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V4.View;
 using Android.Support.V4.App;
+using Android.Support.V4.View;
 
 namespace wave_android_uitest
 {
+	public class Reloader : Android.Text.Style.ClickableSpan {
+		MainActivity _activity;
+
+		public Reloader(MainActivity activity) {
+			_activity = activity;
+		}
+
+		public override void OnClick (View widget)
+		{
+			_activity.RunOnUiThread (_activity.LoadStart);
+		}
+	}
+
+//	public class ActivityListAdapter : ArrayAdapter {
+//		List<ListItem> _list;
+//		int _layoutResource;
+//		LayoutInflater _inflator;
+//
+//		int _nextId;
+//
+//		private struct ListItem {
+//			public int _id, _imageResourceLeft, _imageResourceRight;
+//			public string _topText, _bottomText, _timeText;
+//			public bool _divider;
+//			public Android.Text.SpannableString _topSequence;
+//		}
+//
+//		public ActivityListAdapter(Context context, int layoutId, int textViewId) :
+//		base (context, layoutId, textViewId){
+//			_list = new List<ListItem> ();
+//			_layoutResource = layoutId;
+//			_inflator = (LayoutInflater)context.GetSystemService (Context.LayoutInflaterService);
+//
+//			_nextId = 0;
+//		}
+//
+//		public void AddItem(int imageResourceLeft, int imageResourceRight, string topText, string bottomText, string time, bool divider = false) {
+//			_list.Add (new ListItem () {
+//				_id = _nextId++,
+//				_topText = topText,
+//				_bottomText = bottomText,
+//				_timeText = time,
+//				_imageResourceLeft = imageResourceLeft,
+//				_imageResourceRight = imageResourceRight,
+//				_divider = divider
+//			});
+//
+//			this.Add (topText);
+//		}
+//
+//		public void AddItem(int imageResourceLeft, int imageResRight, Android.Text.SpannableString topString, string bottomString, string time) {
+//			_list.Add (new ListItem () {
+//				_id = _nextId++,
+//				_topText = string.Empty,
+//				_bottomText = bottomString,
+//				_timeText = time,
+//				_imageResourceLeft = imageResourceLeft,
+//				_imageResourceRight = imageResRight,
+//				_divider = false,
+//				_topSequence = topString
+//			});
+//
+//			this.Add (topString);
+//		}
+//
+//		public override View GetView (int position, View convertView, ViewGroup parent)
+//		{
+//			View view;
+//
+//			if (convertView == null) {
+//				view = _inflator.Inflate (_layoutResource, parent, false);
+//			} else {
+//				view = convertView;
+//			}
+//
+//			return this.BindData (view, position);
+//		}
+//
+//		private View BindData (View view, int position)
+//		{
+//			var item = _list [position];
+//
+//			var image = view.FindViewById<ImageView> (Resource.Id.activity_limage);
+//			image.SetImageResource (item._imageResourceLeft);
+//
+//			var text1 = view.FindViewById<TextView> (Resource.Id.activity_text1);
+//			if (!string.IsNullOrEmpty (item._topText)) {
+//				text1.Text = item._topText;
+//			} else {
+//				text1.SetLinkTextColor (Android.Graphics.Color.White);
+//				text1.TextFormatted = item._topSequence;
+//				text1.MovementMethod = new Android.Text.Method.LinkMovementMethod ();
+//			}
+//			text1.Gravity = GravityFlags.Left;
+//
+//			return view;
+//		}
+//	}
+
 	public class AsyncUITimerTask : Java.Util.TimerTask {
 		private Action RunTask;
 		private Activity _activity;
@@ -66,6 +166,9 @@ namespace wave_android_uitest
 		private View splash;
 		private LinearLayout root;
 
+		// Wow ... this is hacky as shit...
+		public static System.Type NextActivity;
+
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{
 			MenuInflater.Inflate (Resource.Menu.activity_actions, menu);
@@ -75,6 +178,8 @@ namespace wave_android_uitest
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+
+			NextActivity = null;
 
 			ActionBar.Title = "";
 			ActionBar.Hide ();
@@ -89,23 +194,28 @@ namespace wave_android_uitest
 			SetContentView (lSplash);
 
 			Java.Util.Timer timer = new Java.Util.Timer ();
-			var task = new AsyncUITimerTask (this, LoadStart);
-//			var task = new AsyncUITimerTask (this, LoadActivity);
+//			var task = new AsyncUITimerTask (this, LoadStart);
+			var task = new AsyncUITimerTask (this, LoadActivity);
 
 			timer.Schedule (task, 5000);
 		}
 
-		private void LoadActivity() {
-			root.RemoveAllViews ();
-
-			var vActivity = LayoutInflater.Inflate (Resource.Layout.activity, null);
-
-			root.AddView (vActivity);
-
-			ActionBar.Show ();
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+			if (NextActivity != null) {
+				var intent = new Intent (this, NextActivity);
+				NextActivity = null;
+				StartActivity (intent);
+			}
 		}
 
-		private void LoadStart() {
+		private void LoadActivity() {
+			var intent = new Intent (this, typeof(ActivityActivity));
+			StartActivity (intent);
+		}
+
+		public void LoadStart() {
 //			root.RemoveView(splash);
 
 			root.RemoveAllViews ();

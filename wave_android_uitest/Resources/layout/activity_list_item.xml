@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dip">
+    <ImageView
+        android:src="@drawable/excl_triangle"
+        android:layout_width="62dip"
+        android:layout_height="62dip"
+        android:id="@+id/activity_limage"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:maxHeight="62dip"
+        android:layout_alignParentTop="true"
+        android:maxWidth="62dip" />
+    <ImageView
+        android:src="@drawable/person_outline"
+        android:layout_width="62dip"
+        android:layout_height="62dip"
+        android:id="@+id/activity_rimage"
+        android:layout_toRightOf="@id/activity_limage"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:maxWidth="62dip"
+        android:maxHeight="62dip" />
+    <TextView
+        android:text="5 min ago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_time"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#525252" />
+    <TextView
+        android:text="Oscar Bluth challenged Lucille Bluth."
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_text1"
+        android:gravity="left"
+        android:inputType="none"
+        style="@android:style/TextAppearance.Widget"
+        android:layout_toRightOf="@id/activity_rimage"
+        android:maxLines="2"
+        android:layout_toLeftOf="@id/activity_time"
+        android:layout_marginBottom="2dip"
+        android:layout_alignParentTop="true"
+        android:textColor="#262626"
+        android:textSize="20px"
+        android:typeface="serif" />
+    <TextView
+        android:text="Most steps in 2 hours. Bet: Dinner and drinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_text2"
+        android:layout_toRightOf="@id/activity_rimage"
+        android:maxLines="2"
+        android:typeface="serif"
+        style="@android:style/TextAppearance.Widget"
+        android:gravity="left"
+        android:layout_below="@id/activity_text1"
+        android:textColor="#262626"
+        android:textSize="20px" />
+</RelativeLayout>

@@ -2,6 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:waui="http://schemas.android.com/apk/Resources-auto" android:versionCode="1" android:versionName="1.0" package="wave_android_uitest.wave_android_uitest">
 	<uses-sdk android:minSdkVersion="14" />
 	<application android:label="app"
-		waui:uiOptions="splitActionBarWhenNarrow" />
+		uiOptions="splitActionBarWhenNarrow" />
 
 </manifest>

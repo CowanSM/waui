@@ -42,41 +42,99 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Mono.Android.Support.v4" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.2\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GenericViewPagerFragment.cs" />
     <Compile Include="GenericFragmentPagerAdaptor.cs" />
+    <Compile Include="TabBarFragment.cs" />
+    <Compile Include="Activities\ActivityActivity.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\PersonActivity.cs" />
+    <Compile Include="Activities\SubPrimaryActivity.cs" />
+    <Compile Include="Activities\MyLifeActivity.cs" />
+    <Compile Include="Activities\ChallengesActivity.cs" />
+    <Compile Include="Activities\PeopleActivity.cs" />
+    <Compile Include="ActivityListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\menu\activity_actions.xml" />
+    <AndroidResource Include="Resources\values\style.xml" />
+    <AndroidResource Include="Resources\values\integer.xml" />
+    <AndroidResource Include="Resources\drawable\blue_button.png" />
+    <AndroidResource Include="Resources\drawable\challenges.png" />
+    <AndroidResource Include="Resources\drawable\down_arrow.PNG" />
+    <AndroidResource Include="Resources\drawable\excl_triangle.png" />
+    <AndroidResource Include="Resources\drawable\global_bg.png" />
+    <AndroidResource Include="Resources\drawable\graph_placeholder.png" />
+    <AndroidResource Include="Resources\drawable\green_check.png" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
-    <AndroidResource Include="Resources\layout\test_layout.xml" />
-    <AndroidResource Include="Resources\layout\test2_layout.xml" />
-    <AndroidResource Include="Resources\layout\tab1.xml" />
+    <AndroidResource Include="Resources\drawable\my_life.png" />
+    <AndroidResource Include="Resources\drawable\people.png" />
+    <AndroidResource Include="Resources\drawable\person_outline.png" />
+    <AndroidResource Include="Resources\drawable\red_button.png" />
+    <AndroidResource Include="Resources\drawable\red_check.png" />
+    <AndroidResource Include="Resources\drawable\transparent.png" />
+    <AndroidResource Include="Resources\drawable\u23.png" />
     <AndroidResource Include="Resources\drawable\u61.png" />
     <AndroidResource Include="Resources\drawable\u62.png" />
-    <AndroidResource Include="Resources\values\dimens.xml" />
-    <AndroidResource Include="Resources\layout\splash.xml" />
-    <AndroidResource Include="Resources\drawable\u23.png" />
-    <AndroidResource Include="Resources\layout\login.xml" />
-    <AndroidResource Include="Resources\layout\signup.xml" />
-    <AndroidResource Include="Resources\drawable\blue_button.png" />
-    <AndroidResource Include="Resources\drawable\red_button.png" />
     <AndroidResource Include="Resources\drawable\white_button.png" />
     <AndroidResource Include="Resources\layout\activity.xml" />
-    <AndroidResource Include="Resources\menu\activity_actions.xml" />
+    <AndroidResource Include="Resources\layout\activity_list_item.xml" />
+    <AndroidResource Include="Resources\layout\activity_option_item.xml" />
+    <AndroidResource Include="Resources\layout\friend_stats.xml" />
+    <AndroidResource Include="Resources\layout\friend_stats_insert.xml" />
+    <AndroidResource Include="Resources\layout\login.xml" />
+    <AndroidResource Include="Resources\layout\signup.xml" />
+    <AndroidResource Include="Resources\layout\splash.xml" />
+    <AndroidResource Include="Resources\layout\tab1.xml" />
+    <AndroidResource Include="Resources\layout\test_layout.xml" />
+    <AndroidResource Include="Resources\layout\test2_layout.xml" />
+    <AndroidResource Include="Resources\drawable\activity_norm.png" />
+    <AndroidResource Include="Resources\drawable\activity_sel.png" />
+    <AndroidResource Include="Resources\drawable\challenges_norm.png" />
+    <AndroidResource Include="Resources\drawable\challenges_sel.png" />
+    <AndroidResource Include="Resources\drawable\mylife_norm.png" />
+    <AndroidResource Include="Resources\drawable\mylife_sel.png" />
+    <AndroidResource Include="Resources\drawable\people_norm.png" />
+    <AndroidResource Include="Resources\drawable\people_sel.png" />
+    <AndroidResource Include="Resources\drawable\ChallengesTab_Selected.png" />
+    <AndroidResource Include="Resources\drawable\ChallengesTab_Unselected.png" />
+    <AndroidResource Include="Resources\drawable\FriendsTab_Selected.png" />
+    <AndroidResource Include="Resources\drawable\FriendsTab_Unselected.png" />
+    <AndroidResource Include="Resources\drawable\ActivityTab_Selected.png" />
+    <AndroidResource Include="Resources\drawable\ActivityTab_Unselected.png" />
+    <AndroidResource Include="Resources\drawable\CalendarTab_Selected.png" />
+    <AndroidResource Include="Resources\drawable\CalendarTab_Unselected.png" />
+    <AndroidResource Include="Resources\drawable\ActivityTab_Selected2.png" />
+    <AndroidResource Include="Resources\drawable\ActivityTab_Unselected2.png" />
+    <AndroidResource Include="Resources\drawable\CalendarTab_Selected2.png" />
+    <AndroidResource Include="Resources\drawable\CalendarTab_Unselected2.png" />
+    <AndroidResource Include="Resources\drawable\ChallengesTab_Selected2.png" />
+    <AndroidResource Include="Resources\drawable\ChallengesTab_Unselected2.png" />
+    <AndroidResource Include="Resources\drawable\FriendsTab_Selected2.png" />
+    <AndroidResource Include="Resources\drawable\FriendsTab_Unselected2.png" />
+    <AndroidResource Include="Resources\layout\tab_bar.xml" />
+    <AndroidResource Include="Resources\layout\my_life.xml" />
+    <AndroidResource Include="Resources\drawable\arrow_filled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\layout\" />
+    <Folder Include="Activities\" />
   </ItemGroup>
 </Project>

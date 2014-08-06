@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/activity_tab_bar"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:scaleY="0.75">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/tab_bar_activity_layout"
+        android:layout_weight="0.25"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants">
+        <ImageView
+            android:src="@drawable/ActivityTab_Unselected2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_activity_image"
+            android:layout_gravity="center"
+            android:focusable="false"
+            android:clickable="false"
+            android:scaleType="center" />
+        <TextView
+            android:text="ACTIVITY"
+            android:id="@+id/tab_bar_activity_text"
+            android:gravity="center"
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="none"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:translationX="0dp"
+            android:translationY="28dip" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/tab_bar_my_life_layout"
+        android:layout_marginLeft="8dip"
+        android:clickable="true"
+        android:layout_weight="0.25">
+        <ImageView
+            android:src="@drawable/CalendarTab_Unselected2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_my_life_image"
+            android:layout_gravity="center"
+            android:scaleType="center" />
+        <TextView
+            android:text="MY LIFE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_my_life_text"
+            android:gravity="center"
+            android:textScaleX="0.8"
+            android:layout_gravity="center"
+            android:translationY="28dip" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_bar_challenges_layout"
+        android:layout_weight="0.25"
+        android:layout_marginLeft="8dip"
+        android:clickable="true"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+        <ImageView
+            android:src="@drawable/ChallengesTab_Unselected2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_challenge_image"
+            android:layout_gravity="center"
+            android:scaleType="center" />
+        <TextView
+            android:text="CHALLENGES"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_challenge_text"
+            android:gravity="center"
+            android:textScaleX="0.8"
+            android:maxLines="1"
+            android:inputType="none"
+            android:layout_gravity="center"
+            android:translationY="28dip" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_bar_people_layout"
+        android:layout_weight="0.25"
+        android:layout_marginLeft="8dip"
+        android:clickable="true">
+        <ImageView
+            android:src="@drawable/FriendsTab_Unselected2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_people_image"
+            android:layout_gravity="center"
+            android:scaleType="center" />
+        <TextView
+            android:text="  PEOPLE  "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_people_text"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textScaleX="0.8"
+            android:translationY="28dip" />
+    </FrameLayout>
+</LinearLayout>

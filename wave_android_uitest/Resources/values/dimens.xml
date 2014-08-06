@@ -1,4 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
-	<dimen name="sm_text_size">18sp</dimen>
+	<dimen name="sm_text_size">12dip</dimen>
+	<dimen name="sm_text_label">16dip</dimen>
+	<dimen name="sm_text_value">28dip</dimen>
+	<dimen name="sm_text_month_label">24dip</dimen>
+	<dimen name="text_filter">16px</dimen>
+	<dimen name="text_name">24px</dimen>
 </resources>

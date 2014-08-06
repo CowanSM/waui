@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/friend_stats_layout">
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="385dip"
+        android:id="@+id/fs_pager" ></android.support.v4.view.ViewPager>
+    <Button
+        android:text="Challenge or Accept Challenge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fs_challenge_button"
+        android:layout_marginLeft="80dip"
+        android:layout_marginRight="80dip"
+        android:background="@drawable/white_button"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sm_text_size"
+        android:layout_marginBottom="15dip"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

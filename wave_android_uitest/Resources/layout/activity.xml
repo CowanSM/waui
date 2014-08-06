@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:id="@+id/activity_root"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <TextView
-        android:text="Activity Screen"
+    android:background="@drawable/global_bg">
+<!--
+    <fragment
+    	android:id="@+id/activity_tab_bar_fragment"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentBottom="true"
+    	class="wave_android_uitest.TabBarFragment" />
+    	-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-</LinearLayout>
+        android:layout_alignParentTop="true" />
+</RelativeLayout>
