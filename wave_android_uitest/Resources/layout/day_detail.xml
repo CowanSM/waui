@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/day_detail_root">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/day_detail_bg_image"
+        android:src="@drawable/test_tile_bg"
+        android:scaleType="fitXY" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/day_detail_txt_layout">
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="43.6dp"
+            android:id="@+id/day_detail_header"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/HeaderBg"
+            android:paddingRight="8dip"
+            android:paddingLeft="8dip">
+            <ImageView
+                android:src="@drawable/arrow_filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/day_detail_right_arrow"
+                android:rotationY="180.0"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleX="0.5"
+                android:scaleY="0.5" />
+            <TextView
+                android:text="Jul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/day_detail_back_month"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/day_detail_right_arrow" />
+            <TextView
+                android:text="JULY 21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/day_detail_current_date"
+                android:textAllCaps="true"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:text="Photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/day_detail_photo_text"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_detail_step_count"
+            android:text="#,###"
+            android:textColor="@android:color/white"
+            android:textSize="76dip"
+            android:layout_marginBottom="20dip" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_detail_step_label"
+            android:text="STEPS"
+            android:layout_toRightOf="@id/day_detail_step_count"
+            android:textColor="@android:color/white"
+            android:textSize="20dip"
+            android:layout_marginBottom="20dip" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_detail_cal_count"
+            android:text="#,###"
+            android:layout_above="@id/day_detail_step_count"
+            android:textColor="@android:color/white"
+            android:textSize="30dip" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_detail_cal_label"
+            android:text="CAL"
+            android:layout_above="@id/day_detail_step_count"
+            android:layout_toRightOf="@id/day_detail_cal_count"
+            android:textColor="@android:color/white"
+            android:textSize="14dip" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_detail_mi_count"
+            android:text="#.##"
+            android:layout_above="@id/day_detail_cal_count"
+            android:textColor="@android:color/white"
+            android:textSize="30dip" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_detail_mi_label"
+            android:text="MI"
+            android:layout_toRightOf="@id/day_detail_mi_count"
+            android:layout_above="@id/day_detail_cal_count"
+            android:textColor="@android:color/white"
+            android:textSize="14dip" />
+    </RelativeLayout>
+</FrameLayout>

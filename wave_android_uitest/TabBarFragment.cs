@@ -34,7 +34,7 @@ namespace wave_android_uitest {
 			SetupButton (Resource.Id.tab_bar_activity_layout, Resource.Id.tab_bar_activity_text,
 				Resource.Id.tab_bar_activity_image, Resource.Drawable.ActivityTab_Selected2, _parentActivity is ActivityActivity);
 			SetupButton (Resource.Id.tab_bar_my_life_layout, Resource.Id.tab_bar_my_life_text,
-				Resource.Id.tab_bar_my_life_image, Resource.Drawable.CalendarTab_Selected2, _parentActivity is MyLifeActivity);
+                Resource.Id.tab_bar_my_life_image, Resource.Drawable.CalendarTab_Selected2, _parentActivity is MyLifeActivity || _parentActivity is DayDetailActivity);
 			SetupButton (Resource.Id.tab_bar_challenges_layout, Resource.Id.tab_bar_challenge_text,
 				Resource.Id.tab_bar_challenge_image, Resource.Drawable.ChallengesTab_Selected2, _parentActivity is ChallengesActivity);
 			SetupButton (Resource.Id.tab_bar_people_layout, Resource.Id.tab_bar_people_text,

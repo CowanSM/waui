@@ -402,8 +402,10 @@ namespace wave_android_uitest {
 
 //			ActionBar.SelectTab (ActionBar.GetTabAt (1));
 
-			ActionBar.SetTitle (Resource.String.actionbar_activity);
-			ActionBar.SetIcon (Resource.Drawable.transparent);
+//			ActionBar.SetTitle (Resource.String.actionbar_activity);
+//			ActionBar.SetIcon (Resource.Drawable.transparent);
+            ActionBar.SetDisplayShowTitleEnabled(false);
+            ActionBar.SetDisplayShowHomeEnabled(false);
 			ActionBar.Show ();
 		}
 	}

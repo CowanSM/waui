@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="95dip"
+    android:layout_height="95dip"
+    android:id="@+id/my_life_tile_root"
+    android:descendantFocusability="blocksDescendants"
+    android:clickable="true">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/my_life_tile_bg_image"
+        android:src="@drawable/global_bg"
+        android:layout_gravity="center"
+        android:scaleType="fitXY" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_life_tile_info">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_life_tile_fg_frame"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_life_tile_fg_image"
+                android:src="@drawable/dateBgCircle"
+                android:scaleType="fitCenter"
+                android:scaleX="0.5"
+                android:scaleY="0.5" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_life_tile_fg_text"
+                android:text="16"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black" />
+        </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#,###"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:id="@+id/my_life_tile_count_txt" />
+    </RelativeLayout>
+</FrameLayout>

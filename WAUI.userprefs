@@ -1,10 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.nexus_5" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.014FD82213013014" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="wave_android_uitest\Activities\MyLifeActivity.cs">
     <Files>
-      <File FileName="wave_android_uitest\Activities\MyLifeActivity.cs" Line="32" Column="81" />
-      <File FileName="wave_android_uitest\Activities\ActivityActivity.cs" Line="216" Column="27" />
-      <File FileName="wave_android_uitest\TabBarFragment.cs" Line="34" Column="46" />
+      <File FileName="wave_android_uitest\Activities\MyLifeActivity.cs" Line="9" Column="9" />
+      <File FileName="wave_android_uitest\TabBarFragment.cs" Line="2" Column="2" />
+      <File FileName="wave_android_uitest\CalendarPagerAdapter.cs" Line="19" Column="19" />
+      <File FileName="wave_android_uitest\CalendarPagerView.cs" Line="1" Column="1" />
+      <File FileName="wave_android_uitest\Resources\anim\in_from_left.xml" Line="7" Column="7" />
+      <File FileName="wave_android_uitest\Resources\anim\in_from_right.xml" Line="7" Column="7" />
+      <File FileName="wave_android_uitest\Resources\anim\out_to_left.xml" Line="7" Column="7" />
+      <File FileName="wave_android_uitest\Resources\anim\out_to_right.xml" Line="7" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,22 +18,32 @@
             <Node name="Activities" expanded="True">
               <Node name="MyLifeActivity.cs" selected="True" />
             </Node>
+            <Node name="Assets" expanded="True" />
             <Node name="Resources" expanded="True">
+              <Node name="anim" expanded="True" />
               <Node name="layout" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\cygwin\home\Leviathan-Work\development\xamarin\WAUI\wave_android_uitest\Activities\MyLifeActivity.cs" line="63" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="wave_android_uitest\GenericFragmentPagerAdaptor.cs" line="46" offsetX="320" offsetY="973" expression="_rGroup.CheckedRadioButtonId" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerAdapter.cs" line="88" offsetX="446" offsetY="1855" expression="day.day" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerAdapter.cs" line="88" offsetX="446" offsetY="1827" expression="position" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerView.cs" line="29" offsetX="996" offsetY="477" expression="difx" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerView.cs" line="31" offsetX="968" offsetY="516" expression="_swipeMinDistance" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerView.cs" line="31" offsetX="1201" offsetY="519" expression="_swipeThresholdVel" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerView.cs" line="31" offsetX="1197" offsetY="478" expression="velocityX" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerView.cs" line="30" offsetX="993" offsetY="439" expression="dify" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerAdapter.cs" line="93" offsetX="527" offsetY="1932" expression="day" liveUpdate="False" />
+    <Watch file="wave_android_uitest\CalendarPagerAdapter.cs" line="93" offsetX="926" offsetY="1936" expression="this._today" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.wave__android__uitest MonoForAntroid.PreferredDevice="4&quot; WVGA (Nexus S)" />
 </Properties>
