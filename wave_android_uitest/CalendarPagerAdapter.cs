@@ -54,6 +54,7 @@ namespace wave_android_uitest {
         private LayoutInflater _inflater;
         private CalendarItem _today, _selected;
         private List<CalendarItem> _list;
+        private Android.Content.Res.AssetManager _assets;
 
         public event Action<View> OnClick;
 
@@ -77,6 +78,7 @@ namespace wave_android_uitest {
             _selected = new CalendarItem(monthCalendar);
             _calendar.Set(CalendarField.DayOfMonth, 1);
             _inflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);
+            _assets = context.Assets;
         }
 
         #region implemented abstract members of BaseAdapter
@@ -110,6 +112,11 @@ namespace wave_android_uitest {
                         OnClick(view);
                     }
                 };
+                // setup fonts
+                var segui = Android.Graphics.Typeface.CreateFromAsset(_assets, "fonts/segoeui.ttf");
+
+                view.FindViewById<TextView>(Resource.Id.my_life_tile_fg_text).SetTypeface(segui, Android.Graphics.TypefaceStyle.Normal);
+                view.FindViewById<TextView>(Resource.Id.my_life_tile_count_txt).SetTypeface(segui, Android.Graphics.TypefaceStyle.Normal);
             }
 
             var txt = view.FindViewById<TextView>(Resource.Id.my_life_tile_fg_text);

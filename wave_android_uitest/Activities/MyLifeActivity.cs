@@ -17,6 +17,7 @@ namespace wave_android_uitest
 	public class MyLifeActivity : SubPrimaryActivity
 	{
         private bool _opponent = true;
+        private bool _calToggle = true;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -37,8 +38,24 @@ namespace wave_android_uitest
             transaction.Add(Resource.Id.my_life_pager, calendarFrag);
             transaction.Commit();
 
-            var pparent = FindViewById<ViewGroup>(Resource.Id.my_life_pager_parent);
+            var pparent = FindViewById<ViewGroup>(Resource.Id.my_life_calendar_switcher);
             ((RelativeLayout.LayoutParams)pparent.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.activity_tab_bar);
+
+            // setup stats toggle button
+            var btn = FindViewById<ImageView>(Resource.Id.my_life_calendar_toggle);
+            btn.Clickable = true;
+            btn.Click += (sender, e) => {
+                if (_calToggle) {
+                    // we are currently viewing the calendar, switch to stats
+                    btn.SetImageResource(Resource.Drawable.StatsButton);
+                    FindViewById<ViewSwitcher>(Resource.Id.my_life_calendar_switcher).ShowNext();
+                } else {
+                    // we are currently viewing stats, switch to the calendar
+                    btn.SetImageResource(Resource.Drawable.StatsIcon_Selected);
+                    FindViewById<ViewSwitcher>(Resource.Id.my_life_calendar_switcher).ShowPrevious();
+                }
+                _calToggle = !_calToggle;
+            };
 
             // setup fonts
             var gbook = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/GOTHAM_BOOK.TTF");
@@ -61,10 +78,12 @@ namespace wave_android_uitest
         private void HandleOnClick(View view) {
             try {
                 var txt = view.FindViewById<TextView>(Resource.Id.my_life_tile_fg_text);
-                var day = Int32.Parse(txt.Text);
+                var day = txt.Text;
+                txt = FindViewById<TextView>(Resource.Id.my_life_month_text);
+                var info = day + " - " + txt.Text;
 
                 var intent = new Intent(BaseContext, typeof(DayDetailActivity));
-                intent.PutExtra("dayOfMonth", day);
+                intent.PutExtra("dateText", info);
                 StartActivity(intent);
             } catch (Exception ex) {
                 throw ex;

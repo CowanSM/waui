@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/day_detail_bg_image"
-        android:src="@drawable/test_tile_bg"
+        android:src="@drawable/global_bg"
         android:scaleType="fitXY" />
     <RelativeLayout
         android:layout_width="match_parent"

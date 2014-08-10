@@ -218,28 +218,31 @@ namespace wave_android_uitest
 			public const int RemoveButton = 2130837542;
 			
 			// aapt resource value: 0x7f020027
-			public const int StatsIcon_Selected = 2130837543;
+			public const int StatsButton = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int test_tile_bg = 2130837544;
+			public const int StatsIcon_Selected = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int transparent = 2130837545;
+			public const int test_tile_bg = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int u23 = 2130837546;
+			public const int transparent = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int u61 = 2130837547;
+			public const int u23 = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int u62 = 2130837548;
+			public const int u61 = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int white_button = 2130837549;
+			public const int u62 = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int XMarkB = 2130837550;
+			public const int white_button = 2130837550;
+			
+			// aapt resource value: 0x7f02002f
+			public const int XMarkB = 2130837551;
 			
 			static Drawable()
 			{
@@ -254,17 +257,17 @@ namespace wave_android_uitest
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f09007b
-			public const int action_activity = 2131296379;
-			
 			// aapt resource value: 0x7f09007d
-			public const int action_challenges = 2131296381;
+			public const int action_activity = 2131296381;
 			
-			// aapt resource value: 0x7f09007c
-			public const int action_my_life = 2131296380;
+			// aapt resource value: 0x7f09007f
+			public const int action_challenges = 2131296383;
 			
 			// aapt resource value: 0x7f09007e
-			public const int action_people = 2131296382;
+			public const int action_my_life = 2131296382;
+			
+			// aapt resource value: 0x7f090080
+			public const int action_people = 2131296384;
 			
 			// aapt resource value: 0x7f090002
 			public const int activity_limage = 2131296258;
@@ -278,8 +281,8 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090000
 			public const int activity_root = 2131296256;
 			
-			// aapt resource value: 0x7f090066
-			public const int activity_tab_bar = 2131296358;
+			// aapt resource value: 0x7f090068
+			public const int activity_tab_bar = 2131296360;
 			
 			// aapt resource value: 0x7f090005
 			public const int activity_text1 = 2131296261;
@@ -290,8 +293,8 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090004
 			public const int activity_time = 2131296260;
 			
-			// aapt resource value: 0x7f090065
-			public const int body = 2131296357;
+			// aapt resource value: 0x7f090067
+			public const int body = 2131296359;
 			
 			// aapt resource value: 0x7f09000e
 			public const int day_detail_back_month = 2131296270;
@@ -407,11 +410,11 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f09001c
 			public const int fsi_view_title = 2131296284;
 			
-			// aapt resource value: 0x7f090063
-			public const int imageView1 = 2131296355;
+			// aapt resource value: 0x7f090065
+			public const int imageView1 = 2131296357;
 			
-			// aapt resource value: 0x7f090079
-			public const int login = 2131296377;
+			// aapt resource value: 0x7f09007b
+			public const int login = 2131296379;
 			
 			// aapt resource value: 0x7f090032
 			public const int login_btn = 2131296306;
@@ -422,14 +425,17 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f09002d
 			public const int login_layout = 2131296301;
 			
-			// aapt resource value: 0x7f090061
-			public const int logo = 2131296353;
+			// aapt resource value: 0x7f090063
+			public const int logo = 2131296355;
+			
+			// aapt resource value: 0x7f09004b
+			public const int my_life_calendar_switcher = 2131296331;
 			
 			// aapt resource value: 0x7f090044
 			public const int my_life_calendar_toggle = 2131296324;
 			
-			// aapt resource value: 0x7f090051
-			public const int my_life_gt_arrow = 2131296337;
+			// aapt resource value: 0x7f090052
+			public const int my_life_gt_arrow = 2131296338;
 			
 			// aapt resource value: 0x7f090036
 			public const int my_life_header = 2131296310;
@@ -440,20 +446,20 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090035
 			public const int my_life_header_frame = 2131296309;
 			
-			// aapt resource value: 0x7f09004d
-			public const int my_life_lt_arrow = 2131296333;
-			
-			// aapt resource value: 0x7f09004c
-			public const int my_life_month_bar = 2131296332;
-			
-			// aapt resource value: 0x7f09004f
-			public const int my_life_month_text = 2131296335;
-			
 			// aapt resource value: 0x7f09004e
-			public const int my_life_newer_text = 2131296334;
+			public const int my_life_lt_arrow = 2131296334;
+			
+			// aapt resource value: 0x7f09004d
+			public const int my_life_month_bar = 2131296333;
 			
 			// aapt resource value: 0x7f090050
-			public const int my_life_older_text = 2131296336;
+			public const int my_life_month_text = 2131296336;
+			
+			// aapt resource value: 0x7f09004f
+			public const int my_life_newer_text = 2131296335;
+			
+			// aapt resource value: 0x7f090051
+			public const int my_life_older_text = 2131296337;
 			
 			// aapt resource value: 0x7f09004a
 			public const int my_life_opponent_challenge_text = 2131296330;
@@ -470,41 +476,44 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090047
 			public const int my_life_opponent_right = 2131296327;
 			
-			// aapt resource value: 0x7f090054
-			public const int my_life_page_grid = 2131296340;
+			// aapt resource value: 0x7f090056
+			public const int my_life_page_grid = 2131296342;
+			
+			// aapt resource value: 0x7f090055
+			public const int my_life_page_root = 2131296341;
 			
 			// aapt resource value: 0x7f090053
-			public const int my_life_page_root = 2131296339;
+			public const int my_life_pager = 2131296339;
 			
-			// aapt resource value: 0x7f090052
-			public const int my_life_pager = 2131296338;
-			
-			// aapt resource value: 0x7f09004b
-			public const int my_life_pager_parent = 2131296331;
+			// aapt resource value: 0x7f09004c
+			public const int my_life_pager_parent = 2131296332;
 			
 			// aapt resource value: 0x7f090034
 			public const int my_life_root_layout = 2131296308;
 			
-			// aapt resource value: 0x7f090056
-			public const int my_life_tile_bg_image = 2131296342;
-			
-			// aapt resource value: 0x7f09005b
-			public const int my_life_tile_count_txt = 2131296347;
+			// aapt resource value: 0x7f090054
+			public const int my_life_stats_parent = 2131296340;
 			
 			// aapt resource value: 0x7f090058
-			public const int my_life_tile_fg_frame = 2131296344;
+			public const int my_life_tile_bg_image = 2131296344;
 			
-			// aapt resource value: 0x7f090059
-			public const int my_life_tile_fg_image = 2131296345;
+			// aapt resource value: 0x7f09005d
+			public const int my_life_tile_count_txt = 2131296349;
 			
 			// aapt resource value: 0x7f09005a
-			public const int my_life_tile_fg_text = 2131296346;
+			public const int my_life_tile_fg_frame = 2131296346;
+			
+			// aapt resource value: 0x7f09005b
+			public const int my_life_tile_fg_image = 2131296347;
+			
+			// aapt resource value: 0x7f09005c
+			public const int my_life_tile_fg_text = 2131296348;
+			
+			// aapt resource value: 0x7f090059
+			public const int my_life_tile_info = 2131296345;
 			
 			// aapt resource value: 0x7f090057
-			public const int my_life_tile_info = 2131296343;
-			
-			// aapt resource value: 0x7f090055
-			public const int my_life_tile_root = 2131296341;
+			public const int my_life_tile_root = 2131296343;
 			
 			// aapt resource value: 0x7f090040
 			public const int my_life_user_check_text = 2131296320;
@@ -551,77 +560,77 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090008
 			public const int option_text = 2131296264;
 			
-			// aapt resource value: 0x7f090073
-			public const int pager = 2131296371;
-			
-			// aapt resource value: 0x7f090074
-			public const int parent_view = 2131296372;
+			// aapt resource value: 0x7f090075
+			public const int pager = 2131296373;
 			
 			// aapt resource value: 0x7f090076
-			public const int rb11 = 2131296374;
-			
-			// aapt resource value: 0x7f090077
-			public const int rb12 = 2131296375;
+			public const int parent_view = 2131296374;
 			
 			// aapt resource value: 0x7f090078
-			public const int rb13 = 2131296376;
+			public const int rb11 = 2131296376;
 			
-			// aapt resource value: 0x7f090075
-			public const int rg1 = 2131296373;
-			
-			// aapt resource value: 0x7f09005f
-			public const int root = 2131296351;
-			
-			// aapt resource value: 0x7f09005d
-			public const int sign_btn = 2131296349;
-			
-			// aapt resource value: 0x7f09005c
-			public const int sign_facebook = 2131296348;
+			// aapt resource value: 0x7f090079
+			public const int rb12 = 2131296377;
 			
 			// aapt resource value: 0x7f09007a
-			public const int signup = 2131296378;
+			public const int rb13 = 2131296378;
+			
+			// aapt resource value: 0x7f090077
+			public const int rg1 = 2131296375;
+			
+			// aapt resource value: 0x7f090061
+			public const int root = 2131296353;
+			
+			// aapt resource value: 0x7f09005f
+			public const int sign_btn = 2131296351;
+			
+			// aapt resource value: 0x7f09005e
+			public const int sign_facebook = 2131296350;
+			
+			// aapt resource value: 0x7f09007c
+			public const int signup = 2131296380;
+			
+			// aapt resource value: 0x7f090064
+			public const int spinner = 2131296356;
 			
 			// aapt resource value: 0x7f090062
-			public const int spinner = 2131296354;
-			
-			// aapt resource value: 0x7f090060
-			public const int splash = 2131296352;
-			
-			// aapt resource value: 0x7f090068
-			public const int tab_bar_activity_image = 2131296360;
-			
-			// aapt resource value: 0x7f090067
-			public const int tab_bar_activity_layout = 2131296359;
-			
-			// aapt resource value: 0x7f090069
-			public const int tab_bar_activity_text = 2131296361;
-			
-			// aapt resource value: 0x7f09006e
-			public const int tab_bar_challenge_image = 2131296366;
-			
-			// aapt resource value: 0x7f09006f
-			public const int tab_bar_challenge_text = 2131296367;
-			
-			// aapt resource value: 0x7f09006d
-			public const int tab_bar_challenges_layout = 2131296365;
-			
-			// aapt resource value: 0x7f09006b
-			public const int tab_bar_my_life_image = 2131296363;
+			public const int splash = 2131296354;
 			
 			// aapt resource value: 0x7f09006a
-			public const int tab_bar_my_life_layout = 2131296362;
+			public const int tab_bar_activity_image = 2131296362;
 			
-			// aapt resource value: 0x7f09006c
-			public const int tab_bar_my_life_text = 2131296364;
+			// aapt resource value: 0x7f090069
+			public const int tab_bar_activity_layout = 2131296361;
 			
-			// aapt resource value: 0x7f090071
-			public const int tab_bar_people_image = 2131296369;
+			// aapt resource value: 0x7f09006b
+			public const int tab_bar_activity_text = 2131296363;
 			
 			// aapt resource value: 0x7f090070
-			public const int tab_bar_people_layout = 2131296368;
+			public const int tab_bar_challenge_image = 2131296368;
+			
+			// aapt resource value: 0x7f090071
+			public const int tab_bar_challenge_text = 2131296369;
+			
+			// aapt resource value: 0x7f09006f
+			public const int tab_bar_challenges_layout = 2131296367;
+			
+			// aapt resource value: 0x7f09006d
+			public const int tab_bar_my_life_image = 2131296365;
+			
+			// aapt resource value: 0x7f09006c
+			public const int tab_bar_my_life_layout = 2131296364;
+			
+			// aapt resource value: 0x7f09006e
+			public const int tab_bar_my_life_text = 2131296366;
+			
+			// aapt resource value: 0x7f090073
+			public const int tab_bar_people_image = 2131296371;
 			
 			// aapt resource value: 0x7f090072
-			public const int tab_bar_people_text = 2131296370;
+			public const int tab_bar_people_layout = 2131296370;
+			
+			// aapt resource value: 0x7f090074
+			public const int tab_bar_people_text = 2131296372;
 			
 			// aapt resource value: 0x7f09002f
 			public const int textView1 = 2131296303;
@@ -629,11 +638,11 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090030
 			public const int textView2 = 2131296304;
 			
-			// aapt resource value: 0x7f09005e
-			public const int textView3 = 2131296350;
+			// aapt resource value: 0x7f090060
+			public const int textView3 = 2131296352;
 			
-			// aapt resource value: 0x7f090064
-			public const int title = 2131296356;
+			// aapt resource value: 0x7f090066
+			public const int title = 2131296358;
 			
 			static Id()
 			{

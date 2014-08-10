@@ -20,6 +20,10 @@ namespace wave_android_uitest {
             // Create your application here
             SetContentView(Resource.Layout.day_detail);
 
+            var date = Intent.GetStringExtra("dateText");
+            var dayText = FindViewById<TextView>(Resource.Id.day_detail_current_date);
+            dayText.Text = date;
+
             // tab bar
             Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction ();
             TabBarFragment fragment = new TabBarFragment (this);
