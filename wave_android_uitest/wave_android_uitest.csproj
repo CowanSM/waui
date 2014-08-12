@@ -64,6 +64,9 @@
     <Compile Include="Activities\DayDetailActivity.cs" />
     <Compile Include="CalendarPagerAdapter.cs" />
     <Compile Include="CalendarPagerView.cs" />
+    <Compile Include="ChallengesPagerView.cs" />
+    <Compile Include="ChallengesAdapters.cs" />
+    <Compile Include="Activities\NewChallengeActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -145,6 +148,19 @@
     <AndroidResource Include="Resources\anim\out_to_left.xml" />
     <AndroidResource Include="Resources\anim\out_to_right.xml" />
     <AndroidResource Include="Resources\drawable\StatsButton.png" />
+    <AndroidResource Include="Resources\layout\challenges.xml" />
+    <AndroidResource Include="Resources\drawable\RedUpArrow.png" />
+    <AndroidResource Include="Resources\layout\challenges_item.xml" />
+    <AndroidResource Include="Resources\drawable\CheckMark.png" />
+    <AndroidResource Include="Resources\drawable\stopwatch.png" />
+    <AndroidResource Include="Resources\drawable\XMark.png" />
+    <AndroidResource Include="Resources\layout\new_challenge.xml" />
+    <AndroidResource Include="Resources\layout\user_row.xml" />
+    <AndroidResource Include="Resources\drawable\whiteCircle.png" />
+    <AndroidResource Include="Resources\layout\new_challenge_page_two.xml" />
+    <AndroidResource Include="Resources\layout\new_challenge_page_three.xml" />
+    <AndroidResource Include="Resources\layout\new_challenge_page_four.xml" />
+    <AndroidResource Include="Resources\drawable\SplashMovo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -154,6 +170,7 @@
     <Folder Include="Activities\" />
     <Folder Include="Assets\fonts\" />
     <Folder Include="Resources\anim\" />
+    <Folder Include="Assets\libs\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\segoeui.ttf" />
@@ -179,5 +196,11 @@
     <AndroidAsset Include="Assets\fonts\GOTHAM_THINITALIC.TTF" />
     <AndroidAsset Include="Assets\fonts\GOTHAM_ULTRA.TTF" />
     <AndroidAsset Include="Assets\fonts\GOTHAM_ULTRAITALIC.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GraphViewBinding\GraphViewBinding.csproj">
+      <Project>{21737B7B-E541-46B1-A064-7EB2458638AD}</Project>
+      <Name>GraphViewBinding</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

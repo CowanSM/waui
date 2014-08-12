@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/new_challenge_page_three_root"
+    android:background="@drawable/global_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_challenge_page_three_top"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_three_top_title"
+            android:text="What time will the challenge start?"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:padding="5dip" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_three_time_parent"
+            android:orientation="vertical" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_challenge_page_three_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/new_challenge_page_three_top">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_three_bottom_title"
+            android:layout_alignParentTop="true"
+            android:text="What date will the challenge start?"
+            android:padding="5dip"
+            android:textColor="@android:color/black"
+            android:background="@android:color/darker_gray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_three_date_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/new_challenge_page_three_bottom_title" />
+    </RelativeLayout>
+</RelativeLayout>

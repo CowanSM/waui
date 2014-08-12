@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/new_challenge_page_four_root"
+    android:background="@drawable/global_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_challenge_page_four_top"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_four_top_title"
+            android:text="What are you willing to bet?"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:padding="5dip" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_four_input"
+            android:text="Enter your wager. Be creative and hold'em to it!"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:minLines="4"
+            android:layout_marginBottom="100dip"
+            android:padding="10dip"
+            android:textIsSelectable="true"
+            android:editable="true" />
+        <Button
+            android:text="send challenge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_four_finished"
+            android:textAllCaps="true"
+            android:layout_marginRight="35dip"
+            android:layout_marginLeft="35dip"
+            android:background="@drawable/red_button" />
+    </LinearLayout>
+</RelativeLayout>

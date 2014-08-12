@@ -142,14 +142,14 @@
             <ImageView
                 android:src="@drawable/StatsIcon_Selected"
                 android:id="@+id/my_life_calendar_toggle"
-                android:scaleX=".5"
-                android:scaleY=".5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:translationY="6dip"
-                android:layout_alignBaseline="@id/my_life_user_info" />
+                android:layout_alignBaseline="@id/my_life_user_info"
+                android:scaleX=".8"
+                android:scaleY=".8" />
         </RelativeLayout>
         <ImageView
             android:layout_width="match_parent"
@@ -270,6 +270,243 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/my_life_stats_parent" />
+            android:id="@+id/my_life_stats_parent"
+            android:padding="5dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/my_life_stats_month_bar"
+                android:paddingTop="4dip"
+                android:paddingRight="8dip"
+                android:paddingBottom="4dip"
+                android:paddingLeft="8dip"
+                android:layout_alignParentTop="true">
+                <ImageView
+                    android:src="@drawable/arrow_filled"
+                    android:layout_width="24.6dp"
+                    android:layout_height="16.9dp"
+                    android:id="@+id/my_life_lt_arrow"
+                    android:scaleType="centerInside"
+                    android:rotationY="180.0" />
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/my_life_newer_text"
+                    android:text="Newer"
+                    android:layout_gravity="left"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/my_life_month_text"
+                    android:text="JULY"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/my_life_older_text"
+                    android:text="Older"
+                    android:layout_gravity="right"
+                    android:textColor="@android:color/black" />
+                <ImageView
+                    android:src="@drawable/arrow_filled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/my_life_gt_arrow" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_life_stats_button_layout"
+                android:layout_alignParentBottom="true"
+                android:weightSum="0.99">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/my_life_stats_steps_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.33"
+                    android:descendantFocusability="blocksDescendants"
+                    android:clickable="true">
+                    <ImageView
+                        android:src="@drawable/RedUpArrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_steps_arrow"
+                        android:layout_marginBottom="5dip"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6" />
+                    <TextView
+                        android:text="##,###"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_step_total"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="steps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_step_label"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dip"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="#,###"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_steps_avg"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="daily avg."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_steps_avg_label"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:inputType="none"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/my_life_stats_miles_layout"
+                    android:layout_weight="0.33"
+                    android:clickable="true"
+                    android:descendantFocusability="blocksDescendants">
+                    <ImageView
+                        android:src="@drawable/RedUpArrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_miles_arrow"
+                        android:layout_marginBottom="5dip"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:visibility="invisible" />
+                    <TextView
+                        android:text="##,###"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_miles_total"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="miles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_miles_label"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dip"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="#,###"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_miles_avg"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="daily avg."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_miles_avg_label"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:inputType="none"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/my_life_stats_calories_layout"
+                    android:layout_weight="0.33"
+                    android:clickable="true"
+                    android:descendantFocusability="blocksDescendants">
+                    <ImageView
+                        android:src="@drawable/RedUpArrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_cals_arrow"
+                        android:layout_marginBottom="5dip"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:visibility="invisible" />
+                    <TextView
+                        android:text="##,###"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_cals_total"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_stats_cals_label"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dip"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="#,###"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_cals_avg"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="daily avg."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/my_life_cals_avg_label"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:inputType="none"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/my_life_stats_graph_parent"
+                android:layout_above="@id/my_life_stats_button_layout"
+                android:layout_below="@id/my_life_stats_month_bar" />
+        </RelativeLayout>
     </ViewSwitcher>
 </RelativeLayout>

@@ -1,26 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.014FD82213013014" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="wave_android_uitest\Activities\MyLifeActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.galaxy_nexus" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="wave_android_uitest\Activities\NewChallengeActivity.cs">
     <Files>
-      <File FileName="wave_android_uitest\Activities\MyLifeActivity.cs" Line="9" Column="9" />
-      <File FileName="wave_android_uitest\TabBarFragment.cs" Line="2" Column="2" />
-      <File FileName="wave_android_uitest\CalendarPagerAdapter.cs" Line="19" Column="19" />
-      <File FileName="wave_android_uitest\CalendarPagerView.cs" Line="1" Column="1" />
-      <File FileName="wave_android_uitest\Resources\anim\in_from_left.xml" Line="7" Column="7" />
-      <File FileName="wave_android_uitest\Resources\anim\in_from_right.xml" Line="7" Column="7" />
-      <File FileName="wave_android_uitest\Resources\anim\out_to_left.xml" Line="7" Column="7" />
-      <File FileName="wave_android_uitest\Resources\anim\out_to_right.xml" Line="7" Column="7" />
+      <File FileName="wave_android_uitest\Activities\ChallengesActivity.cs" Line="52" Column="52" />
+      <File FileName="wave_android_uitest\ChallengesAdapters.cs" Line="42" Column="42" />
+      <File FileName="wave_android_uitest\Activities\NewChallengeActivity.cs" Line="59" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="wave_android_uitest" expanded="True">
+            <Node name="References" expanded="True" />
             <Node name="Activities" expanded="True">
-              <Node name="MyLifeActivity.cs" selected="True" />
+              <Node name="NewChallengeActivity.cs" selected="True" />
             </Node>
-            <Node name="Assets" expanded="True" />
+            <Node name="Properties" expanded="True" />
             <Node name="Resources" expanded="True">
-              <Node name="anim" expanded="True" />
               <Node name="layout" expanded="True" />
             </Node>
           </Node>
@@ -29,9 +24,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\cygwin\home\Leviathan-Work\development\xamarin\WAUI\wave_android_uitest\Activities\MyLifeActivity.cs" line="63" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="wave_android_uitest\GenericFragmentPagerAdaptor.cs" line="46" offsetX="320" offsetY="973" expression="_rGroup.CheckedRadioButtonId" liveUpdate="False" />
