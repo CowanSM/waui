@@ -47,13 +47,13 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/user_row_check"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginRight="5dip" />
         <ImageView
             android:src="@android:drawable/ic_menu_gallery"
             android:id="@+id/user_row_x"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="5dip" />
     </LinearLayout>
     <TextView
