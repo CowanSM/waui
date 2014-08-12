@@ -60,6 +60,13 @@
     <Compile Include="Activities\ChallengesActivity.cs" />
     <Compile Include="Activities\PeopleActivity.cs" />
     <Compile Include="ActivityListAdapter.cs" />
+    <Compile Include="MyLifeListAdapter.cs" />
+    <Compile Include="Activities\DayDetailActivity.cs" />
+    <Compile Include="CalendarPagerAdapter.cs" />
+    <Compile Include="CalendarPagerView.cs" />
+    <Compile Include="ChallengesPagerView.cs" />
+    <Compile Include="ChallengesAdapters.cs" />
+    <Compile Include="Activities\NewChallengeActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -110,14 +117,6 @@
     <AndroidResource Include="Resources\drawable\mylife_sel.png" />
     <AndroidResource Include="Resources\drawable\people_norm.png" />
     <AndroidResource Include="Resources\drawable\people_sel.png" />
-    <AndroidResource Include="Resources\drawable\ChallengesTab_Selected.png" />
-    <AndroidResource Include="Resources\drawable\ChallengesTab_Unselected.png" />
-    <AndroidResource Include="Resources\drawable\FriendsTab_Selected.png" />
-    <AndroidResource Include="Resources\drawable\FriendsTab_Unselected.png" />
-    <AndroidResource Include="Resources\drawable\ActivityTab_Selected.png" />
-    <AndroidResource Include="Resources\drawable\ActivityTab_Unselected.png" />
-    <AndroidResource Include="Resources\drawable\CalendarTab_Selected.png" />
-    <AndroidResource Include="Resources\drawable\CalendarTab_Unselected.png" />
     <AndroidResource Include="Resources\drawable\ActivityTab_Selected2.png" />
     <AndroidResource Include="Resources\drawable\ActivityTab_Unselected2.png" />
     <AndroidResource Include="Resources\drawable\CalendarTab_Selected2.png" />
@@ -129,6 +128,39 @@
     <AndroidResource Include="Resources\layout\tab_bar.xml" />
     <AndroidResource Include="Resources\layout\my_life.xml" />
     <AndroidResource Include="Resources\drawable\arrow_filled.png" />
+    <AndroidResource Include="Resources\drawable\LevelColoredCircle.png" />
+    <AndroidResource Include="Resources\drawable\LevelAmount.png" />
+    <AndroidResource Include="Resources\drawable\HeaderBg.png" />
+    <AndroidResource Include="Resources\drawable\dividerF.png" />
+    <AndroidResource Include="Resources\drawable\CheckMarkB.png" />
+    <AndroidResource Include="Resources\drawable\XMarkB.png" />
+    <AndroidResource Include="Resources\drawable\StatsIcon_Selected.png" />
+    <AndroidResource Include="Resources\layout\my_life_page.xml" />
+    <AndroidResource Include="Resources\layout\my_life_tile.xml" />
+    <AndroidResource Include="Resources\drawable\dateBgCircle.png" />
+    <AndroidResource Include="Resources\drawable\dateBgWide.png" />
+    <AndroidResource Include="Resources\drawable\test_tile_bg.png" />
+    <AndroidResource Include="Resources\layout\day_detail.xml" />
+    <AndroidResource Include="Resources\drawable\ChallengeButton.png" />
+    <AndroidResource Include="Resources\drawable\RemoveButton.png" />
+    <AndroidResource Include="Resources\anim\in_from_left.xml" />
+    <AndroidResource Include="Resources\anim\in_from_right.xml" />
+    <AndroidResource Include="Resources\anim\out_to_left.xml" />
+    <AndroidResource Include="Resources\anim\out_to_right.xml" />
+    <AndroidResource Include="Resources\drawable\StatsButton.png" />
+    <AndroidResource Include="Resources\layout\challenges.xml" />
+    <AndroidResource Include="Resources\drawable\RedUpArrow.png" />
+    <AndroidResource Include="Resources\layout\challenges_item.xml" />
+    <AndroidResource Include="Resources\drawable\CheckMark.png" />
+    <AndroidResource Include="Resources\drawable\stopwatch.png" />
+    <AndroidResource Include="Resources\drawable\XMark.png" />
+    <AndroidResource Include="Resources\layout\new_challenge.xml" />
+    <AndroidResource Include="Resources\layout\user_row.xml" />
+    <AndroidResource Include="Resources\drawable\whiteCircle.png" />
+    <AndroidResource Include="Resources\layout\new_challenge_page_two.xml" />
+    <AndroidResource Include="Resources\layout\new_challenge_page_three.xml" />
+    <AndroidResource Include="Resources\layout\new_challenge_page_four.xml" />
+    <AndroidResource Include="Resources\drawable\SplashMovo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -136,5 +168,39 @@
     <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\layout\" />
     <Folder Include="Activities\" />
+    <Folder Include="Assets\fonts\" />
+    <Folder Include="Resources\anim\" />
+    <Folder Include="Assets\libs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\segoeui.ttf" />
+    <AndroidAsset Include="Assets\fonts\segoeuib.ttf" />
+    <AndroidAsset Include="Assets\fonts\segoeuii.ttf" />
+    <AndroidAsset Include="Assets\fonts\segoeuil.ttf" />
+    <AndroidAsset Include="Assets\fonts\segoeuiz.ttf" />
+    <AndroidAsset Include="Assets\fonts\seguisb.ttf" />
+    <AndroidAsset Include="Assets\fonts\seguisym.ttf" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_BLACK.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_BLACKITALIC.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_BOLD.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_BOLDITALIC.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_BOOK.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_BOOKITALIC.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_EXTRALIGHT.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_EXTRALIGHTITALIC.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_LIGHT.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_LIGHTITALIC.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_MEDIUM.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_MEDIUMITALIC.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_THIN.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_THINITALIC.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_ULTRA.TTF" />
+    <AndroidAsset Include="Assets\fonts\GOTHAM_ULTRAITALIC.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GraphViewBinding\GraphViewBinding.csproj">
+      <Project>{21737B7B-E541-46B1-A064-7EB2458638AD}</Project>
+      <Name>GraphViewBinding</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:id="@+id/challenges_root"
+    android:background="@drawable/global_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/challenges_header_layout">
+        <TextView
+            android:text="challenges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/challenges_title_text"
+            android:textAllCaps="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:text="+ Create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/challenges_header_create"
+            android:layout_toRightOf="@id/challenges_title_text"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:clickable="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/challenges_tab_layout"
+        android:layout_below="@id/challenges_header_layout"
+        android:background="@android:color/black"
+        android:paddingRight="5dip"
+        android:paddingLeft="5dip"
+        android:weightSum="0.99">
+        <TextView
+            android:text="New(2)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/challenges_tab_new_txt"
+            android:gravity="center"
+            android:maxLines="1"
+            android:layout_weight="0.36"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:text="Active(3)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/challenges_tab_active_txt"
+            android:gravity="center"
+            android:maxLines="1"
+            android:layout_weight="0.33" />
+        <TextView
+            android:text="Completed(7)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/challenges_tab_completed_txt"
+            android:gravity="center"
+            android:maxLines="1"
+            android:layout_weight="0.30" />
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/challenges_tab_layout"
+        android:id="@+id/challenges_pager" />
+</RelativeLayout>

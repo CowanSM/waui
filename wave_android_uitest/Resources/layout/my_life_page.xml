@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/my_life_page_root"
+    android:layout_width="fill_parent">
+    <GridView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/my_life_page_grid"
+        android:stretchMode="spacingWidthUniform"
+        android:numColumns="3"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:gravity="center"
+        android:choiceMode="singleChoice"
+        android:horizontalSpacing="10dip"
+        android:verticalSpacing="10dip"
+        android:columnWidth="95dip"
+        android:paddingRight="5dip"
+        android:paddingLeft="5dip" />
+</RelativeLayout>

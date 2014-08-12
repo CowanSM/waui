@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/new_challenge_page_two_root"
+    android:background="@drawable/global_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_challenge_page_two_top"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_two_top_title"
+            android:text="What are you tracking?"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:padding="5dip" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_two_top_steps"
+            android:text="Steps"
+            android:clickable="true"
+            android:padding="7dip"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_two_top_miles"
+            android:text="Miles"
+            android:clickable="true"
+            android:padding="7dip"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_two_top_calories"
+            android:text="Calories"
+            android:clickable="true"
+            android:padding="7dip"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_challenge_page_two_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/new_challenge_page_two_top">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_two_bottom_title"
+            android:layout_alignParentTop="true"
+            android:text="How long is the challenge?"
+            android:padding="5dip"
+            android:textColor="@android:color/black"
+            android:background="@android:color/darker_gray" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_two_bottom_buttons"
+            android:orientation="vertical"
+            android:layout_below="@id/new_challenge_page_two_bottom_title"
+            android:padding="5dip"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_challenge_page_two_bottom_minutes"
+                android:text="Minutes"
+                android:textColor="@android:color/white"
+                android:paddingRight="70dip"
+                android:paddingTop="7dip"
+                android:paddingBottom="7dip"
+                android:paddingLeft="7dip" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_challenge_page_two_bottom_hours"
+                android:text="Hours"
+                android:textColor="@android:color/white"
+                android:padding="7dip" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_challenge_page_two_bottom_days"
+                android:text="Days"
+                android:padding="7dip"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_challenge_page_two_bottom_weeks"
+                android:text="Weeks"
+                android:padding="7dip"
+                android:textColor="@android:color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_challenge_page_two_bottom_months"
+                android:text="Months"
+                android:padding="7dip"
+                android:textColor="@android:color/white"
+                android:textColorHighlight="@android:color/holo_red_light" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_challenge_page_two_number_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/new_challenge_page_two_bottom_title"
+            android:layout_toLeftOf="@id/new_challenge_page_two_bottom_buttons" />
+    </RelativeLayout>
+</RelativeLayout>
