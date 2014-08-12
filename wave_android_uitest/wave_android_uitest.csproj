@@ -161,6 +161,7 @@
     <AndroidResource Include="Resources\layout\new_challenge_page_three.xml" />
     <AndroidResource Include="Resources\layout\new_challenge_page_four.xml" />
     <AndroidResource Include="Resources\drawable\SplashMovo.png" />
+    <AndroidResource Include="Resources\layout\people.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

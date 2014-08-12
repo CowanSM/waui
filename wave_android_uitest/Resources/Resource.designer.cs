@@ -24,6 +24,10 @@ namespace wave_android_uitest
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
+		public static void UpdateIdValues()
+		{
+		}
+		
 		public partial class Animation
 		{
 			
@@ -271,17 +275,17 @@ namespace wave_android_uitest
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0900d0
-			public const int action_activity = 2131296464;
+			// aapt resource value: 0x7f0900df
+			public const int action_activity = 2131296479;
 			
-			// aapt resource value: 0x7f0900d2
-			public const int action_challenges = 2131296466;
+			// aapt resource value: 0x7f0900e1
+			public const int action_challenges = 2131296481;
 			
-			// aapt resource value: 0x7f0900d1
-			public const int action_my_life = 2131296465;
+			// aapt resource value: 0x7f0900e0
+			public const int action_my_life = 2131296480;
 			
-			// aapt resource value: 0x7f0900d3
-			public const int action_people = 2131296467;
+			// aapt resource value: 0x7f0900e2
+			public const int action_people = 2131296482;
 			
 			// aapt resource value: 0x7f090002
 			public const int activity_limage = 2131296258;
@@ -295,8 +299,8 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090000
 			public const int activity_root = 2131296256;
 			
-			// aapt resource value: 0x7f0900b5
-			public const int activity_tab_bar = 2131296437;
+			// aapt resource value: 0x7f0900c1
+			public const int activity_tab_bar = 2131296449;
 			
 			// aapt resource value: 0x7f090005
 			public const int activity_text1 = 2131296261;
@@ -307,8 +311,8 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090004
 			public const int activity_time = 2131296260;
 			
-			// aapt resource value: 0x7f0900b4
-			public const int body = 2131296436;
+			// aapt resource value: 0x7f0900c0
+			public const int body = 2131296448;
 			
 			// aapt resource value: 0x7f09000c
 			public const int challenges_header_create = 2131296268;
@@ -490,11 +494,11 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090032
 			public const int fsi_view_title = 2131296306;
 			
-			// aapt resource value: 0x7f0900b2
-			public const int imageView1 = 2131296434;
+			// aapt resource value: 0x7f0900be
+			public const int imageView1 = 2131296446;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int login = 2131296456;
+			// aapt resource value: 0x7f0900d4
+			public const int login = 2131296468;
 			
 			// aapt resource value: 0x7f090048
 			public const int login_btn = 2131296328;
@@ -808,74 +812,110 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090008
 			public const int option_text = 2131296264;
 			
-			// aapt resource value: 0x7f0900c2
-			public const int pager = 2131296450;
+			// aapt resource value: 0x7f0900ce
+			public const int pager = 2131296462;
 			
-			// aapt resource value: 0x7f0900c3
-			public const int parent_view = 2131296451;
-			
-			// aapt resource value: 0x7f0900c5
-			public const int rb11 = 2131296453;
-			
-			// aapt resource value: 0x7f0900c6
-			public const int rb12 = 2131296454;
-			
-			// aapt resource value: 0x7f0900c7
-			public const int rb13 = 2131296455;
-			
-			// aapt resource value: 0x7f0900c4
-			public const int rg1 = 2131296452;
-			
-			// aapt resource value: 0x7f0900ae
-			public const int sign_btn = 2131296430;
-			
-			// aapt resource value: 0x7f0900ad
-			public const int sign_facebook = 2131296429;
-			
-			// aapt resource value: 0x7f0900c9
-			public const int signup = 2131296457;
-			
-			// aapt resource value: 0x7f0900b0
-			public const int splash_root = 2131296432;
-			
-			// aapt resource value: 0x7f0900b1
-			public const int splash_spinner = 2131296433;
-			
-			// aapt resource value: 0x7f0900b7
-			public const int tab_bar_activity_image = 2131296439;
+			// aapt resource value: 0x7f0900cf
+			public const int parent_view = 2131296463;
 			
 			// aapt resource value: 0x7f0900b6
-			public const int tab_bar_activity_layout = 2131296438;
+			public const int people_friends = 2131296438;
 			
 			// aapt resource value: 0x7f0900b8
-			public const int tab_bar_activity_text = 2131296440;
+			public const int people_friends_list = 2131296440;
 			
-			// aapt resource value: 0x7f0900bd
-			public const int tab_bar_challenge_image = 2131296445;
+			// aapt resource value: 0x7f0900b7
+			public const int people_friends_title = 2131296439;
 			
-			// aapt resource value: 0x7f0900be
-			public const int tab_bar_challenge_text = 2131296446;
+			// aapt resource value: 0x7f0900ae
+			public const int people_header = 2131296430;
 			
-			// aapt resource value: 0x7f0900bc
-			public const int tab_bar_challenges_layout = 2131296444;
+			// aapt resource value: 0x7f0900b0
+			public const int people_header_search = 2131296432;
+			
+			// aapt resource value: 0x7f0900af
+			public const int people_header_title = 2131296431;
+			
+			// aapt resource value: 0x7f0900b4
+			public const int people_requests = 2131296436;
+			
+			// aapt resource value: 0x7f0900b5
+			public const int people_requests_title = 2131296437;
+			
+			// aapt resource value: 0x7f0900ad
+			public const int people_root = 2131296429;
+			
+			// aapt resource value: 0x7f0900b1
+			public const int people_tabs = 2131296433;
+			
+			// aapt resource value: 0x7f0900b2
+			public const int people_tabs_friends = 2131296434;
+			
+			// aapt resource value: 0x7f0900b3
+			public const int people_tabs_top_performers = 2131296435;
+			
+			// aapt resource value: 0x7f0900d1
+			public const int rb11 = 2131296465;
+			
+			// aapt resource value: 0x7f0900d2
+			public const int rb12 = 2131296466;
+			
+			// aapt resource value: 0x7f0900d3
+			public const int rb13 = 2131296467;
+			
+			// aapt resource value: 0x7f0900d0
+			public const int rg1 = 2131296464;
 			
 			// aapt resource value: 0x7f0900ba
-			public const int tab_bar_my_life_image = 2131296442;
+			public const int sign_btn = 2131296442;
 			
 			// aapt resource value: 0x7f0900b9
-			public const int tab_bar_my_life_layout = 2131296441;
+			public const int sign_facebook = 2131296441;
 			
-			// aapt resource value: 0x7f0900bb
-			public const int tab_bar_my_life_text = 2131296443;
+			// aapt resource value: 0x7f0900d5
+			public const int signup = 2131296469;
 			
-			// aapt resource value: 0x7f0900c0
-			public const int tab_bar_people_image = 2131296448;
+			// aapt resource value: 0x7f0900bc
+			public const int splash_root = 2131296444;
 			
-			// aapt resource value: 0x7f0900bf
-			public const int tab_bar_people_layout = 2131296447;
+			// aapt resource value: 0x7f0900bd
+			public const int splash_spinner = 2131296445;
 			
-			// aapt resource value: 0x7f0900c1
-			public const int tab_bar_people_text = 2131296449;
+			// aapt resource value: 0x7f0900c3
+			public const int tab_bar_activity_image = 2131296451;
+			
+			// aapt resource value: 0x7f0900c2
+			public const int tab_bar_activity_layout = 2131296450;
+			
+			// aapt resource value: 0x7f0900c4
+			public const int tab_bar_activity_text = 2131296452;
+			
+			// aapt resource value: 0x7f0900c9
+			public const int tab_bar_challenge_image = 2131296457;
+			
+			// aapt resource value: 0x7f0900ca
+			public const int tab_bar_challenge_text = 2131296458;
+			
+			// aapt resource value: 0x7f0900c8
+			public const int tab_bar_challenges_layout = 2131296456;
+			
+			// aapt resource value: 0x7f0900c6
+			public const int tab_bar_my_life_image = 2131296454;
+			
+			// aapt resource value: 0x7f0900c5
+			public const int tab_bar_my_life_layout = 2131296453;
+			
+			// aapt resource value: 0x7f0900c7
+			public const int tab_bar_my_life_text = 2131296455;
+			
+			// aapt resource value: 0x7f0900cc
+			public const int tab_bar_people_image = 2131296460;
+			
+			// aapt resource value: 0x7f0900cb
+			public const int tab_bar_people_layout = 2131296459;
+			
+			// aapt resource value: 0x7f0900cd
+			public const int tab_bar_people_text = 2131296461;
 			
 			// aapt resource value: 0x7f090045
 			public const int textView1 = 2131296325;
@@ -883,29 +923,38 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090046
 			public const int textView2 = 2131296326;
 			
-			// aapt resource value: 0x7f0900af
-			public const int textView3 = 2131296431;
+			// aapt resource value: 0x7f0900bb
+			public const int textView3 = 2131296443;
 			
-			// aapt resource value: 0x7f0900b3
-			public const int title = 2131296435;
+			// aapt resource value: 0x7f0900bf
+			public const int title = 2131296447;
 			
-			// aapt resource value: 0x7f0900cb
-			public const int user_row_image = 2131296459;
+			// aapt resource value: 0x7f0900db
+			public const int user_row_buttons = 2131296475;
 			
-			// aapt resource value: 0x7f0900cf
-			public const int user_row_name = 2131296463;
+			// aapt resource value: 0x7f0900dc
+			public const int user_row_check = 2131296476;
 			
-			// aapt resource value: 0x7f0900ca
-			public const int user_row_root = 2131296458;
+			// aapt resource value: 0x7f0900d7
+			public const int user_row_image = 2131296471;
 			
-			// aapt resource value: 0x7f0900cc
-			public const int user_row_xp_frame = 2131296460;
+			// aapt resource value: 0x7f0900de
+			public const int user_row_name = 2131296478;
 			
-			// aapt resource value: 0x7f0900cd
-			public const int user_row_xp_image = 2131296461;
+			// aapt resource value: 0x7f0900d6
+			public const int user_row_root = 2131296470;
 			
-			// aapt resource value: 0x7f0900ce
-			public const int user_row_xp_text = 2131296462;
+			// aapt resource value: 0x7f0900dd
+			public const int user_row_x = 2131296477;
+			
+			// aapt resource value: 0x7f0900d8
+			public const int user_row_xp_frame = 2131296472;
+			
+			// aapt resource value: 0x7f0900d9
+			public const int user_row_xp_image = 2131296473;
+			
+			// aapt resource value: 0x7f0900da
+			public const int user_row_xp_text = 2131296474;
 			
 			static Id()
 			{
@@ -985,25 +1034,28 @@ namespace wave_android_uitest
 			public const int new_challenge_page_two = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int signup = 2130903056;
+			public const int people = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int splash = 2130903057;
+			public const int signup = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int tab1 = 2130903058;
+			public const int splash = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int tab_bar = 2130903059;
+			public const int tab1 = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int test2_layout = 2130903060;
+			public const int tab_bar = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int test_layout = 2130903061;
+			public const int test2_layout = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int user_row = 2130903062;
+			public const int test_layout = 2130903062;
+			
+			// aapt resource value: 0x7f030017
+			public const int user_row = 2130903063;
 			
 			static Layout()
 			{

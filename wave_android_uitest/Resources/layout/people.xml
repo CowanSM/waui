@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/people_root"
+    android:background="@drawable/global_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/people_header"
+        android:layout_alignParentTop="true"
+        android:padding="5dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_header_title"
+            android:text="people"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:padding="7dip"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_header_search"
+            android:text="Search"
+            android:layout_toRightOf="@id/people_header_title"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:layout_alignParentTop="true"
+            android:paddingTop="7dip"
+            android:paddingRight="5dip"
+            android:paddingBottom="5dip"
+            android:paddingLeft="5dip"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/people_tabs"
+        android:orientation="horizontal"
+        android:layout_below="@id/people_header"
+        android:weightSum="1"
+        android:padding="5dip"
+        android:background="@android:color/black">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_tabs_friends"
+            android:text="friends"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_tabs_top_performers"
+            android:text="top performers"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/people_requests"
+        android:orientation="vertical"
+        android:layout_below="@id/people_tabs">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_requests_title"
+            android:text="Friend Requests"
+            android:textColor="@android:color/black"
+            android:padding="7dip"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/people_friends"
+        android:orientation="vertical"
+        android:layout_below="@id/people_requests">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_friends_title"
+            android:text="Friends"
+            android:padding="7dip"
+            android:textColor="@android:color/black"
+            android:background="@android:color/darker_gray" />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_friends_list" />
+    </LinearLayout>
+</RelativeLayout>
