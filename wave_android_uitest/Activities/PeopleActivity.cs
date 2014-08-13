@@ -83,6 +83,19 @@ namespace wave_android_uitest
             var friends = FindViewById<View>(Resource.Id.people_friends);
             ((RelativeLayout.LayoutParams)friends.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.activity_tab_bar);
 
+            // font(s)
+            var gbold = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/GOTHAM_BOLD.TTF");
+            var gbook = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/GOTHAM_BOOK.TTF");
+            var gmed = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/GOTHAM_MEDIUM.TTF");
+            var segsb = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/seguisb.ttf");
+
+            FindViewById<TextView>(Resource.Id.people_header_title).SetTypeface(gbold, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.people_header_search).SetTypeface(gbook, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.people_tabs_friends).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.people_tabs_top_performers).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.people_friends_title).SetTypeface(segsb, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.people_requests_title).SetTypeface(segsb, Android.Graphics.TypefaceStyle.Normal);
+
             ActionBar.Hide();
 		}
 	}

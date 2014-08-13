@@ -65,5 +65,6 @@
         android:gravity="center_vertical"
         android:layout_toLeftOf="@id/user_row_buttons"
         android:layout_centerVertical="true"
-        android:padding="7dip" />
+        android:padding="7dip"
+        android:textColor="@android:color/white" />
 </RelativeLayout>
