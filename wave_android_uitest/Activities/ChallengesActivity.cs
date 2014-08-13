@@ -40,7 +40,7 @@ namespace wave_android_uitest
             // create pages
             pager.Adapter = new ChallengesPagerAdapter(SupportFragmentManager, new List<ChallengesPagerView>()
                 {
-                        new ChallengesPagerView(this, new ChallengesListAdapter(LayoutInflater, new List<ChallengesListAdapter.Item>() {
+                        new ChallengesPagerView(this, new ChallengesListAdapter(this, new List<ChallengesListAdapter.Item>() {
                             new ChallengesListAdapter.Item() {
                                 Name = "Oscar Bluth",
                                 Bet = "Wear underwear outside pants for one day.",
@@ -54,7 +54,7 @@ namespace wave_android_uitest
                                 Time = "1d 50m"
                             }
                         })),
-                        new ChallengesPagerView(this, new ChallengesListAdapter(LayoutInflater, new List<ChallengesListAdapter.Item>() {
+                        new ChallengesPagerView(this, new ChallengesListAdapter(this, new List<ChallengesListAdapter.Item>() {
                             new ChallengesListAdapter.Item() {
                                 Name = "Oscar Bluth",
                                 Bet = "Wear underwear outside pants for one day.",
@@ -77,7 +77,7 @@ namespace wave_android_uitest
                                 ShowButtons = false
                             }
                         })),
-                        new ChallengesPagerView(this, new ChallengesListAdapter(LayoutInflater, new List<ChallengesListAdapter.Item>() {
+                        new ChallengesPagerView(this, new ChallengesListAdapter(this, new List<ChallengesListAdapter.Item>() {
                             new ChallengesListAdapter.Item() {
                                 Name = "Oscar Bluth",
                                 Bet = "Wear underwear outside pants for one day.",
@@ -136,6 +136,19 @@ namespace wave_android_uitest
                         FindViewById<TextView>(Resource.Id.challenges_tab_active_txt),
                         FindViewById<TextView>(Resource.Id.challenges_tab_completed_txt)
                     }));
+
+            // setup fonts
+            var gmed = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/GOTHAM_MEDIUM.TTF");
+            var gbold = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/GOTHAM_BOLD.TTF");
+            var gbook = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/GOTHAM_BOOK.TTF");
+
+            FindViewById<TextView>(Resource.Id.challenges_header_create).SetTypeface(gbook, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.challenges_title_text).SetTypeface(gbold, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.challenges_tab_new_txt).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.challenges_tab_active_txt).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.challenges_tab_completed_txt).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
+
+            ActionBar.Hide();
 		}
 	}
 }

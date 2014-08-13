@@ -45,7 +45,7 @@ namespace wave_android_uitest
             // listview should be set to above tab bar
             // add list adapter which will have a list of all friends (opponents)
             var listview = FindViewById<ListView>(Resource.Id.people_friends_list);
-            listview.Adapter = new OpponentListAdapter(LayoutInflater, new List<OpponentListAdapter.Opponent>() {
+            listview.Adapter = new OpponentListAdapter(this, new List<OpponentListAdapter.Opponent>() {
                 new OpponentListAdapter.Opponent() {
                     Name = "Lindsay Bluth",
                     Level = 17
@@ -82,6 +82,8 @@ namespace wave_android_uitest
 
             var friends = FindViewById<View>(Resource.Id.people_friends);
             ((RelativeLayout.LayoutParams)friends.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.activity_tab_bar);
+
+            ActionBar.Hide();
 		}
 	}
 }

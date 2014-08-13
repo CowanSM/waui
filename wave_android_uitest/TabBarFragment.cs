@@ -40,30 +40,47 @@ namespace wave_android_uitest {
 			SetupButton (Resource.Id.tab_bar_people_layout, Resource.Id.tab_bar_people_text,
 				Resource.Id.tab_bar_people_image, Resource.Drawable.FriendsTab_Selected2, _parentActivity is PeopleActivity);
 
+            FrameLayout layout;
 			// setup clickables
-			var layout = _rootView.FindViewById<FrameLayout> (Resource.Id.tab_bar_activity_layout);
-			layout.Click += (sender, e) => {
-				// laod activity activity
-				_parentActivity.SwitchActivity(typeof(ActivityActivity));
-			};
+            if (!(_parentActivity is ActivityActivity)) {
+                layout = _rootView.FindViewById<FrameLayout>(Resource.Id.tab_bar_activity_layout);
+                layout.Click += (sender, e) => {
+                    // laod activity activity
+                    _parentActivity.SwitchActivity(typeof(ActivityActivity));
+                };
+            }
 
-			layout = _rootView.FindViewById<FrameLayout> (Resource.Id.tab_bar_my_life_layout);
-			layout.Click += (sender, e) => {
-				// load my life activity
-				_parentActivity.SwitchActivity(typeof(MyLifeActivity));
-			};
+            if (!(_parentActivity is MyLifeActivity)) {
+                layout = _rootView.FindViewById<FrameLayout>(Resource.Id.tab_bar_my_life_layout);
+                layout.Click += (sender, e) => {
+                    // load my life activity
+                    _parentActivity.SwitchActivity(typeof(MyLifeActivity));
+                };
+            }
 
-			layout = _rootView.FindViewById<FrameLayout> (Resource.Id.tab_bar_challenges_layout);
-			layout.Click += (sender, e) => {
-				// load challenges activity
-				_parentActivity.SwitchActivity(typeof(ChallengesActivity));
-			};
+            if (!(_parentActivity is ChallengesActivity)) {
+                layout = _rootView.FindViewById<FrameLayout>(Resource.Id.tab_bar_challenges_layout);
+                layout.Click += (sender, e) => {
+                    // load challenges activity
+                    _parentActivity.SwitchActivity(typeof(ChallengesActivity));
+                };
+            }
 
-			layout = _rootView.FindViewById<FrameLayout> (Resource.Id.tab_bar_people_layout);
-			layout.Click += (sender, e) => {
-				// load people activity
-				_parentActivity.SwitchActivity(typeof(PeopleActivity));
-			};
+            if (!(_parentActivity is PeopleActivity)) {
+                layout = _rootView.FindViewById<FrameLayout>(Resource.Id.tab_bar_people_layout);
+                layout.Click += (sender, e) => {
+                    // load people activity
+                    _parentActivity.SwitchActivity(typeof(PeopleActivity));
+                };
+            }
+
+            // setup fonts
+            var gmed = Android.Graphics.Typeface.CreateFromAsset(Activity.Assets, "fonts/GOTHAM_MEDIUM.TTF");
+           
+            _rootView.FindViewById<TextView>(Resource.Id.tab_bar_people_text).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
+            _rootView.FindViewById<TextView>(Resource.Id.tab_bar_my_life_text).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
+            _rootView.FindViewById<TextView>(Resource.Id.tab_bar_challenge_text).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
+            _rootView.FindViewById<TextView>(Resource.Id.tab_bar_activity_text).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
 
 			return _rootView;
 		}
