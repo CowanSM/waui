@@ -187,8 +187,8 @@ namespace wave_android_uitest
 			tView = LayoutInflater.Inflate (Resource.Layout.test_layout, null);
 			var lSplash = LayoutInflater.Inflate (Resource.Layout.splash, null);
 
-			root = lSplash.FindViewById<LinearLayout> (Resource.Id.root);
-			splash = lSplash.FindViewById<View> (Resource.Id.splash);
+//			root = lSplash.FindViewById<LinearLayout> (Resource.Id.root);
+//			splash = lSplash.FindViewById<View> (Resource.Id.splash);
 
 			// Set our view from the "main" layout resource
 			SetContentView (lSplash);

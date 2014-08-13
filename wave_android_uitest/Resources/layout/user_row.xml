@@ -32,6 +32,30 @@
             android:layout_gravity="center"
             android:gravity="center" />
     </FrameLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_row_buttons"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:padding="5dip"
+        android:visibility="invisible">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:id="@+id/user_row_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:id="@+id/user_row_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip" />
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,19 +64,6 @@
         android:text="Oscar Bluth"
         android:gravity="center_vertical"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="true" />
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/user_row_check"
-        android:layout_toRightOf="@id/user_row_name"
-        android:layout_centerVertical="true" />
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true" />
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/user_row_buttons" />
 </RelativeLayout>
