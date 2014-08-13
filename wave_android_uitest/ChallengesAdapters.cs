@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Android.Content;
 using Android.Widget;
 using Android.Views;
+using Android.App;
 
 namespace wave_android_uitest {
     public class ChallengesPagerAdapter : Android.Support.V4.App.FragmentPagerAdapter {
@@ -62,14 +63,16 @@ namespace wave_android_uitest {
 
         private List<Item> _list;
         private LayoutInflater _inflator;
+        private Activity _activity;
 
-        public ChallengesListAdapter(LayoutInflater inflator) {
-            _list = new List<Item>();
-            _inflator = inflator;
-        }
+//        public ChallengesListAdapter(LayoutInflater inflator) {
+//            _list = new List<Item>();
+//            _inflator = inflator;
+//        }
 
-        public ChallengesListAdapter(LayoutInflater inflator, IEnumerable<Item> initialList) {
-            _inflator = inflator;
+        public ChallengesListAdapter(Activity activity, IEnumerable<Item> initialList) {
+            _inflator = activity.LayoutInflater;
+            _activity = activity;
             _list = new List<Item>(initialList);
         }
 
@@ -111,17 +114,25 @@ namespace wave_android_uitest {
                 view = _inflator.Inflate(Resource.Layout.challenges_item, parent, false);
             }
 
+            // fonts
+            var seguiSB = Android.Graphics.Typeface.CreateFromAsset(_activity.Assets, "fonts/seguisb.ttf");
+            var sequi = Android.Graphics.Typeface.CreateFromAsset(_activity.Assets, "fonts/segoeui.ttf");
+
             // set the data
             var item = _list[position];
 
             var txt = view.FindViewById<TextView>(Resource.Id.challenges_item_inner_name);
             txt.Text = item.Name;
+            txt.SetTypeface(seguiSB, Android.Graphics.TypefaceStyle.Normal);
             txt = view.FindViewById<TextView>(Resource.Id.challenges_item_inner_bet);
             txt.Text = item.Bet;
+            txt.SetTypeface(sequi, Android.Graphics.TypefaceStyle.Normal);
             txt = view.FindViewById<TextView>(Resource.Id.challenges_item_inner_middle_goal);
             txt.Text = item.Goal;
+            txt.SetTypeface(sequi, Android.Graphics.TypefaceStyle.Normal);
             txt = view.FindViewById<TextView>(Resource.Id.challenges_item_inner_middle_time);
             txt.Text = item.Time;
+            txt.SetTypeface(sequi, Android.Graphics.TypefaceStyle.Normal);
 
             var circle = view.FindViewById<ImageView>(Resource.Id.challenges_item_rimage);
             circle.SetBackgroundColor(item.CircleColor);

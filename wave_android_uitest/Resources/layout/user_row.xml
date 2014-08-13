@@ -44,13 +44,13 @@
         android:padding="5dip"
         android:visibility="invisible">
         <ImageView
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@drawable/CheckMark"
             android:id="@+id/user_row_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dip" />
         <ImageView
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@drawable/XMark"
             android:id="@+id/user_row_x"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         android:layout_toRightOf="@id/user_row_xp_frame"
         android:text="Oscar Bluth"
         android:gravity="center_vertical"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@id/user_row_buttons" />
+        android:layout_toLeftOf="@id/user_row_buttons"
+        android:layout_centerVertical="true"
+        android:padding="7dip" />
 </RelativeLayout>
