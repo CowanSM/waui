@@ -1,2 +1,4 @@
 wave_android_uitest/obj/*
 wave_android_uitest/bin/*
+GraphViewBinding/obj/*
+GraphViewBinding/bin/*
