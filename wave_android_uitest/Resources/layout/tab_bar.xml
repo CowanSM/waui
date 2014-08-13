@@ -4,13 +4,45 @@
     android:layout_height="wrap_content"
     android:id="@+id/activity_tab_bar"
     android:orientation="horizontal"
-    android:weightSum="1"
-    android:scaleY="0.75">
+    android:weightSum="1.25"
+    android:scaleY="0.75"
+    android:clipChildren="false">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/tab_bar_home_layout"
+        android:layout_weight="0.22"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants">
+        <ImageView
+            android:src="@drawable/ActivityTab_Unselected2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_bar_home_image"
+            android:layout_gravity="center"
+            android:focusable="false"
+            android:clickable="false"
+            android:scaleType="center" />
+        <TextView
+            android:text="HOME"
+            android:id="@+id/tab_bar_home_text"
+            android:gravity="center"
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="none"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:translationX="0dp"
+            android:translationY="28dip"
+            android:textAllCaps="true" />
+    </FrameLayout>
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/tab_bar_activity_layout"
-        android:layout_weight="0.25"
+        android:layout_weight="0.22"
         android:clickable="true"
         android:descendantFocusability="blocksDescendants">
         <ImageView

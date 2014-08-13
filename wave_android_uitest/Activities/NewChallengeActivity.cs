@@ -14,6 +14,8 @@ using Android.Widget;
 namespace wave_android_uitest {
     [Activity(Label = "NewChallengeActivity")]			
     public class NewChallengeActivity : SubPrimaryActivity {
+        private int _currentPage;
+
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.new_challenge);
@@ -41,6 +43,23 @@ namespace wave_android_uitest {
 
             pager.Adapter = adapter;
             pager.SetOnPageChangeListener(new NewChallengePageListener(FindViewById<TextView>(Resource.Id.new_challenge_header_subtitle)));
+
+            _currentPage = 0;
+            // set up back/next buttons
+            var btn = FindViewById<View>(Resource.Id.new_challenge_header_back_container);
+            btn.Click += (sender, e) => {
+                // back
+                if (_currentPage > 0) {
+                    pager.SetCurrentItem(--_currentPage, true);
+                }
+            };
+            btn = FindViewById<View>(Resource.Id.new_challenge_header_next_container);
+            btn.Click += (sender, e) => {
+                // next
+                if (_currentPage < (pager.Adapter.Count-1)) {
+                    pager.SetCurrentItem(++_currentPage, true);
+                }
+            };
 
             ActionBar.Hide();
         }

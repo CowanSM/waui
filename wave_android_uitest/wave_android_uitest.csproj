@@ -67,6 +67,8 @@
     <Compile Include="ChallengesPagerView.cs" />
     <Compile Include="ChallengesAdapters.cs" />
     <Compile Include="Activities\NewChallengeActivity.cs" />
+    <Compile Include="Activities\HomeActivity.cs" />
+    <Compile Include="Activities\SyncActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -162,6 +164,8 @@
     <AndroidResource Include="Resources\layout\new_challenge_page_four.xml" />
     <AndroidResource Include="Resources\drawable\SplashMovo.png" />
     <AndroidResource Include="Resources\layout\people.xml" />
+    <AndroidResource Include="Resources\layout\sync.xml" />
+    <AndroidResource Include="Resources\layout\home.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

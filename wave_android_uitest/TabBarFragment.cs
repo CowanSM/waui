@@ -38,7 +38,9 @@ namespace wave_android_uitest {
 			SetupButton (Resource.Id.tab_bar_challenges_layout, Resource.Id.tab_bar_challenge_text,
 				Resource.Id.tab_bar_challenge_image, Resource.Drawable.ChallengesTab_Selected2, _parentActivity is ChallengesActivity);
 			SetupButton (Resource.Id.tab_bar_people_layout, Resource.Id.tab_bar_people_text,
-				Resource.Id.tab_bar_people_image, Resource.Drawable.FriendsTab_Selected2, _parentActivity is PeopleActivity);
+                Resource.Id.tab_bar_people_image, Resource.Drawable.FriendsTab_Selected2, _parentActivity is PeopleActivity);
+            SetupButton (Resource.Id.tab_bar_home_layout, Resource.Id.tab_bar_home_text,
+                Resource.Id.tab_bar_home_image, Resource.Drawable.ActivityTab_Selected2, _parentActivity is HomeActivity);
 
             FrameLayout layout;
 			// setup clickables
@@ -71,6 +73,13 @@ namespace wave_android_uitest {
                 layout.Click += (sender, e) => {
                     // load people activity
                     _parentActivity.SwitchActivity(typeof(PeopleActivity));
+                };
+            }
+
+            if (!(_parentActivity is HomeActivity)) {
+                layout = _rootView.FindViewById<FrameLayout>(Resource.Id.tab_bar_home_layout);
+                layout.Click += (sender, e) => {
+                    _parentActivity.SwitchActivity(typeof(HomeActivity));
                 };
             }
 
