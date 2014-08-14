@@ -20,6 +20,7 @@ namespace wave_android_uitest
 
         //Vedad - our recorder
         AudioRecord recorder;
+        System.Action fileReadComplete;
 
         int sampleRate;
         ChannelIn channels;
@@ -28,36 +29,11 @@ namespace wave_android_uitest
 
         string filePath;
 
-		public WaveAudioHandler ()
+        public WaveAudioHandler (System.Action fileReadCompleteCallback)
         {
             onlyInstance = this;
-		}
 
-		public bool initializeRecorder()
-        {
-            bool retVal = false;
-
-            sampleRate = 44100;
-            channels = ChannelIn.Mono;
-            outputFormat = Android.Media.Encoding.Pcm16bit;
-
-            bufferSize = AudioRecord.GetMinBufferSize(sampleRate, channels, outputFormat);
-
-            filePath = "/sdcard/test.wav";
-
-            recorder = new AudioRecord(AudioSource.Mic, sampleRate, channels, outputFormat, bufferSize);
-
-            if (recorder == null || recorder.State != State.Initialized) 
-            {
-                Console.WriteLine("Problem setting up recorder");
-            } 
-            else 
-            {
-                retVal = true;
-                Console.WriteLine("Recorder successfully initialized");
-            }
-
-            return retVal;
+            fileReadComplete = fileReadCompleteCallback;
 		}
 
         public class BufferWrite : Java.Util.TimerTask 
@@ -79,7 +55,7 @@ namespace wave_android_uitest
                 int bitSize = 16;                   
 
                 //Vedad - byte rate is how much data is processed in a second. 
-                int byteRate = (sampleRate * bitSize * (int)onlyInstance.channels);
+                int byteRate = (onlyInstance.sampleRate * bitSize * (int)onlyInstance.channels);
 
                 //Vedad - write our wav header
                 byte[] header = new byte[44];
@@ -108,10 +84,10 @@ namespace wave_android_uitest
                 header[21] = 0;
                 header[22] = (byte)((int)onlyInstance.channels);                            //Vedad - 2 bytes for channles(mono, stereo)
                 header[23] = 0;
-                header[24] = (byte) (sampleRate & 0xff);                    //Vedad - 24-27 4 bytes for sample rate. 24 gets the least significant 8 bits of the first byte of data
-                header[25] = (byte) ((sampleRate >> 8) & 0xff);             //Vedad - shift 8 bits to the right, grabs least significant 8 bits of this byte
-                header[26] = (byte) ((sampleRate >> 16) & 0xff);            //Vedad - shift 8 bits to the right, grabs least significant 8 bits of this byte
-                header[27] = (byte) ((sampleRate >> 24) & 0xff);            //Vedad - shift 8 bits to the right, grabs least significant 8 bits of this byte
+                header[24] = (byte) (onlyInstance.sampleRate & 0xff);                    //Vedad - 24-27 4 bytes for sample rate. 24 gets the least significant 8 bits of the first byte of data
+                header[25] = (byte) ((onlyInstance.sampleRate >> 8) & 0xff);             //Vedad - shift 8 bits to the right, grabs least significant 8 bits of this byte
+                header[26] = (byte) ((onlyInstance.sampleRate >> 16) & 0xff);            //Vedad - shift 8 bits to the right, grabs least significant 8 bits of this byte
+                header[27] = (byte) ((onlyInstance.sampleRate >> 24) & 0xff);            //Vedad - shift 8 bits to the right, grabs least significant 8 bits of this byte
                 header[28] = (byte) (byteRate & 0xff);                      //Vedad - 28-31 4 bytes for byte rate
                 header[29] = (byte) ((byteRate >> 8) & 0xff);
                 header[30] = (byte) ((byteRate >> 16) & 0xff);
@@ -139,7 +115,7 @@ namespace wave_android_uitest
 
                 while(onlyInstance.recorder.RecordingState == RecordState.Recording)
                 {
-                    result = onlyInstance.recorder.Read(buffer, 0, bufferSize);
+                    result = onlyInstance.recorder.Read(buffer, 0, onlyInstance.bufferSize);
 
                     foreach(byte item in buffer)
                     {
@@ -172,13 +148,16 @@ namespace wave_android_uitest
                 fos.Close();
                 fos.Dispose();
 
-                onlyInstance.recorder.Release();
 
+                onlyInstance.CleanRecorder();
 //                Console.WriteLine("Sleeping");
 //                SystemClock.Sleep(1000);
 //                Console.WriteLine("Awake");
 
                 Console.WriteLine("Cancelling write thread");
+
+                onlyInstance.fileReadComplete();
+
                 this.Cancel();
             }
         }
@@ -214,6 +193,42 @@ namespace wave_android_uitest
             }
         }
 
+        public bool InitializeRecorder()
+        {
+            bool retVal = false;
+
+            sampleRate = 44100;
+            channels = ChannelIn.Mono;
+            outputFormat = Android.Media.Encoding.Pcm16bit;
+
+            bufferSize = AudioRecord.GetMinBufferSize(sampleRate, channels, outputFormat);
+
+            filePath = "/sdcard/test.wav";
+
+            recorder = new AudioRecord(AudioSource.Mic, sampleRate, channels, outputFormat, bufferSize);
+
+            if (recorder == null || recorder.State != State.Initialized) 
+            {
+                Console.WriteLine("Problem setting up recorder");
+            } 
+            else 
+            {
+                retVal = true;
+                Console.WriteLine("Recorder successfully initialized");
+            }
+
+            return retVal;
+        }
+
+        public void CleanRecorder()
+        {
+            if(recorder != null)
+            {
+                onlyInstance.recorder.Release();
+                onlyInstance.recorder = null;
+            }
+        }
+
 		public string StartRecording()
 		{
             //Vedad - start our main recorder thread
@@ -226,7 +241,7 @@ namespace wave_android_uitest
 //            timer.Schedule(timer, 0);
 //            timer.ScheduleAtFixedRate (task, 0, 5000);
 
-            onlyInstance.filePath;
+            return onlyInstance.filePath;
 		}
 
 		public void StopRecording()
