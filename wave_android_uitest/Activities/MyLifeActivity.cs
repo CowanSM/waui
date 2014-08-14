@@ -96,7 +96,7 @@ namespace wave_android_uitest
                 FindViewById<TextView>(Resource.Id.my_life_opponent_remove_txt).SetTypeface(gbook, Android.Graphics.TypefaceStyle.Normal);
             } else {
                 FindViewById<RelativeLayout>(Resource.Id.my_life_opponent_layout).Visibility = ViewStates.Invisible;
-                ((RelativeLayout.LayoutParams)FindViewById<ViewGroup>(Resource.Id.my_life_pager_parent).LayoutParameters).AddRule(LayoutRules.Below, Resource.Id.my_life_header_frame);
+                ((RelativeLayout.LayoutParams)FindViewById<ViewGroup>(Resource.Id.my_life_calendar_switcher).LayoutParameters).AddRule(LayoutRules.Below, Resource.Id.my_life_header_frame);
             }
 
             // actions for the stats clickables
