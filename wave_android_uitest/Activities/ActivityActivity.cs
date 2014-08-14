@@ -181,7 +181,7 @@ namespace wave_android_uitest {
 		#endregion
 	}
 
-	[Activity (Label = "ActivityActivity")]			
+    [Activity (Label = "ActivityActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class ActivityActivity : SubPrimaryActivity {
 		private ListView _activityList, _groupList, _optionList;
 		private FilterOptions _filterOptions;

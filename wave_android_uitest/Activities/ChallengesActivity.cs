@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace wave_android_uitest
 {
-	[Activity (Label = "ChallengesActivity")]			
+    [Activity (Label = "ChallengesActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class ChallengesActivity : SubPrimaryActivity
 	{
 		protected override void OnCreate (Bundle bundle)

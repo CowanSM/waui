@@ -157,7 +157,7 @@ namespace wave_android_uitest
 
 	}
 
-	[Activity (Label = "wave_android_uitest", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity (Label = "wave_android_uitest", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]
 	public class MainActivity : FragmentActivity
 	{
 		//int count = 1;

@@ -12,7 +12,7 @@ using Com.Jjoe64.Graphview;
 
 namespace wave_android_uitest
 {
-	[Activity (Label = "MyLifeActivity")]			
+    [Activity (Label = "MyLifeActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class MyLifeActivity : SubPrimaryActivity
 	{
         private bool _opponent = false;

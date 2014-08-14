@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 
 namespace wave_android_uitest {
-    [Activity(Label = "DayDetailActivity")]			
+    [Activity(Label = "DayDetailActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
     public class DayDetailActivity : SubPrimaryActivity {
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);

@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 
 namespace wave_android_uitest {
-    [Activity(Label = "OpponentLifeActivity")]			
+    [Activity(Label = "OpponentLifeActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
     public class OpponentLifeActivity : SubPrimaryActivity {
         private bool _opponent = true;
         private bool _calToggle = true;

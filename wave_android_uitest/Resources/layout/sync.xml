@@ -36,4 +36,19 @@
         android:layout_marginTop="10dip"
         android:layout_marginRight="10dip"
         android:layout_marginBottom="10dip" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sync_outputparent"
+        android:layout_above="@id/sync_button"
+        android:layout_below="@id/sync_title">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sync_output"
+            android:gravity="center" />
+    </LinearLayout>
 </RelativeLayout>
