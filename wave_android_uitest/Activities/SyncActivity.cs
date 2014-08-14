@@ -49,6 +49,7 @@ namespace wave_android_uitest {
 
         protected override void OnDestroy() 
         {
+            base.OnDestroy();
             audioHandler.CleanRecorder();
         }
 
