@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 
 namespace wave_android_uitest {
-    [Activity(Label = "FriendRequest")]			
+    [Activity(Label = "FriendRequest", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
     public class FriendRequest : Activity {
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
