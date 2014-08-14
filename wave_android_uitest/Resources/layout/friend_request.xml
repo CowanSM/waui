@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/friend_request_root"
+    android:background="@drawable/global_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/friend_request_header"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TextView
+            android:text="Friend Request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_request_header_title"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:padding="7dip"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/friend_request_buttons"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:text="Request Friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_request_button_request"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:padding="14dip"
+            android:clickable="true" />
+        <TextView
+            android:text="Back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_request_button_cancel"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/friend_request_button_request"
+            android:layout_centerHorizontal="true"
+            android:padding="14dip"
+            android:layout_marginBottom="64dip"
+            android:layout_marginTop="21dip"
+            android:clickable="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/friend_request_parameters"
+        android:layout_below="@id/friend_request_header"
+        android:layout_above="@id/friend_request_buttons">
+        <TextView
+            android:text="Username or Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_request_name_label"
+            android:padding="7dip"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="15dip" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_request_name_input"
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"
+            android:layout_below="@id/friend_request_name_label"
+            android:padding="7dip"
+            android:layout_marginLeft="21dip"
+            android:layout_marginTop="7dip"
+            android:layout_marginRight="21dip"
+            android:layout_marginBottom="42dip"
+            android:inputType="text"
+            android:minLines="1"
+            android:maxLines="1" />
+        <TextView
+            android:text="Message (Optional)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_request_message_label"
+            android:textColor="@android:color/black"
+            android:padding="7dip"
+            android:layout_below="@id/friend_request_name_input"
+            android:layout_marginLeft="15dip" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_request_message_input"
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"
+            android:padding="7dip"
+            android:layout_below="@id/friend_request_message_label"
+            android:layout_marginLeft="21dip"
+            android:layout_marginTop="7dip"
+            android:layout_marginRight="21dip"
+            android:inputType="text"
+            android:minLines="1"
+            android:maxLines="1" />
+    </RelativeLayout>
+</RelativeLayout>

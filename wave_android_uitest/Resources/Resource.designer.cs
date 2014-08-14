@@ -24,10 +24,6 @@ namespace wave_android_uitest
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
-		public static void UpdateIdValues()
-		{
-		}
-		
 		public partial class Animation
 		{
 			
@@ -275,17 +271,17 @@ namespace wave_android_uitest
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090104
-			public const int action_activity = 2131296516;
+			// aapt resource value: 0x7f090111
+			public const int action_activity = 2131296529;
 			
-			// aapt resource value: 0x7f090106
-			public const int action_challenges = 2131296518;
+			// aapt resource value: 0x7f090113
+			public const int action_challenges = 2131296531;
 			
-			// aapt resource value: 0x7f090105
-			public const int action_my_life = 2131296517;
+			// aapt resource value: 0x7f090112
+			public const int action_my_life = 2131296530;
 			
-			// aapt resource value: 0x7f090107
-			public const int action_people = 2131296519;
+			// aapt resource value: 0x7f090114
+			public const int action_people = 2131296532;
 			
 			// aapt resource value: 0x7f090002
 			public const int activity_limage = 2131296258;
@@ -299,8 +295,8 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090000
 			public const int activity_root = 2131296256;
 			
-			// aapt resource value: 0x7f0900e3
-			public const int activity_tab_bar = 2131296483;
+			// aapt resource value: 0x7f0900f0
+			public const int activity_tab_bar = 2131296496;
 			
 			// aapt resource value: 0x7f090005
 			public const int activity_text1 = 2131296261;
@@ -311,8 +307,8 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090004
 			public const int activity_time = 2131296260;
 			
-			// aapt resource value: 0x7f0900e2
-			public const int body = 2131296482;
+			// aapt resource value: 0x7f0900ef
+			public const int body = 2131296495;
 			
 			// aapt resource value: 0x7f09000c
 			public const int challenges_header_create = 2131296268;
@@ -422,476 +418,515 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090021
 			public const int day_detail_txt_layout = 2131296289;
 			
-			// aapt resource value: 0x7f090063
-			public const int editText1 = 2131296355;
-			
-			// aapt resource value: 0x7f090065
-			public const int forgot_password = 2131296357;
-			
-			// aapt resource value: 0x7f09002d
-			public const int friend_stats_layout = 2131296301;
-			
-			// aapt resource value: 0x7f09002f
-			public const int fs_challenge_button = 2131296303;
-			
-			// aapt resource value: 0x7f09002e
-			public const int fs_pager = 2131296302;
-			
-			// aapt resource value: 0x7f09003d
-			public const int fsi_graph_placeholder = 2131296317;
-			
-			// aapt resource value: 0x7f09003a
-			public const int fsi_hours_count = 2131296314;
-			
-			// aapt resource value: 0x7f090039
-			public const int fsi_hours_label = 2131296313;
-			
-			// aapt resource value: 0x7f090038
-			public const int fsi_miles_count = 2131296312;
-			
-			// aapt resource value: 0x7f090037
-			public const int fsi_miles_label = 2131296311;
-			
-			// aapt resource value: 0x7f090033
-			public const int fsi_newer_button = 2131296307;
-			
-			// aapt resource value: 0x7f090034
-			public const int fsi_older_button = 2131296308;
-			
-			// aapt resource value: 0x7f090031
-			public const int fsi_parent_layout = 2131296305;
-			
-			// aapt resource value: 0x7f090030
-			public const int fsi_scroll = 2131296304;
-			
-			// aapt resource value: 0x7f09003b
-			public const int fsi_stat_divider = 2131296315;
-			
-			// aapt resource value: 0x7f090036
-			public const int fsi_steps_count = 2131296310;
-			
-			// aapt resource value: 0x7f090035
-			public const int fsi_steps_label = 2131296309;
-			
-			// aapt resource value: 0x7f090042
-			public const int fsi_user_hour_count = 2131296322;
-			
-			// aapt resource value: 0x7f090041
-			public const int fsi_user_hour_label = 2131296321;
-			
-			// aapt resource value: 0x7f090040
-			public const int fsi_user_mile_count = 2131296320;
-			
-			// aapt resource value: 0x7f09003f
-			public const int fsi_user_mile_label = 2131296319;
-			
-			// aapt resource value: 0x7f09003e
-			public const int fsi_user_step_count = 2131296318;
-			
-			// aapt resource value: 0x7f09003c
-			public const int fsi_user_step_label = 2131296316;
-			
-			// aapt resource value: 0x7f090032
-			public const int fsi_view_title = 2131296306;
-			
-			// aapt resource value: 0x7f090053
-			public const int home_data = 2131296339;
-			
-			// aapt resource value: 0x7f090058
-			public const int home_data_calories_label = 2131296344;
-			
-			// aapt resource value: 0x7f090057
-			public const int home_data_miles = 2131296343;
-			
-			// aapt resource value: 0x7f090056
-			public const int home_data_miles_label = 2131296342;
-			
-			// aapt resource value: 0x7f09005b
-			public const int home_data_sleep = 2131296347;
-			
-			// aapt resource value: 0x7f09005a
-			public const int home_data_sleep_label = 2131296346;
-			
-			// aapt resource value: 0x7f090055
-			public const int home_data_steps = 2131296341;
-			
-			// aapt resource value: 0x7f090054
-			public const int home_data_steps_label = 2131296340;
-			
-			// aapt resource value: 0x7f090044
-			public const int home_header = 2131296324;
-			
-			// aapt resource value: 0x7f090048
-			public const int home_header_controls = 2131296328;
-			
-			// aapt resource value: 0x7f090049
-			public const int home_header_controls_logout = 2131296329;
-			
-			// aapt resource value: 0x7f09004a
-			public const int home_header_controls_test = 2131296330;
-			
-			// aapt resource value: 0x7f090045
-			public const int home_header_user = 2131296325;
-			
-			// aapt resource value: 0x7f090046
-			public const int home_header_user_image = 2131296326;
-			
-			// aapt resource value: 0x7f090047
-			public const int home_header_user_name = 2131296327;
-			
-			// aapt resource value: 0x7f09005c
-			public const int home_options = 2131296348;
-			
-			// aapt resource value: 0x7f09005e
-			public const int home_options_picture = 2131296350;
-			
-			// aapt resource value: 0x7f09005d
-			public const int home_options_sync = 2131296349;
-			
-			// aapt resource value: 0x7f090043
-			public const int home_root = 2131296323;
-			
-			// aapt resource value: 0x7f09004b
-			public const int home_subheader = 2131296331;
-			
-			// aapt resource value: 0x7f09004f
-			public const int home_subheader_back = 2131296335;
-			
-			// aapt resource value: 0x7f090051
-			public const int home_subheader_back_image = 2131296337;
-			
-			// aapt resource value: 0x7f090050
-			public const int home_subheader_back_text = 2131296336;
-			
-			// aapt resource value: 0x7f09004c
-			public const int home_subheader_next = 2131296332;
-			
-			// aapt resource value: 0x7f09004d
-			public const int home_subheader_next_image = 2131296333;
-			
-			// aapt resource value: 0x7f09004e
-			public const int home_subheader_next_text = 2131296334;
-			
-			// aapt resource value: 0x7f090052
-			public const int home_subheader_title = 2131296338;
-			
-			// aapt resource value: 0x7f0900e0
-			public const int imageView1 = 2131296480;
-			
-			// aapt resource value: 0x7f0900f9
-			public const int login = 2131296505;
-			
-			// aapt resource value: 0x7f090064
-			public const int login_btn = 2131296356;
-			
-			// aapt resource value: 0x7f090060
-			public const int login_facebook = 2131296352;
-			
-			// aapt resource value: 0x7f09005f
-			public const int login_layout = 2131296351;
-			
-			// aapt resource value: 0x7f09007d
-			public const int my_life_calendar_switcher = 2131296381;
-			
-			// aapt resource value: 0x7f090076
-			public const int my_life_calendar_toggle = 2131296374;
-			
-			// aapt resource value: 0x7f090099
-			public const int my_life_cals_avg = 2131296409;
-			
-			// aapt resource value: 0x7f09009a
-			public const int my_life_cals_avg_label = 2131296410;
-			
-			// aapt resource value: 0x7f090084
-			public const int my_life_gt_arrow = 2131296388;
-			
-			// aapt resource value: 0x7f090068
-			public const int my_life_header = 2131296360;
-			
-			// aapt resource value: 0x7f090077
-			public const int my_life_header_bg = 2131296375;
-			
-			// aapt resource value: 0x7f090067
-			public const int my_life_header_frame = 2131296359;
-			
-			// aapt resource value: 0x7f090080
-			public const int my_life_lt_arrow = 2131296384;
-			
-			// aapt resource value: 0x7f090093
-			public const int my_life_miles_avg = 2131296403;
-			
-			// aapt resource value: 0x7f090094
-			public const int my_life_miles_avg_label = 2131296404;
-			
-			// aapt resource value: 0x7f09007f
-			public const int my_life_month_bar = 2131296383;
-			
-			// aapt resource value: 0x7f090082
-			public const int my_life_month_text = 2131296386;
-			
-			// aapt resource value: 0x7f090081
-			public const int my_life_newer_text = 2131296385;
-			
-			// aapt resource value: 0x7f090083
-			public const int my_life_older_text = 2131296387;
-			
-			// aapt resource value: 0x7f09007c
-			public const int my_life_opponent_challenge_text = 2131296380;
-			
-			// aapt resource value: 0x7f090078
-			public const int my_life_opponent_layout = 2131296376;
-			
-			// aapt resource value: 0x7f09007b
-			public const int my_life_opponent_left = 2131296379;
-			
-			// aapt resource value: 0x7f09007a
-			public const int my_life_opponent_remove_txt = 2131296378;
-			
-			// aapt resource value: 0x7f090079
-			public const int my_life_opponent_right = 2131296377;
-			
-			// aapt resource value: 0x7f09009d
-			public const int my_life_page_grid = 2131296413;
-			
-			// aapt resource value: 0x7f09009c
-			public const int my_life_page_root = 2131296412;
-			
-			// aapt resource value: 0x7f090085
-			public const int my_life_pager = 2131296389;
-			
-			// aapt resource value: 0x7f09007e
-			public const int my_life_pager_parent = 2131296382;
-			
-			// aapt resource value: 0x7f090066
-			public const int my_life_root_layout = 2131296358;
-			
-			// aapt resource value: 0x7f090088
-			public const int my_life_stats_button_layout = 2131296392;
-			
-			// aapt resource value: 0x7f090095
-			public const int my_life_stats_calories_layout = 2131296405;
-			
-			// aapt resource value: 0x7f090096
-			public const int my_life_stats_cals_arrow = 2131296406;
-			
-			// aapt resource value: 0x7f090098
-			public const int my_life_stats_cals_label = 2131296408;
-			
-			// aapt resource value: 0x7f090097
-			public const int my_life_stats_cals_total = 2131296407;
-			
-			// aapt resource value: 0x7f09009b
-			public const int my_life_stats_graph_parent = 2131296411;
-			
-			// aapt resource value: 0x7f090090
-			public const int my_life_stats_miles_arrow = 2131296400;
-			
-			// aapt resource value: 0x7f090092
-			public const int my_life_stats_miles_label = 2131296402;
-			
-			// aapt resource value: 0x7f09008f
-			public const int my_life_stats_miles_layout = 2131296399;
-			
-			// aapt resource value: 0x7f090091
-			public const int my_life_stats_miles_total = 2131296401;
-			
-			// aapt resource value: 0x7f090087
-			public const int my_life_stats_month_bar = 2131296391;
-			
-			// aapt resource value: 0x7f090086
-			public const int my_life_stats_parent = 2131296390;
-			
-			// aapt resource value: 0x7f09008c
-			public const int my_life_stats_step_label = 2131296396;
-			
-			// aapt resource value: 0x7f09008b
-			public const int my_life_stats_step_total = 2131296395;
-			
-			// aapt resource value: 0x7f09008a
-			public const int my_life_stats_steps_arrow = 2131296394;
-			
-			// aapt resource value: 0x7f090089
-			public const int my_life_stats_steps_layout = 2131296393;
-			
-			// aapt resource value: 0x7f09008d
-			public const int my_life_steps_avg = 2131296397;
-			
-			// aapt resource value: 0x7f09008e
-			public const int my_life_steps_avg_label = 2131296398;
-			
-			// aapt resource value: 0x7f09009f
-			public const int my_life_tile_bg_image = 2131296415;
-			
-			// aapt resource value: 0x7f0900a4
-			public const int my_life_tile_count_txt = 2131296420;
-			
-			// aapt resource value: 0x7f0900a1
-			public const int my_life_tile_fg_frame = 2131296417;
-			
-			// aapt resource value: 0x7f0900a2
-			public const int my_life_tile_fg_image = 2131296418;
-			
-			// aapt resource value: 0x7f0900a3
-			public const int my_life_tile_fg_text = 2131296419;
-			
-			// aapt resource value: 0x7f0900a0
-			public const int my_life_tile_info = 2131296416;
-			
-			// aapt resource value: 0x7f09009e
-			public const int my_life_tile_root = 2131296414;
-			
-			// aapt resource value: 0x7f090072
-			public const int my_life_user_check_text = 2131296370;
+			// aapt resource value: 0x7f09006e
+			public const int editText1 = 2131296366;
 			
 			// aapt resource value: 0x7f090070
-			public const int my_life_user_divider1 = 2131296368;
+			public const int forgot_password = 2131296368;
 			
-			// aapt resource value: 0x7f090073
-			public const int my_life_user_divider2 = 2131296371;
+			// aapt resource value: 0x7f090032
+			public const int friend_request_button_cancel = 2131296306;
+			
+			// aapt resource value: 0x7f090031
+			public const int friend_request_button_request = 2131296305;
+			
+			// aapt resource value: 0x7f090030
+			public const int friend_request_buttons = 2131296304;
+			
+			// aapt resource value: 0x7f09002e
+			public const int friend_request_header = 2131296302;
+			
+			// aapt resource value: 0x7f09002f
+			public const int friend_request_header_title = 2131296303;
+			
+			// aapt resource value: 0x7f090037
+			public const int friend_request_message_input = 2131296311;
+			
+			// aapt resource value: 0x7f090036
+			public const int friend_request_message_label = 2131296310;
+			
+			// aapt resource value: 0x7f090035
+			public const int friend_request_name_input = 2131296309;
+			
+			// aapt resource value: 0x7f090034
+			public const int friend_request_name_label = 2131296308;
+			
+			// aapt resource value: 0x7f090033
+			public const int friend_request_parameters = 2131296307;
+			
+			// aapt resource value: 0x7f09002d
+			public const int friend_request_root = 2131296301;
+			
+			// aapt resource value: 0x7f090038
+			public const int friend_stats_layout = 2131296312;
+			
+			// aapt resource value: 0x7f09003a
+			public const int fs_challenge_button = 2131296314;
+			
+			// aapt resource value: 0x7f090039
+			public const int fs_pager = 2131296313;
+			
+			// aapt resource value: 0x7f090048
+			public const int fsi_graph_placeholder = 2131296328;
+			
+			// aapt resource value: 0x7f090045
+			public const int fsi_hours_count = 2131296325;
+			
+			// aapt resource value: 0x7f090044
+			public const int fsi_hours_label = 2131296324;
+			
+			// aapt resource value: 0x7f090043
+			public const int fsi_miles_count = 2131296323;
+			
+			// aapt resource value: 0x7f090042
+			public const int fsi_miles_label = 2131296322;
+			
+			// aapt resource value: 0x7f09003e
+			public const int fsi_newer_button = 2131296318;
+			
+			// aapt resource value: 0x7f09003f
+			public const int fsi_older_button = 2131296319;
+			
+			// aapt resource value: 0x7f09003c
+			public const int fsi_parent_layout = 2131296316;
+			
+			// aapt resource value: 0x7f09003b
+			public const int fsi_scroll = 2131296315;
+			
+			// aapt resource value: 0x7f090046
+			public const int fsi_stat_divider = 2131296326;
+			
+			// aapt resource value: 0x7f090041
+			public const int fsi_steps_count = 2131296321;
+			
+			// aapt resource value: 0x7f090040
+			public const int fsi_steps_label = 2131296320;
+			
+			// aapt resource value: 0x7f09004d
+			public const int fsi_user_hour_count = 2131296333;
+			
+			// aapt resource value: 0x7f09004c
+			public const int fsi_user_hour_label = 2131296332;
+			
+			// aapt resource value: 0x7f09004b
+			public const int fsi_user_mile_count = 2131296331;
+			
+			// aapt resource value: 0x7f09004a
+			public const int fsi_user_mile_label = 2131296330;
+			
+			// aapt resource value: 0x7f090049
+			public const int fsi_user_step_count = 2131296329;
+			
+			// aapt resource value: 0x7f090047
+			public const int fsi_user_step_label = 2131296327;
+			
+			// aapt resource value: 0x7f09003d
+			public const int fsi_view_title = 2131296317;
+			
+			// aapt resource value: 0x7f09005e
+			public const int home_data = 2131296350;
+			
+			// aapt resource value: 0x7f090063
+			public const int home_data_calories_label = 2131296355;
+			
+			// aapt resource value: 0x7f090062
+			public const int home_data_miles = 2131296354;
+			
+			// aapt resource value: 0x7f090061
+			public const int home_data_miles_label = 2131296353;
+			
+			// aapt resource value: 0x7f090066
+			public const int home_data_sleep = 2131296358;
+			
+			// aapt resource value: 0x7f090065
+			public const int home_data_sleep_label = 2131296357;
+			
+			// aapt resource value: 0x7f090060
+			public const int home_data_steps = 2131296352;
+			
+			// aapt resource value: 0x7f09005f
+			public const int home_data_steps_label = 2131296351;
+			
+			// aapt resource value: 0x7f09004f
+			public const int home_header = 2131296335;
+			
+			// aapt resource value: 0x7f090053
+			public const int home_header_controls = 2131296339;
+			
+			// aapt resource value: 0x7f090054
+			public const int home_header_controls_logout = 2131296340;
+			
+			// aapt resource value: 0x7f090055
+			public const int home_header_controls_test = 2131296341;
+			
+			// aapt resource value: 0x7f090050
+			public const int home_header_user = 2131296336;
+			
+			// aapt resource value: 0x7f090051
+			public const int home_header_user_image = 2131296337;
+			
+			// aapt resource value: 0x7f090052
+			public const int home_header_user_name = 2131296338;
+			
+			// aapt resource value: 0x7f090067
+			public const int home_options = 2131296359;
 			
 			// aapt resource value: 0x7f090069
-			public const int my_life_user_image = 2131296361;
+			public const int home_options_picture = 2131296361;
 			
-			// aapt resource value: 0x7f09006b
-			public const int my_life_user_info = 2131296363;
+			// aapt resource value: 0x7f090068
+			public const int home_options_sync = 2131296360;
 			
-			// aapt resource value: 0x7f09006a
-			public const int my_life_user_name = 2131296362;
+			// aapt resource value: 0x7f09004e
+			public const int home_root = 2131296334;
 			
-			// aapt resource value: 0x7f090074
-			public const int my_life_user_x = 2131296372;
+			// aapt resource value: 0x7f090056
+			public const int home_subheader = 2131296342;
 			
-			// aapt resource value: 0x7f090075
-			public const int my_life_user_x_text = 2131296373;
+			// aapt resource value: 0x7f09005a
+			public const int home_subheader_back = 2131296346;
 			
-			// aapt resource value: 0x7f09006d
-			public const int my_life_user_xp_bar = 2131296365;
+			// aapt resource value: 0x7f09005c
+			public const int home_subheader_back_image = 2131296348;
 			
-			// aapt resource value: 0x7f090071
-			public const int my_life_user_xp_check = 2131296369;
+			// aapt resource value: 0x7f09005b
+			public const int home_subheader_back_text = 2131296347;
 			
-			// aapt resource value: 0x7f09006e
-			public const int my_life_user_xp_image = 2131296366;
+			// aapt resource value: 0x7f090057
+			public const int home_subheader_next = 2131296343;
 			
-			// aapt resource value: 0x7f09006c
-			public const int my_life_user_xp_layout = 2131296364;
+			// aapt resource value: 0x7f090058
+			public const int home_subheader_next_image = 2131296344;
+			
+			// aapt resource value: 0x7f090059
+			public const int home_subheader_next_text = 2131296345;
+			
+			// aapt resource value: 0x7f09005d
+			public const int home_subheader_title = 2131296349;
+			
+			// aapt resource value: 0x7f0900ed
+			public const int imageView1 = 2131296493;
+			
+			// aapt resource value: 0x7f090106
+			public const int login = 2131296518;
 			
 			// aapt resource value: 0x7f09006f
-			public const int my_life_user_xp_text = 2131296367;
+			public const int login_btn = 2131296367;
 			
-			// aapt resource value: 0x7f0900a6
-			public const int new_challenge_header = 2131296422;
+			// aapt resource value: 0x7f09006b
+			public const int login_facebook = 2131296363;
 			
-			// aapt resource value: 0x7f0900a9
-			public const int new_challenge_header_back = 2131296425;
+			// aapt resource value: 0x7f09006a
+			public const int login_layout = 2131296362;
 			
 			// aapt resource value: 0x7f0900a8
-			public const int new_challenge_header_back_arrow = 2131296424;
+			public const int my_life_back_button = 2131296424;
 			
-			// aapt resource value: 0x7f0900a7
-			public const int new_challenge_header_back_container = 2131296423;
+			// aapt resource value: 0x7f090088
+			public const int my_life_calendar_switcher = 2131296392;
 			
-			// aapt resource value: 0x7f0900ab
-			public const int new_challenge_header_next = 2131296427;
+			// aapt resource value: 0x7f090081
+			public const int my_life_calendar_toggle = 2131296385;
 			
-			// aapt resource value: 0x7f0900ac
-			public const int new_challenge_header_next_arrow = 2131296428;
-			
-			// aapt resource value: 0x7f0900aa
-			public const int new_challenge_header_next_container = 2131296426;
-			
-			// aapt resource value: 0x7f0900ae
-			public const int new_challenge_header_subtitle = 2131296430;
-			
-			// aapt resource value: 0x7f0900ad
-			public const int new_challenge_header_title = 2131296429;
-			
-			// aapt resource value: 0x7f0900b4
-			public const int new_challenge_page_four_finished = 2131296436;
-			
-			// aapt resource value: 0x7f0900b3
-			public const int new_challenge_page_four_input = 2131296435;
-			
-			// aapt resource value: 0x7f0900b0
-			public const int new_challenge_page_four_root = 2131296432;
-			
-			// aapt resource value: 0x7f0900b1
-			public const int new_challenge_page_four_top = 2131296433;
-			
-			// aapt resource value: 0x7f0900b2
-			public const int new_challenge_page_four_top_title = 2131296434;
-			
-			// aapt resource value: 0x7f0900b9
-			public const int new_challenge_page_three_bottom = 2131296441;
-			
-			// aapt resource value: 0x7f0900ba
-			public const int new_challenge_page_three_bottom_title = 2131296442;
-			
-			// aapt resource value: 0x7f0900bb
-			public const int new_challenge_page_three_date_parent = 2131296443;
-			
-			// aapt resource value: 0x7f0900b5
-			public const int new_challenge_page_three_root = 2131296437;
-			
-			// aapt resource value: 0x7f0900b8
-			public const int new_challenge_page_three_time_parent = 2131296440;
-			
-			// aapt resource value: 0x7f0900b6
-			public const int new_challenge_page_three_top = 2131296438;
-			
-			// aapt resource value: 0x7f0900b7
-			public const int new_challenge_page_three_top_title = 2131296439;
-			
-			// aapt resource value: 0x7f0900c2
-			public const int new_challenge_page_two_bottom = 2131296450;
-			
-			// aapt resource value: 0x7f0900c4
-			public const int new_challenge_page_two_bottom_buttons = 2131296452;
-			
-			// aapt resource value: 0x7f0900c7
-			public const int new_challenge_page_two_bottom_days = 2131296455;
-			
-			// aapt resource value: 0x7f0900c6
-			public const int new_challenge_page_two_bottom_hours = 2131296454;
-			
-			// aapt resource value: 0x7f0900c5
-			public const int new_challenge_page_two_bottom_minutes = 2131296453;
-			
-			// aapt resource value: 0x7f0900c9
-			public const int new_challenge_page_two_bottom_months = 2131296457;
-			
-			// aapt resource value: 0x7f0900c3
-			public const int new_challenge_page_two_bottom_title = 2131296451;
-			
-			// aapt resource value: 0x7f0900c8
-			public const int new_challenge_page_two_bottom_weeks = 2131296456;
-			
-			// aapt resource value: 0x7f0900ca
-			public const int new_challenge_page_two_number_parent = 2131296458;
-			
-			// aapt resource value: 0x7f0900bc
-			public const int new_challenge_page_two_root = 2131296444;
-			
-			// aapt resource value: 0x7f0900bd
-			public const int new_challenge_page_two_top = 2131296445;
-			
-			// aapt resource value: 0x7f0900c1
-			public const int new_challenge_page_two_top_calories = 2131296449;
-			
-			// aapt resource value: 0x7f0900c0
-			public const int new_challenge_page_two_top_miles = 2131296448;
-			
-			// aapt resource value: 0x7f0900bf
-			public const int new_challenge_page_two_top_steps = 2131296447;
-			
-			// aapt resource value: 0x7f0900be
-			public const int new_challenge_page_two_top_title = 2131296446;
-			
-			// aapt resource value: 0x7f0900af
-			public const int new_challenge_pager = 2131296431;
+			// aapt resource value: 0x7f0900a4
+			public const int my_life_cals_avg = 2131296420;
 			
 			// aapt resource value: 0x7f0900a5
-			public const int new_challenge_root = 2131296421;
+			public const int my_life_cals_avg_label = 2131296421;
+			
+			// aapt resource value: 0x7f09008f
+			public const int my_life_gt_arrow = 2131296399;
+			
+			// aapt resource value: 0x7f090073
+			public const int my_life_header = 2131296371;
+			
+			// aapt resource value: 0x7f090082
+			public const int my_life_header_bg = 2131296386;
+			
+			// aapt resource value: 0x7f090072
+			public const int my_life_header_frame = 2131296370;
+			
+			// aapt resource value: 0x7f09008b
+			public const int my_life_lt_arrow = 2131296395;
+			
+			// aapt resource value: 0x7f09009e
+			public const int my_life_miles_avg = 2131296414;
+			
+			// aapt resource value: 0x7f09009f
+			public const int my_life_miles_avg_label = 2131296415;
+			
+			// aapt resource value: 0x7f09008a
+			public const int my_life_month_bar = 2131296394;
+			
+			// aapt resource value: 0x7f09008d
+			public const int my_life_month_text = 2131296397;
+			
+			// aapt resource value: 0x7f09008c
+			public const int my_life_newer_text = 2131296396;
+			
+			// aapt resource value: 0x7f09008e
+			public const int my_life_older_text = 2131296398;
+			
+			// aapt resource value: 0x7f0900a7
+			public const int my_life_opponent_back = 2131296423;
+			
+			// aapt resource value: 0x7f090087
+			public const int my_life_opponent_challenge_text = 2131296391;
+			
+			// aapt resource value: 0x7f090083
+			public const int my_life_opponent_layout = 2131296387;
+			
+			// aapt resource value: 0x7f090086
+			public const int my_life_opponent_left = 2131296390;
+			
+			// aapt resource value: 0x7f090085
+			public const int my_life_opponent_remove_txt = 2131296389;
+			
+			// aapt resource value: 0x7f090084
+			public const int my_life_opponent_right = 2131296388;
+			
+			// aapt resource value: 0x7f0900aa
+			public const int my_life_page_grid = 2131296426;
+			
+			// aapt resource value: 0x7f0900a9
+			public const int my_life_page_root = 2131296425;
+			
+			// aapt resource value: 0x7f090090
+			public const int my_life_pager = 2131296400;
+			
+			// aapt resource value: 0x7f090089
+			public const int my_life_pager_parent = 2131296393;
+			
+			// aapt resource value: 0x7f090071
+			public const int my_life_root_layout = 2131296369;
+			
+			// aapt resource value: 0x7f090093
+			public const int my_life_stats_button_layout = 2131296403;
+			
+			// aapt resource value: 0x7f0900a0
+			public const int my_life_stats_calories_layout = 2131296416;
+			
+			// aapt resource value: 0x7f0900a1
+			public const int my_life_stats_cals_arrow = 2131296417;
+			
+			// aapt resource value: 0x7f0900a3
+			public const int my_life_stats_cals_label = 2131296419;
+			
+			// aapt resource value: 0x7f0900a2
+			public const int my_life_stats_cals_total = 2131296418;
+			
+			// aapt resource value: 0x7f0900a6
+			public const int my_life_stats_graph_parent = 2131296422;
+			
+			// aapt resource value: 0x7f09009b
+			public const int my_life_stats_miles_arrow = 2131296411;
+			
+			// aapt resource value: 0x7f09009d
+			public const int my_life_stats_miles_label = 2131296413;
+			
+			// aapt resource value: 0x7f09009a
+			public const int my_life_stats_miles_layout = 2131296410;
+			
+			// aapt resource value: 0x7f09009c
+			public const int my_life_stats_miles_total = 2131296412;
+			
+			// aapt resource value: 0x7f090092
+			public const int my_life_stats_month_bar = 2131296402;
+			
+			// aapt resource value: 0x7f090091
+			public const int my_life_stats_parent = 2131296401;
+			
+			// aapt resource value: 0x7f090097
+			public const int my_life_stats_step_label = 2131296407;
+			
+			// aapt resource value: 0x7f090096
+			public const int my_life_stats_step_total = 2131296406;
+			
+			// aapt resource value: 0x7f090095
+			public const int my_life_stats_steps_arrow = 2131296405;
+			
+			// aapt resource value: 0x7f090094
+			public const int my_life_stats_steps_layout = 2131296404;
+			
+			// aapt resource value: 0x7f090098
+			public const int my_life_steps_avg = 2131296408;
+			
+			// aapt resource value: 0x7f090099
+			public const int my_life_steps_avg_label = 2131296409;
+			
+			// aapt resource value: 0x7f0900ac
+			public const int my_life_tile_bg_image = 2131296428;
+			
+			// aapt resource value: 0x7f0900b1
+			public const int my_life_tile_count_txt = 2131296433;
+			
+			// aapt resource value: 0x7f0900ae
+			public const int my_life_tile_fg_frame = 2131296430;
+			
+			// aapt resource value: 0x7f0900af
+			public const int my_life_tile_fg_image = 2131296431;
+			
+			// aapt resource value: 0x7f0900b0
+			public const int my_life_tile_fg_text = 2131296432;
+			
+			// aapt resource value: 0x7f0900ad
+			public const int my_life_tile_info = 2131296429;
+			
+			// aapt resource value: 0x7f0900ab
+			public const int my_life_tile_root = 2131296427;
+			
+			// aapt resource value: 0x7f09007d
+			public const int my_life_user_check_text = 2131296381;
+			
+			// aapt resource value: 0x7f09007b
+			public const int my_life_user_divider1 = 2131296379;
+			
+			// aapt resource value: 0x7f09007e
+			public const int my_life_user_divider2 = 2131296382;
+			
+			// aapt resource value: 0x7f090074
+			public const int my_life_user_image = 2131296372;
+			
+			// aapt resource value: 0x7f090076
+			public const int my_life_user_info = 2131296374;
+			
+			// aapt resource value: 0x7f090075
+			public const int my_life_user_name = 2131296373;
+			
+			// aapt resource value: 0x7f09007f
+			public const int my_life_user_x = 2131296383;
+			
+			// aapt resource value: 0x7f090080
+			public const int my_life_user_x_text = 2131296384;
+			
+			// aapt resource value: 0x7f090078
+			public const int my_life_user_xp_bar = 2131296376;
+			
+			// aapt resource value: 0x7f09007c
+			public const int my_life_user_xp_check = 2131296380;
+			
+			// aapt resource value: 0x7f090079
+			public const int my_life_user_xp_image = 2131296377;
+			
+			// aapt resource value: 0x7f090077
+			public const int my_life_user_xp_layout = 2131296375;
+			
+			// aapt resource value: 0x7f09007a
+			public const int my_life_user_xp_text = 2131296378;
+			
+			// aapt resource value: 0x7f0900b3
+			public const int new_challenge_header = 2131296435;
+			
+			// aapt resource value: 0x7f0900b6
+			public const int new_challenge_header_back = 2131296438;
+			
+			// aapt resource value: 0x7f0900b5
+			public const int new_challenge_header_back_arrow = 2131296437;
+			
+			// aapt resource value: 0x7f0900b4
+			public const int new_challenge_header_back_container = 2131296436;
+			
+			// aapt resource value: 0x7f0900b8
+			public const int new_challenge_header_next = 2131296440;
+			
+			// aapt resource value: 0x7f0900b9
+			public const int new_challenge_header_next_arrow = 2131296441;
+			
+			// aapt resource value: 0x7f0900b7
+			public const int new_challenge_header_next_container = 2131296439;
+			
+			// aapt resource value: 0x7f0900bb
+			public const int new_challenge_header_subtitle = 2131296443;
+			
+			// aapt resource value: 0x7f0900ba
+			public const int new_challenge_header_title = 2131296442;
+			
+			// aapt resource value: 0x7f0900c1
+			public const int new_challenge_page_four_finished = 2131296449;
+			
+			// aapt resource value: 0x7f0900c0
+			public const int new_challenge_page_four_input = 2131296448;
+			
+			// aapt resource value: 0x7f0900bd
+			public const int new_challenge_page_four_root = 2131296445;
+			
+			// aapt resource value: 0x7f0900be
+			public const int new_challenge_page_four_top = 2131296446;
+			
+			// aapt resource value: 0x7f0900bf
+			public const int new_challenge_page_four_top_title = 2131296447;
+			
+			// aapt resource value: 0x7f0900c6
+			public const int new_challenge_page_three_bottom = 2131296454;
+			
+			// aapt resource value: 0x7f0900c7
+			public const int new_challenge_page_three_bottom_title = 2131296455;
+			
+			// aapt resource value: 0x7f0900c8
+			public const int new_challenge_page_three_date_parent = 2131296456;
+			
+			// aapt resource value: 0x7f0900c2
+			public const int new_challenge_page_three_root = 2131296450;
+			
+			// aapt resource value: 0x7f0900c5
+			public const int new_challenge_page_three_time_parent = 2131296453;
+			
+			// aapt resource value: 0x7f0900c3
+			public const int new_challenge_page_three_top = 2131296451;
+			
+			// aapt resource value: 0x7f0900c4
+			public const int new_challenge_page_three_top_title = 2131296452;
+			
+			// aapt resource value: 0x7f0900cf
+			public const int new_challenge_page_two_bottom = 2131296463;
+			
+			// aapt resource value: 0x7f0900d1
+			public const int new_challenge_page_two_bottom_buttons = 2131296465;
+			
+			// aapt resource value: 0x7f0900d4
+			public const int new_challenge_page_two_bottom_days = 2131296468;
+			
+			// aapt resource value: 0x7f0900d3
+			public const int new_challenge_page_two_bottom_hours = 2131296467;
+			
+			// aapt resource value: 0x7f0900d2
+			public const int new_challenge_page_two_bottom_minutes = 2131296466;
+			
+			// aapt resource value: 0x7f0900d6
+			public const int new_challenge_page_two_bottom_months = 2131296470;
+			
+			// aapt resource value: 0x7f0900d0
+			public const int new_challenge_page_two_bottom_title = 2131296464;
+			
+			// aapt resource value: 0x7f0900d5
+			public const int new_challenge_page_two_bottom_weeks = 2131296469;
+			
+			// aapt resource value: 0x7f0900d7
+			public const int new_challenge_page_two_number_parent = 2131296471;
+			
+			// aapt resource value: 0x7f0900c9
+			public const int new_challenge_page_two_root = 2131296457;
+			
+			// aapt resource value: 0x7f0900ca
+			public const int new_challenge_page_two_top = 2131296458;
+			
+			// aapt resource value: 0x7f0900ce
+			public const int new_challenge_page_two_top_calories = 2131296462;
+			
+			// aapt resource value: 0x7f0900cd
+			public const int new_challenge_page_two_top_miles = 2131296461;
+			
+			// aapt resource value: 0x7f0900cc
+			public const int new_challenge_page_two_top_steps = 2131296460;
+			
+			// aapt resource value: 0x7f0900cb
+			public const int new_challenge_page_two_top_title = 2131296459;
+			
+			// aapt resource value: 0x7f0900bc
+			public const int new_challenge_pager = 2131296444;
+			
+			// aapt resource value: 0x7f0900b2
+			public const int new_challenge_root = 2131296434;
 			
 			// aapt resource value: 0x7f090007
 			public const int option_cb = 2131296263;
@@ -899,173 +934,173 @@ namespace wave_android_uitest
 			// aapt resource value: 0x7f090008
 			public const int option_text = 2131296264;
 			
-			// aapt resource value: 0x7f0900f3
-			public const int pager = 2131296499;
-			
-			// aapt resource value: 0x7f0900f4
-			public const int parent_view = 2131296500;
-			
-			// aapt resource value: 0x7f0900d4
-			public const int people_friends = 2131296468;
-			
-			// aapt resource value: 0x7f0900d6
-			public const int people_friends_list = 2131296470;
-			
-			// aapt resource value: 0x7f0900d5
-			public const int people_friends_title = 2131296469;
-			
-			// aapt resource value: 0x7f0900cc
-			public const int people_header = 2131296460;
-			
-			// aapt resource value: 0x7f0900ce
-			public const int people_header_search = 2131296462;
-			
-			// aapt resource value: 0x7f0900cd
-			public const int people_header_title = 2131296461;
-			
-			// aapt resource value: 0x7f0900d2
-			public const int people_requests = 2131296466;
-			
-			// aapt resource value: 0x7f0900d3
-			public const int people_requests_title = 2131296467;
-			
-			// aapt resource value: 0x7f0900cb
-			public const int people_root = 2131296459;
-			
-			// aapt resource value: 0x7f0900cf
-			public const int people_tabs = 2131296463;
-			
-			// aapt resource value: 0x7f0900d0
-			public const int people_tabs_friends = 2131296464;
-			
-			// aapt resource value: 0x7f0900d1
-			public const int people_tabs_top_performers = 2131296465;
-			
-			// aapt resource value: 0x7f0900f6
-			public const int rb11 = 2131296502;
-			
-			// aapt resource value: 0x7f0900f7
-			public const int rb12 = 2131296503;
-			
-			// aapt resource value: 0x7f0900f8
-			public const int rb13 = 2131296504;
-			
-			// aapt resource value: 0x7f0900f5
-			public const int rg1 = 2131296501;
-			
-			// aapt resource value: 0x7f0900d8
-			public const int sign_btn = 2131296472;
-			
-			// aapt resource value: 0x7f0900d7
-			public const int sign_facebook = 2131296471;
-			
-			// aapt resource value: 0x7f0900fa
-			public const int signup = 2131296506;
-			
-			// aapt resource value: 0x7f0900da
-			public const int splash_root = 2131296474;
-			
-			// aapt resource value: 0x7f0900db
-			public const int splash_spinner = 2131296475;
-			
-			// aapt resource value: 0x7f0900dd
-			public const int sync_back = 2131296477;
-			
-			// aapt resource value: 0x7f0900df
-			public const int sync_button = 2131296479;
-			
-			// aapt resource value: 0x7f0900dc
-			public const int sync_root = 2131296476;
-			
-			// aapt resource value: 0x7f0900de
-			public const int sync_title = 2131296478;
-			
-			// aapt resource value: 0x7f0900e8
-			public const int tab_bar_activity_image = 2131296488;
-			
-			// aapt resource value: 0x7f0900e7
-			public const int tab_bar_activity_layout = 2131296487;
-			
-			// aapt resource value: 0x7f0900e9
-			public const int tab_bar_activity_text = 2131296489;
-			
-			// aapt resource value: 0x7f0900ee
-			public const int tab_bar_challenge_image = 2131296494;
-			
-			// aapt resource value: 0x7f0900ef
-			public const int tab_bar_challenge_text = 2131296495;
-			
-			// aapt resource value: 0x7f0900ed
-			public const int tab_bar_challenges_layout = 2131296493;
-			
-			// aapt resource value: 0x7f0900e5
-			public const int tab_bar_home_image = 2131296485;
-			
-			// aapt resource value: 0x7f0900e4
-			public const int tab_bar_home_layout = 2131296484;
-			
-			// aapt resource value: 0x7f0900e6
-			public const int tab_bar_home_text = 2131296486;
-			
-			// aapt resource value: 0x7f0900eb
-			public const int tab_bar_my_life_image = 2131296491;
-			
-			// aapt resource value: 0x7f0900ea
-			public const int tab_bar_my_life_layout = 2131296490;
-			
-			// aapt resource value: 0x7f0900ec
-			public const int tab_bar_my_life_text = 2131296492;
-			
-			// aapt resource value: 0x7f0900f1
-			public const int tab_bar_people_image = 2131296497;
-			
-			// aapt resource value: 0x7f0900f0
-			public const int tab_bar_people_layout = 2131296496;
-			
-			// aapt resource value: 0x7f0900f2
-			public const int tab_bar_people_text = 2131296498;
-			
-			// aapt resource value: 0x7f090061
-			public const int textView1 = 2131296353;
-			
-			// aapt resource value: 0x7f090062
-			public const int textView2 = 2131296354;
-			
-			// aapt resource value: 0x7f0900d9
-			public const int textView3 = 2131296473;
-			
-			// aapt resource value: 0x7f090059
-			public const int textView7 = 2131296345;
-			
-			// aapt resource value: 0x7f0900e1
-			public const int title = 2131296481;
-			
 			// aapt resource value: 0x7f090100
-			public const int user_row_buttons = 2131296512;
+			public const int pager = 2131296512;
 			
 			// aapt resource value: 0x7f090101
-			public const int user_row_check = 2131296513;
+			public const int parent_view = 2131296513;
 			
-			// aapt resource value: 0x7f0900fc
-			public const int user_row_image = 2131296508;
+			// aapt resource value: 0x7f0900e1
+			public const int people_friends = 2131296481;
+			
+			// aapt resource value: 0x7f0900e3
+			public const int people_friends_list = 2131296483;
+			
+			// aapt resource value: 0x7f0900e2
+			public const int people_friends_title = 2131296482;
+			
+			// aapt resource value: 0x7f0900d9
+			public const int people_header = 2131296473;
+			
+			// aapt resource value: 0x7f0900db
+			public const int people_header_request = 2131296475;
+			
+			// aapt resource value: 0x7f0900da
+			public const int people_header_title = 2131296474;
+			
+			// aapt resource value: 0x7f0900df
+			public const int people_requests = 2131296479;
+			
+			// aapt resource value: 0x7f0900e0
+			public const int people_requests_title = 2131296480;
+			
+			// aapt resource value: 0x7f0900d8
+			public const int people_root = 2131296472;
+			
+			// aapt resource value: 0x7f0900dc
+			public const int people_tabs = 2131296476;
+			
+			// aapt resource value: 0x7f0900dd
+			public const int people_tabs_friends = 2131296477;
+			
+			// aapt resource value: 0x7f0900de
+			public const int people_tabs_top_performers = 2131296478;
 			
 			// aapt resource value: 0x7f090103
-			public const int user_row_name = 2131296515;
+			public const int rb11 = 2131296515;
 			
-			// aapt resource value: 0x7f0900fb
-			public const int user_row_root = 2131296507;
+			// aapt resource value: 0x7f090104
+			public const int rb12 = 2131296516;
+			
+			// aapt resource value: 0x7f090105
+			public const int rb13 = 2131296517;
 			
 			// aapt resource value: 0x7f090102
-			public const int user_row_x = 2131296514;
+			public const int rg1 = 2131296514;
 			
-			// aapt resource value: 0x7f0900fd
-			public const int user_row_xp_frame = 2131296509;
+			// aapt resource value: 0x7f0900e5
+			public const int sign_btn = 2131296485;
+			
+			// aapt resource value: 0x7f0900e4
+			public const int sign_facebook = 2131296484;
+			
+			// aapt resource value: 0x7f090107
+			public const int signup = 2131296519;
+			
+			// aapt resource value: 0x7f0900e7
+			public const int splash_root = 2131296487;
+			
+			// aapt resource value: 0x7f0900e8
+			public const int splash_spinner = 2131296488;
+			
+			// aapt resource value: 0x7f0900ea
+			public const int sync_back = 2131296490;
+			
+			// aapt resource value: 0x7f0900ec
+			public const int sync_button = 2131296492;
+			
+			// aapt resource value: 0x7f0900e9
+			public const int sync_root = 2131296489;
+			
+			// aapt resource value: 0x7f0900eb
+			public const int sync_title = 2131296491;
+			
+			// aapt resource value: 0x7f0900f5
+			public const int tab_bar_activity_image = 2131296501;
+			
+			// aapt resource value: 0x7f0900f4
+			public const int tab_bar_activity_layout = 2131296500;
+			
+			// aapt resource value: 0x7f0900f6
+			public const int tab_bar_activity_text = 2131296502;
+			
+			// aapt resource value: 0x7f0900fb
+			public const int tab_bar_challenge_image = 2131296507;
+			
+			// aapt resource value: 0x7f0900fc
+			public const int tab_bar_challenge_text = 2131296508;
+			
+			// aapt resource value: 0x7f0900fa
+			public const int tab_bar_challenges_layout = 2131296506;
+			
+			// aapt resource value: 0x7f0900f2
+			public const int tab_bar_home_image = 2131296498;
+			
+			// aapt resource value: 0x7f0900f1
+			public const int tab_bar_home_layout = 2131296497;
+			
+			// aapt resource value: 0x7f0900f3
+			public const int tab_bar_home_text = 2131296499;
+			
+			// aapt resource value: 0x7f0900f8
+			public const int tab_bar_my_life_image = 2131296504;
+			
+			// aapt resource value: 0x7f0900f7
+			public const int tab_bar_my_life_layout = 2131296503;
+			
+			// aapt resource value: 0x7f0900f9
+			public const int tab_bar_my_life_text = 2131296505;
 			
 			// aapt resource value: 0x7f0900fe
-			public const int user_row_xp_image = 2131296510;
+			public const int tab_bar_people_image = 2131296510;
+			
+			// aapt resource value: 0x7f0900fd
+			public const int tab_bar_people_layout = 2131296509;
 			
 			// aapt resource value: 0x7f0900ff
-			public const int user_row_xp_text = 2131296511;
+			public const int tab_bar_people_text = 2131296511;
+			
+			// aapt resource value: 0x7f09006c
+			public const int textView1 = 2131296364;
+			
+			// aapt resource value: 0x7f09006d
+			public const int textView2 = 2131296365;
+			
+			// aapt resource value: 0x7f0900e6
+			public const int textView3 = 2131296486;
+			
+			// aapt resource value: 0x7f090064
+			public const int textView7 = 2131296356;
+			
+			// aapt resource value: 0x7f0900ee
+			public const int title = 2131296494;
+			
+			// aapt resource value: 0x7f09010d
+			public const int user_row_buttons = 2131296525;
+			
+			// aapt resource value: 0x7f09010e
+			public const int user_row_check = 2131296526;
+			
+			// aapt resource value: 0x7f090109
+			public const int user_row_image = 2131296521;
+			
+			// aapt resource value: 0x7f090110
+			public const int user_row_name = 2131296528;
+			
+			// aapt resource value: 0x7f090108
+			public const int user_row_root = 2131296520;
+			
+			// aapt resource value: 0x7f09010f
+			public const int user_row_x = 2131296527;
+			
+			// aapt resource value: 0x7f09010a
+			public const int user_row_xp_frame = 2131296522;
+			
+			// aapt resource value: 0x7f09010b
+			public const int user_row_xp_image = 2131296523;
+			
+			// aapt resource value: 0x7f09010c
+			public const int user_row_xp_text = 2131296524;
 			
 			static Id()
 			{
@@ -1115,64 +1150,67 @@ namespace wave_android_uitest
 			public const int day_detail = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int friend_stats = 2130903046;
+			public const int friend_request = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int friend_stats_insert = 2130903047;
+			public const int friend_stats = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int home = 2130903048;
+			public const int friend_stats_insert = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int login = 2130903049;
+			public const int home = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int my_life = 2130903050;
+			public const int login = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int my_life_page = 2130903051;
+			public const int my_life = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int my_life_tile = 2130903052;
+			public const int my_life_page = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int new_challenge = 2130903053;
+			public const int my_life_tile = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int new_challenge_page_four = 2130903054;
+			public const int new_challenge = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int new_challenge_page_three = 2130903055;
+			public const int new_challenge_page_four = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int new_challenge_page_two = 2130903056;
+			public const int new_challenge_page_three = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int people = 2130903057;
+			public const int new_challenge_page_two = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int signup = 2130903058;
+			public const int people = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int splash = 2130903059;
+			public const int signup = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int sync = 2130903060;
+			public const int splash = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int tab1 = 2130903061;
+			public const int sync = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int tab_bar = 2130903062;
+			public const int tab1 = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int test2_layout = 2130903063;
+			public const int tab_bar = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int test_layout = 2130903064;
+			public const int test2_layout = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int user_row = 2130903065;
+			public const int test_layout = 2130903065;
+			
+			// aapt resource value: 0x7f03001a
+			public const int user_row = 2130903066;
 			
 			static Layout()
 			{
