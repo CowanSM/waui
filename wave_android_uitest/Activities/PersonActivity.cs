@@ -12,7 +12,7 @@ using Android.Support.V4.View;
 using Android.Support.V4.App;
 
 namespace wave_android_uitest {
-	[Activity (Label = "PersonActivity")]			
+    [Activity (Label = "PersonActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class PersonActivity : FragmentActivity {
 		public override bool OnCreateOptionsMenu (IMenu menu) {
 			MenuInflater.Inflate (Resource.Menu.activity_actions, menu);

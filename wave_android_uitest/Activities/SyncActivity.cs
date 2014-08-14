@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 
 namespace wave_android_uitest {
-    [Activity(Label = "SyncActivity")]			
+    [Activity(Label = "SyncActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
     public class SyncActivity : Activity 
     {
         private WaveAudioHandler audioHandler;

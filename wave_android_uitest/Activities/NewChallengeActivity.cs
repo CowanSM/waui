@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 
 namespace wave_android_uitest {
-    [Activity(Label = "NewChallengeActivity")]			
+    [Activity(Label = "NewChallengeActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
     public class NewChallengeActivity : SubPrimaryActivity {
         private int _currentPage;
 

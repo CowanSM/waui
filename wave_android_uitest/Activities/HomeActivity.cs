@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 
 namespace wave_android_uitest {
-    [Activity(Label = "HomeActivity")]			
+    [Activity(Label = "HomeActivity", ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait)]			
     public class HomeActivity : SubPrimaryActivity {
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
