@@ -48,15 +48,18 @@ namespace wave_android_uitest
             listview.Adapter = new OpponentListAdapter(this, new List<OpponentListAdapter.Opponent>() {
                 new OpponentListAdapter.Opponent() {
                     Name = "Lindsay Bluth",
-                    Level = 17
+                    Level = 17,
+                    Selectable = true
                 },
                 new OpponentListAdapter.Opponent() {
                     Name = "J. Walter Weatherman",
-                    Level = 21
+                    Level = 21,
+                    Selectable = true
                 },
                 new OpponentListAdapter.Opponent() {
                     Name = "Barry Zuckercorn",
-                    Level = 11
+                    Level = 11,
+                    Selectable = true
                 },
                 new OpponentListAdapter.Opponent() {
                     Name = "Gene Parmesan",
@@ -64,24 +67,35 @@ namespace wave_android_uitest
                 },
                 new OpponentListAdapter.Opponent() {
                     Name = "Judge Reinholt",
-                    Level = 13
+                    Level = 13,
+                    Selectable = true
                 },
                 new OpponentListAdapter.Opponent() {
                     Name = "Stanley Sitwell",
-                    Level = 1
+                    Level = 1,
+                    Selectable = true
                 },
                 new OpponentListAdapter.Opponent() {
                     Name = "George Bluth",
-                    Level = 7
+                    Level = 7,
+                    Selectable = true
                 },
                 new OpponentListAdapter.Opponent() {
                     Name = "Tobias Funke",
-                    Level = 1
+                    Level = 1,
+                    Selectable = true
                 }
-            });
+            }, ClickOnUser);
 
             var friends = FindViewById<View>(Resource.Id.people_friends);
             ((RelativeLayout.LayoutParams)friends.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.activity_tab_bar);
+
+            // setup request button
+            var req = FindViewById<TextView>(Resource.Id.people_header_request);
+            req.Click += (sender, e) => {
+                var intent = new Intent(BaseContext, typeof(FriendRequest));
+                StartActivity(intent);
+            };
 
             // font(s)
             var gbold = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/GOTHAM_BOLD.TTF");
@@ -90,7 +104,7 @@ namespace wave_android_uitest
             var segsb = Android.Graphics.Typeface.CreateFromAsset(Assets, "fonts/seguisb.ttf");
 
             FindViewById<TextView>(Resource.Id.people_header_title).SetTypeface(gbold, Android.Graphics.TypefaceStyle.Normal);
-            FindViewById<TextView>(Resource.Id.people_header_search).SetTypeface(gbook, Android.Graphics.TypefaceStyle.Normal);
+            FindViewById<TextView>(Resource.Id.people_header_request).SetTypeface(gbook, Android.Graphics.TypefaceStyle.Normal);
             FindViewById<TextView>(Resource.Id.people_tabs_friends).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
             FindViewById<TextView>(Resource.Id.people_tabs_top_performers).SetTypeface(gmed, Android.Graphics.TypefaceStyle.Normal);
             FindViewById<TextView>(Resource.Id.people_friends_title).SetTypeface(segsb, Android.Graphics.TypefaceStyle.Normal);
@@ -98,6 +112,18 @@ namespace wave_android_uitest
 
             ActionBar.Hide();
 		}
+
+        public void ClickOnUser(object sender, EventArgs args) {
+            if (sender is View) {
+                var view = (View)sender;
+                var name = view.FindViewById<TextView>(Resource.Id.user_row_name);
+                if (name != null) {
+                    var intent = new Intent(BaseContext, typeof(OpponentLifeActivity));
+                    intent.PutExtra("name", name.Text);
+                    StartActivity(intent);
+                }
+            }
+        }
 	}
 }
 

@@ -56,6 +56,7 @@ namespace wave_android_uitest {
         private const int DURATION = 1400;
 
         protected Calendar _calendar;
+        private Calendar _today;
         private Java.Util.Locale _locale;
         private CalendarPagerAdapter _adapter;
 //        private ViewSwitcher _switcher;
@@ -68,6 +69,7 @@ namespace wave_android_uitest {
             _locale = Java.Util.Locale.Default;
             _calendar = Calendar.GetInstance(_locale);
             _flipper = view;
+            _today = Calendar.GetInstance(_locale);
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Android.OS.Bundle savedInstanceState) {
@@ -76,8 +78,8 @@ namespace wave_android_uitest {
 
             // setup swiping
             var swipeGes = new SwipeGesture(Activity);
-            swipeGes.Next += NextMonth;
-            swipeGes.Previous += PreviousMonth;
+            swipeGes.Next += PreviousMonth;
+            swipeGes.Previous += NextMonth;
             var swipeDet = new GestureDetector(Activity, swipeGes);
 
             _adapter = new CalendarPagerAdapter(Activity, _calendar);
@@ -95,6 +97,11 @@ namespace wave_android_uitest {
         }
 
         public void NextMonth(float velocity) {
+            // exit early if the next month is past current month
+            if (_calendar.Get(CalendarField.Year) == _today.Get(CalendarField.Year) && _calendar.Get(CalendarField.Month) == _today.Get(CalendarField.Month)) {
+                return;
+            }
+
             _flipper.SetInAnimation(Activity, Resource.Animation.in_from_right);
             _flipper.SetOutAnimation(Activity, Resource.Animation.out_to_left);
             _flipper.InAnimation.Duration = (long)Math.Max((DURATION / velocity), 500f);
@@ -108,6 +115,11 @@ namespace wave_android_uitest {
         }
 
         public void PreviousMonth(float velocity) {
+            // exit early if we are at January 2000
+            if (_calendar.Get(CalendarField.Year) == 2000 && _calendar.Get(CalendarField.Month) == Calendar.January) {
+                return;
+            }
+
             _flipper.SetInAnimation(Activity, Resource.Animation.in_from_left);
             _flipper.SetOutAnimation(Activity, Resource.Animation.out_to_right);
             _flipper.InAnimation.Duration = (long)Math.Max((DURATION / velocity), 500f);

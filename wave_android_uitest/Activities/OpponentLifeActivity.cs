@@ -1,6 +1,8 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 using Android.App;
 using Android.Content;
@@ -8,27 +10,20 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Com.Jjoe64.Graphview;
 
-namespace wave_android_uitest
-{
-	[Activity (Label = "MyLifeActivity")]			
-	public class MyLifeActivity : SubPrimaryActivity
-	{
-        private bool _opponent = false;
+namespace wave_android_uitest {
+    [Activity(Label = "OpponentLifeActivity")]			
+    public class OpponentLifeActivity : SubPrimaryActivity {
+        private bool _opponent = true;
         private bool _calToggle = true;
 
-		protected override void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
-			// Create your application here
-            SetContentView(Resource.Layout.my_life);
+        protected override void OnCreate(Bundle bundle) {
+            base.OnCreate(bundle);
 
-            // tab bar
+            // Create your application here
+            SetContentView(Resource.Layout.my_life);
             Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction ();
             TabBarFragment fragment = new TabBarFragment (this);
-            transaction.Add (Resource.Id.my_life_root_layout, fragment);
-
             // calendar view
             CalendarPagerView calendarFrag = new CalendarPagerView(FindViewById<ViewFlipper>(Resource.Id.my_life_pager));
             calendarFrag.OnClick += HandleOnClick;
@@ -36,8 +31,19 @@ namespace wave_android_uitest
             transaction.Add(Resource.Id.my_life_pager, calendarFrag);
             transaction.Commit();
 
+            var name = Intent.GetStringExtra("name");
+            FindViewById<TextView>(Resource.Id.my_life_user_name).Text = name;
+
             var pparent = FindViewById<ViewGroup>(Resource.Id.my_life_calendar_switcher);
-            ((RelativeLayout.LayoutParams)pparent.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.activity_tab_bar);
+            ((RelativeLayout.LayoutParams)pparent.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.my_life_opponent_back);
+
+            var oppLayout = FindViewById<LinearLayout>(Resource.Id.my_life_opponent_back);
+            oppLayout.Visibility = ViewStates.Visible;
+
+            var oppBtn = FindViewById<Button>(Resource.Id.my_life_back_button);
+            oppBtn.Click += (object sender, EventArgs e) => {
+                Finish();
+            };
 
             // setup stats toggle button
             var btn = FindViewById<ImageView>(Resource.Id.my_life_calendar_toggle);
@@ -57,7 +63,7 @@ namespace wave_android_uitest
 
             // setup the graph view
             GraphingView.GraphViewSeries series = new GraphingView.GraphViewSeries(new GraphingView.GraphView.GraphViewData[]
-                {
+                    {
                         new GraphingView.GraphView.GraphViewData(1,2000),
                         new GraphingView.GraphView.GraphViewData(2,1860),
                         new GraphingView.GraphView.GraphViewData(3,1750),
@@ -71,7 +77,7 @@ namespace wave_android_uitest
                         new GraphingView.GraphView.GraphViewData(11,1432),
                         new GraphingView.GraphView.GraphViewData(12,1333),
                         new GraphingView.GraphView.GraphViewData(13,540)
-                });
+                    });
             GraphingView.GraphView gView = new GraphingView.LineGraphView(this, "");
             gView.SetManualYAxisBounds(2200, 0);
             gView.SetViewPort(1, 31);
@@ -80,10 +86,10 @@ namespace wave_android_uitest
             var pgView = FindViewById<LinearLayout>(Resource.Id.my_life_stats_graph_parent);
             pgView.AddView(gView);
             pgView.SetBackgroundColor(Android.Graphics.Color.DimGray);
-//            ((RelativeLayout.LayoutParams)gView.LayoutParameters).AddRule(LayoutRules.Below, Resource.Id.mylifestats
+            //            ((RelativeLayout.LayoutParams)gView.LayoutParameters).AddRule(LayoutRules.Below, Resource.Id.mylifestats
 
-//            ((RelativeLayout.LayoutParams)gView.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.my_life_stats_button_layout);
-//            ((RelativeLayout.LayoutParams)gView.LayoutParameters).AddRule(LayoutRules.Below, Resource.Id.my_life_stats_header);
+            //            ((RelativeLayout.LayoutParams)gView.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.my_life_stats_button_layout);
+            //            ((RelativeLayout.LayoutParams)gView.LayoutParameters).AddRule(LayoutRules.Below, Resource.Id.my_life_stats_header);
 
             var statsHeader = FindViewById<LinearLayout>(Resource.Id.my_life_stats_month_bar);
             statsHeader.SetBackgroundColor(Android.Graphics.Color.DimGray);
@@ -146,7 +152,7 @@ namespace wave_android_uitest
             };
 
             ActionBar.Hide();
-		}
+        }
 
         public void HandleMonthChanged (string obj) {
             FindViewById<TextView>(Resource.Id.my_life_month_text).Text = obj;
@@ -166,6 +172,6 @@ namespace wave_android_uitest
                 throw ex;
             }
         }
-	}
+    }
 }
 

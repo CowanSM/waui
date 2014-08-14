@@ -509,4 +509,21 @@
                 android:layout_below="@id/my_life_stats_month_bar" />
         </RelativeLayout>
     </ViewSwitcher>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_life_opponent_back"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="2dip"
+        android:paddingRight="20dip"
+        android:paddingBottom="5dip"
+        android:paddingLeft="20dip"
+        android:visibility="invisible">
+        <Button
+            android:text="Back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/my_life_back_button" />
+    </LinearLayout>
 </RelativeLayout>

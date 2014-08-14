@@ -69,6 +69,8 @@
     <Compile Include="Activities\NewChallengeActivity.cs" />
     <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="Activities\SyncActivity.cs" />
+    <Compile Include="Activities\OpponentLifeActivity.cs" />
+    <Compile Include="Activities\FriendRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -166,6 +168,7 @@
     <AndroidResource Include="Resources\layout\people.xml" />
     <AndroidResource Include="Resources\layout\sync.xml" />
     <AndroidResource Include="Resources\layout\home.xml" />
+    <AndroidResource Include="Resources\layout\friend_request.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

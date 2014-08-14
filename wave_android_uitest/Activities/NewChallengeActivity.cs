@@ -22,10 +22,10 @@ namespace wave_android_uitest {
 
             // Create your application here
             // tab bar
-            Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction ();
-            TabBarFragment fragment = new TabBarFragment (this);
-            transaction.Add (Resource.Id.new_challenge_root, fragment);
-            transaction.Commit();
+//            Android.App.FragmentTransaction transaction = FragmentManager.BeginTransaction ();
+//            TabBarFragment fragment = new TabBarFragment (this);
+//            transaction.Add (Resource.Id.new_challenge_root, fragment);
+//            transaction.Commit();
 
             var pager = FindViewById<Android.Support.V4.View.ViewPager>(Resource.Id.new_challenge_pager);
             ((RelativeLayout.LayoutParams)pager.LayoutParameters).AddRule(LayoutRules.Above, Resource.Id.activity_tab_bar);
