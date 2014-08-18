@@ -71,6 +71,8 @@
     <Compile Include="Activities\SyncActivity.cs" />
     <Compile Include="Activities\OpponentLifeActivity.cs" />
     <Compile Include="Activities\FriendRequest.cs" />
+    <Compile Include="Core\AudioStream\WaveAudioHandler.cs" />
+    <Compile Include="Activities\LoginActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -179,6 +181,7 @@
     <Folder Include="Assets\fonts\" />
     <Folder Include="Resources\anim\" />
     <Folder Include="Assets\libs\" />
+    <Folder Include="Core\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\segoeui.ttf" />
